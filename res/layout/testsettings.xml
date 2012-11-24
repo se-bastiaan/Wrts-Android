@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbarlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/topbar"
+            android:orientation="vertical" >
+			<ImageView
+                android:id="@+id/LogoView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_logo"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/LogoView"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="19dp"
+                android:textColor="#ffffff" />
+            <RelativeLayout
+            	android:id="@+id/topbarborder"
+            	android:layout_width="fill_parent"
+            	android:layout_height="1dp"
+            	android:background="@color/topbarborder"
+            	android:layout_alignParentBottom="true"
+            	android:orientation="vertical" />
+        </RelativeLayout>
+        
+        <ScrollView
+	        	android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent"
+	       	 	android:id="@+id/Testsettings"
+				android:orientation="vertical"
+				android:background="@color/backcolor"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+					<TextView
+					    android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+						android:text="@string/practice"
+						android:textStyle="bold"
+						android:color="@color/grey2"
+						android:paddingBottom="1dp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="15dp"
+						android:textAllCaps="true" />
+					<ImageView
+					    android:contentDescription="@string/app_name"
+					    android:layout_width="fill_parent"
+	        			android:layout_height="2dp"
+	        			android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="1dp"
+	        			android:background="@color/grey2" />
+		        	<RadioGroup
+		        	    android:id="@+id/practiceradio"
+		        	    android:layout_width="fill_parent"
+		        	    android:layout_height="wrap_content"
+		        	    android:orientation="vertical">
+		        		<RadioButton
+		        		    android:id="@+id/radioGood"
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:text="@string/practicegood"
+						    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+							android:textColor="@color/grey"
+							android:gravity="right|center" />
+		        		<RadioButton
+		        		    android:id="@+id/radioFast"
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:text="@string/practicefast"
+						    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+							android:textColor="@color/grey"
+							android:gravity="right|center" />
+		        		<RelativeLayout 
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:gravity="right|center"
+		        		    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+		        		    >
+		        	 	<Button
+		        		    android:id="@+id/showtime"
+		        		    style="?android:attr/buttonStyleSmall"
+		        		    android:layout_width="70dp"
+		        		    android:layout_height="38dp"
+		        		    android:text="1 sec."
+		        		    android:gravity="center"
+		        		    android:layout_alignParentLeft="true" />
+		        		<TextView
+		        		    android:layout_width="wrap_content"
+		        		    android:layout_height="38dp"
+		        		    android:text="@string/showanswer"
+		        		    android:textSize="16dp"
+		        		    android:gravity="right|center"
+		        		    android:layout_alignParentRight="true"
+		        		    android:layout_gravity="right" />
+		        		</RelativeLayout>
+		        		<RelativeLayout 
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:gravity="right|center"
+		        		    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+		        		    >
+		        	 	<Button
+		        		    android:id="@+id/textsizeB"
+		        		    style="?android:attr/buttonStyleSmall"
+		        		    android:layout_width="70dp"
+		        		    android:layout_height="38dp"
+		        		    android:text="14"
+		        		    android:gravity="center"
+		        		    android:layout_alignParentLeft="true" />
+		        		<TextView
+		        		    android:layout_width="wrap_content"
+		        		    android:layout_height="38dp"
+		        		    android:text="@string/textsize"
+		        		    android:textSize="16dp"
+		        		    android:gravity="right|center"
+		        		    android:layout_alignParentRight="true"
+		        		    android:layout_gravity="right" />
+		        		</RelativeLayout>
+		        	</RadioGroup>
+		        	
+		        	<TextView
+					    android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+						android:text="@string/rules"
+						android:textStyle="bold"
+						android:color="@color/grey2"
+						android:paddingBottom="1dp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="15dp"
+						android:textAllCaps="true" />
+					<ImageView
+					    android:contentDescription="@string/app_name"
+					    android:layout_width="fill_parent"
+	        			android:layout_height="2dp"
+	        			android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="1dp"
+	        			android:background="@color/grey2" />
+					<CheckBox
+						android:id="@+id/uppercase"
+		        		android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+		        		android:text="@string/uppercase"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:textColor="@color/grey"
+						android:gravity="right|center" />
+					<CheckBox
+						android:id="@+id/accents"
+		        		android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+		        		android:text="@string/accents"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:textColor="@color/grey"
+						android:gravity="right|center" />
+					<CheckBox
+						android:id="@+id/punctuation"
+		        		android:layout_width="fill_parent"
+		        		android:layout_height="wrap_content"
+		        		android:text="@string/punctuation"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="5dp"
+						android:textColor="@color/grey"
+						android:gravity="right|center" />
+					<TextView
+					    android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+						android:text="@string/score"
+						android:textStyle="bold"
+						android:color="@color/grey2"
+						android:paddingBottom="1dp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="15dp"
+						android:textAllCaps="true" />
+					<ImageView
+					    android:contentDescription="@string/app_name"
+					    android:layout_width="fill_parent"
+	        			android:layout_height="2dp"
+	        			android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginTop="1dp"
+	        			android:background="@color/grey2" />
+		        	<RadioGroup
+		        	    android:id="@+id/scoreradio"
+		        	    android:layout_width="fill_parent"
+		        	    android:layout_height="wrap_content"
+		        	    android:orientation="vertical">
+		        		<RadioButton
+		        		    android:id="@+id/scoreNL"
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:text="@string/scoreNL"
+						    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+							android:textColor="@color/grey"
+							android:gravity="right|center" />
+		        		<RadioButton
+		        		    android:id="@+id/scoreproc"
+		        		    android:layout_width="fill_parent"
+		        		    android:layout_height="wrap_content"
+		        		    android:text="@string/scoreproc"
+						    android:layout_marginLeft="15dp"
+							android:layout_marginRight="15dp"
+							android:layout_marginTop="5dp"
+							android:textColor="@color/grey"
+							android:gravity="right|center" />		        	    
+		        	</RadioGroup>
+			</LinearLayout>
+        </ScrollView>        
+</LinearLayout>

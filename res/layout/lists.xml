@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    	<RelativeLayout
+            android:id="@+id/topbarlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/topbar"
+            android:orientation="vertical" >
+			<ImageView
+                android:id="@+id/LogoView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_logo"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/LogoView"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="19dp"
+                android:textColor="#ffffff" />
+            <ImageButton
+                android:id="@+id/NewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_menu_background"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_new"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+            <RelativeLayout
+            	android:id="@+id/topbarborder"
+            	android:layout_width="fill_parent"
+            	android:layout_height="1dp"
+            	android:background="@color/topbarborder"
+            	android:layout_alignParentBottom="true"
+            	android:orientation="vertical" />
+        </RelativeLayout>
+        <LinearLayout
+	        	android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent"
+	       	 	android:id="@+id/Lists"
+				android:orientation="vertical"
+				android:background="@color/backcolor">
+	            <ListView 
+	  				xmlns:android="http://schemas.android.com/apk/res/android"
+	   				android:id="@+id/ListsView"
+	   				android:layout_height="0dp"
+	   				android:layout_width="fill_parent"
+	   				android:layout_weight="10"
+	   				android:dividerHeight="1dp"
+	   				android:divider="#c1c1c1"
+	   				android:background="@color/backcolor"
+	   				android:fadingEdgeLength="0dp"
+	   				android:fadeScrollbars="true"
+	   				android:cacheColorHint="@color/trans"
+	     		/>
+	            <com.google.ads.AdView
+			    	 android:id="@+id/adView"
+			    	 android:layout_width="wrap_content"
+			    	 android:layout_height="wrap_content"
+			    	 android:layout_weight="0"
+			    	 android:gravity="bottom"
+			    	 ads:adSize="BANNER"
+			    	 ads:adUnitId="a14e8c518781661"
+			    	 ads:loadAdOnCreate="true"	    
+				/>          
+        </LinearLayout>
+</LinearLayout>

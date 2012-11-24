@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    	<RelativeLayout
+            android:id="@+id/topbarlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/topbar"
+            android:orientation="vertical" >
+			<ImageView
+                android:id="@+id/LogoView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_logo"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/LogoView"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="19dp"
+                android:textColor="#ffffff" />            
+            <ImageButton
+                android:id="@+id/TestButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_menu_background"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_test"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name" />
+            <ImageButton
+                android:id="@+id/EditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_menu_background"
+                android:layout_toLeftOf="@id/TestButton"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_edit"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name" />
+            <ImageButton
+                android:id="@+id/DoneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_menu_background"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_done"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+            <ImageButton
+                android:id="@+id/NewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_menu_background"
+                android:layout_toLeftOf="@id/DoneButton"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_new"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+            <ImageButton
+                android:id="@+id/HelpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_menu_background"
+                android:layout_toLeftOf="@id/NewButton"
+                android:gravity="center"
+                android:src="@drawable/ic_menu_help"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+            <RelativeLayout
+            	android:id="@+id/topbarborder"
+            	android:layout_width="fill_parent"
+            	android:layout_height="1dp"
+            	android:background="@color/topbarborder"
+            	android:layout_alignParentBottom="true"
+            	android:orientation="vertical" />
+        </RelativeLayout>
+        <LinearLayout
+	        	android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent"
+	       	 	android:id="@+id/List"
+				android:orientation="vertical"
+				android:background="@color/backcolor">
+            	<TextView
+				    xmlns:android="http://schemas.android.com/apk/res/android"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/title"
+				    android:textSize="13dp"
+				    android:textStyle="bold"
+				    android:background="@color/backcolor"
+				    android:textColor="@color/grey"
+				    android:paddingTop="20dp"
+				    android:paddingBottom="20dp"
+				    android:paddingLeft="10dp"
+				    android:paddingRight="10dp"
+				    android:gravity="center" />
+            	<Button
+				    xmlns:android="http://schemas.android.com/apk/res/android"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/titlebutton"
+				    android:textSize="13dp"
+				    android:textStyle="bold"
+				    android:textColor="@color/grey"
+				    android:layout_marginTop="5dp"
+				    android:layout_marginBottom="5dp"
+				    android:gravity="center"
+				    android:visibility="gone" />            	
+	            <ListView 
+	  				xmlns:android="http://schemas.android.com/apk/res/android"
+	   				android:id="@+id/ListView"
+	   				android:layout_height="wrap_content"
+	   				android:layout_width="fill_parent"
+	   				android:dividerHeight="1dp"
+	   				android:divider="#c1c1c1"
+	   				android:background="@color/backcolor"
+	   				android:fadingEdgeLength="0dp"
+	   				android:fadeScrollbars="true"
+	   				android:cacheColorHint="@color/trans"
+	   				android:visibility="visible"
+	     		/>
+	            <!-- <com.google.ads.AdView
+			    	 android:id="@+id/adView"
+			    	 android:layout_width="wrap_content"
+			    	 android:layout_height="wrap_content"
+			    	 android:gravity="bottom"
+			    	 ads:adSize="BANNER"
+			    	 ads:adUnitId="a14e8c518781661"
+			    	 ads:loadAdOnCreate="true"	    
+				/> -->           
+        </LinearLayout>
+</LinearLayout>

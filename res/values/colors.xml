@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white1">#6fff</color>
+    <color name="white2">#6fff</color>
+    <color name="white3">#4fff</color>
+    <color name="grey">#222222</color>
+    <color name="grey2">#595959</color>
+    <color name="trans">#0000</color>
+    <color name="backcolor">#dddddd</color>
+    <color name="backcolorhover">#cfcfcf</color>
+    <color name="orange">#ea8800</color>
+    <color name="green">#008800</color>
+    <color name="red">#880000</color>
+    <color name="topbar">#222222</color>
+    <color name="topbarborder">#474747</color>
+    <!--  <color name="topbar">#223039</color>
+    <color name="topbarborder">#374D5C</color> -->
+</resources>

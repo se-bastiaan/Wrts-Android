@@ -1,0 +1,59 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+-keepattributes LineNumberTable
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.support.v4.app.FragmentActivity
+-keep public class * extends android.app.Application
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends org.xml.sax.helpers.DefaultHandler
+-keep public class com.crittercism.**
+
+-keepclassmembers public class com.crittercism.*
+{
+    *;
+}
+
+#To remove debug logs:
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** w(...);
+}
+
+#Maintain java native methods 
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+
+#To maintain custom components names that are used on layouts XML:
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+}
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+#Maintain enums
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#To keep parcelable classes (to serialize - deserialize objects to sent through Intents)
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
