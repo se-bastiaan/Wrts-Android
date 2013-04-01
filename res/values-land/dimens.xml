@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="wrts_slidingmenu_offset">200dp</dimen>
+
+</resources>

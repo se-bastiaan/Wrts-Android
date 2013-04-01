@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme.Wrts" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/wrts_ab_selectable_bg</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Wrts</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Wrts</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Wrts</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Wrts</item>
+        <item name="android:actionModeBackground">@drawable/style_cab_background_top_wrts</item>
+        <item name="android:actionModeSplitBackground">@drawable/style_cab_background_bottom_wrts</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Wrts</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Wrts.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Wrts" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/style_ab_solid_wrts</item>
+        <item name="android:backgroundStacked">@drawable/style_ab_stacked_solid_wrts</item>
+        <item name="android:backgroundSplit">@drawable/style_ab_bottom_solid_wrts</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Wrts</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Wrts" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="android:background">@drawable/style_ab_transparent_wrts</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Wrts</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Wrts.Widget" parent="@style/Theme.Sherlock">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Wrts</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+    </style>
+
+</resources>

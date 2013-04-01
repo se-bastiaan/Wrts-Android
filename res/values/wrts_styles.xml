@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Wrts" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/wrts_ab_selectable_bg</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Wrts</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Wrts</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Wrts</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Wrts</item>
+        <item name="actionModeBackground">@drawable/style_cab_background_top_wrts</item>
+        <item name="actionModeSplitBackground">@drawable/style_cab_background_bottom_wrts</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Wrts</item>
+
+                <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Wrts.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Wrts" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/style_ab_solid_wrts</item>
+        <item name="backgroundStacked">@drawable/style_ab_stacked_solid_wrts</item>
+        <item name="backgroundSplit">@drawable/style_ab_bottom_solid_wrts</item>
+        <item name="progressBarStyle">@style/ProgressBar.Wrts</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Wrts" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/style_ab_transparent_wrts</item>
+        <item name="progressBarStyle">@style/ProgressBar.Wrts</item>
+    </style>
+	
+    <style name="PopupMenu.Wrts" parent="@style/Widget.Sherlock.ListPopupWindow">	
+        <item name="android:popupBackground">@drawable/style_menu_dropdown_panel_wrts</item>	
+    </style>
+	
+    <style name="DropDownListView.Wrts" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/wrts_ab_selectable_bg</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Wrts" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/wrts_ab_tab_indicator</item>
+    </style>
+	
+    <style name="DropDownNav.Wrts" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/wrts_ab_spinner_bg</item>
+        <item name="android:popupBackground">@drawable/style_menu_dropdown_panel_wrts</item>
+        <item name="android:dropDownSelector">@drawable/wrts_ab_selectable_bg</item>
+    </style>
+    
+    <style name="ProgressBar.Wrts" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/wrts_horizontal_progress</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Wrts" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
+        <item name="android:background">@drawable/wrts_cab_button_done</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Wrts.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Wrts</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+    </style>
+
+</resources>
