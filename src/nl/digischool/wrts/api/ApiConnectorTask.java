@@ -3,47 +3,76 @@ package nl.digischool.wrts.api;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Map;
 
-import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLException;
 
-import android.content.Context;
+import nl.digischool.wrts.classes.Params;
+import nl.digischool.wrts.classes.Utilities;
 import android.os.AsyncTask;
-import android.util.Log;
 
-public class ApiConnectorTask extends AsyncTask<Map<String, Object>, Void, String> {
+public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	
-	private static String API_URL = "https://wrts.nl/api";
-	private static Boolean logEnabled = true;
-	private Context context;
+	private String API_METHOD, API_OUTPUT, API_AUTH;
+	private String LOG_TAG = getClass().getSimpleName();
+	private Boolean API_DO_OUTPUT;
 	
-	public ApiConnectorTask(Context context) {
-		this.context = context;
+	/**
+	 * ApiConnectorTask without server post
+	 * @param context
+	 * @param method
+	 * @param method
+	 */
+	public ApiConnectorTask(String method, String auth) {
+		this.API_METHOD = method;
+		this.API_AUTH = auth;
+		this.API_DO_OUTPUT = false;
 	}
 	
-	protected String doInBackground(Map<String, Object>... params) {
+	/**
+	 * ApiConnectorTask with post to server
+	 * @param context
+	 * @param method
+	 * @param auth
+	 * @param output
+	 */
+	public ApiConnectorTask(String method, String auth, String output) {
+		this.API_METHOD = method;
+		this.API_OUTPUT = output;
+		this.API_AUTH = auth;
+		this.API_DO_OUTPUT = true;
+	}
+	
+	/**
+	 * doInBackground connecting to the server en performing the request (GET or POST)
+	 * @param params
+	 * @return String
+	 */
+	protected String doInBackground(Void... params) {
 		// Create result variable
 		String result = "";
 		try {
 			// Create connection to server
-		    URL url = new URL(API_URL + "/" + params[0].get("method"));
-		    HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection(); 
+		    URL url = new URL(Params.apiUrl + "/" + this.API_METHOD);
+		    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection(); 
+		    urlConnection.setRequestProperty("Authorization", "Basic " + this.API_AUTH);
+		    urlConnection.setRequestProperty("User-Agent", Params.userAgent);
+		    
 		    urlConnection.setUseCaches(false);
 			try {
 			    // Set request as POST to post the parameters if they're set
-			    if(params[0].containsKey("postParameters")) {
+			    if(this.API_DO_OUTPUT) {
+			    	Utilities.log(this.LOG_TAG, "Do API Output");
 			    	urlConnection.setRequestMethod("POST");
 			    	
- 	 			    urlConnection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+ 	 			    urlConnection.setRequestProperty("Content-Type","application/xml");
 	 				urlConnection.setDoOutput(true);
 		 			urlConnection.setChunkedStreamingMode(0);
 		
 		 			// Post data to server
-		 			String postParams = (String) params[0].get("postParameters");
 		 			DataOutputStream writeStream = new DataOutputStream (urlConnection.getOutputStream());
-		 			writeStream.writeBytes(postParams);
+		 			writeStream.writeBytes(API_OUTPUT);
 		 			writeStream.flush();
 		 			writeStream.close();
 			    }
@@ -57,7 +86,7 @@ public class ApiConnectorTask extends AsyncTask<Map<String, Object>, Void, Strin
  					builder.append(line);
  				} 				
  				result = builder.toString();
- 				log(result);
+ 				Utilities.log(this.LOG_TAG, result);
  			} catch (Exception e) {
  				e.printStackTrace();
  			} finally {
@@ -70,14 +99,11 @@ public class ApiConnectorTask extends AsyncTask<Map<String, Object>, Void, Strin
     	} catch (Exception e) {
     		e.printStackTrace();
     		return null;
-    	}        	
+    	}
     }    	
 	
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
     }
     
-    private void log(Object message) {
-		if(logEnabled) Log.d(getClass().getSimpleName(), message.toString());
-	}
 }

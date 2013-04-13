@@ -1218,12 +1218,15 @@ containing a value of this type.
          */
         public static final int abs__action_mode_done=0x7f090003;
         /**  Title default for a dialog showing possible activities in ActivityChooserView [CHAR LIMIT=25] 
+ Title default for a dialog showing possible activities in ActivityChooserView [CHAR LIMIT=25] 
          */
         public static final int abs__activity_chooser_view_dialog_title_default=0x7f090005;
         /**  Title for a button to expand the list of activities in ActivityChooserView [CHAR LIMIT=25] 
+ Title for a button to expand the list of activities in ActivityChooserView [CHAR LIMIT=25] 
          */
         public static final int abs__activity_chooser_view_see_all=0x7f090004;
         /**  Description of the shwoing of a popup window with activities to choose from. [CHAR LIMIT=NONE] 
+ Description of the shwoing of a popup window with activities to choose from. [CHAR LIMIT=NONE] 
          */
         public static final int abs__activitychooserview_choose_application=0x7f090007;
         /**  SearchView accessibility description for clear button [CHAR LIMIT=NONE] 
@@ -1242,12 +1245,15 @@ containing a value of this type.
          */
         public static final int abs__searchview_description_voice=0x7f09000e;
         /**  Title for a dialog showing possible activities for sharing in ShareActionProvider [CHAR LIMIT=25] 
+ Title for a dialog showing possible activities for sharing in ShareActionProvider [CHAR LIMIT=25] 
          */
         public static final int abs__share_action_provider_share_with=0x7f090006;
         /**  Description of the choose target button in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
+ Description of the choose target button in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with=0x7f090008;
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
+ Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int action_settings=0x7f090010;

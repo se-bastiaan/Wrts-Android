@@ -5,9 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import nl.digischool.wrts.adapters.SlidingMenuListAdapter;
-
+import nl.digischool.wrts.api.ApiHelper;
+import nl.digischool.wrts.api.XmlBuilder;
+import nl.digischool.wrts.classes.Utilities;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.view.MenuItem;
 import com.slidingmenu.lib.SlidingMenu;
@@ -58,6 +63,12 @@ public class OverviewActivity extends SlidingActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void settingsAction(View v) {
+		ApiHelper api = new ApiHelper(this);
+		api.saveUserData("se_bastiaan@outlook.com", "beest01");
+		Utilities.log("API result", api.getDetailIndex());
 	}
 
 }
