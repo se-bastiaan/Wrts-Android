@@ -2,25 +2,35 @@ package nl.digischool.wrts;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import nl.digischool.wrts.adapters.SlidingMenuListAdapter;
 import nl.digischool.wrts.api.ApiHelper;
-import nl.digischool.wrts.api.XmlBuilder;
+import nl.digischool.wrts.api.IndexReaderTask;
+import nl.digischool.wrts.api.SyncListsTask;
+import nl.digischool.wrts.api.WordListDataSaverTask;
+import nl.digischool.wrts.api.WordListReaderTask;
 import nl.digischool.wrts.classes.Utilities;
+import nl.digischool.wrts.database.DbHelper;
+import nl.digischool.wrts.database.DbModel;
+import nl.digischool.wrts.objects.WordList;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.view.MenuItem;
+import com.db4o.ObjectContainer;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingActivity;
 
 public class OverviewActivity extends SlidingActivity {
 	
 	private SlidingMenu slidingMenu;
+	private ApiHelper api;
+	private DbHelper db;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +63,9 @@ public class OverviewActivity extends SlidingActivity {
 		slidingMenu.setBehindOffsetRes(R.dimen.wrts_slidingmenu_offset);
 		
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		api = new ApiHelper(this);
+		db = new DbHelper(this);
 	}
 	
 	@Override
@@ -66,9 +79,12 @@ public class OverviewActivity extends SlidingActivity {
 	}
 	
 	public void settingsAction(View v) {
-		ApiHelper api = new ApiHelper(this);
-		api.saveUserData("se_bastiaan@outlook.com", "beest01");
-		Utilities.log("API result", api.getDetailIndex());
+		try {
+			api.saveUserData("se_bastiaan@outlook.com", "beest01");
+			new SyncListsTask().execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

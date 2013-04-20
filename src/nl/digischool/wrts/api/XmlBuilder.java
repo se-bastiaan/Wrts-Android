@@ -42,7 +42,7 @@ public class XmlBuilder {
 	 * Specify WordList id
 	 * @param id
 	 */
-	public void setId(Integer id) {
+	public void setId(String id) {
 		dataList.id = id;
 	}
 	
@@ -131,7 +131,7 @@ public class XmlBuilder {
 				        
 				        	if(dataList.id != null) {
 					        	serializer.startTag("", "id");
-					        	serializer.text(Integer.toString(dataList.id));
+					        	serializer.text(dataList.id);
 					        	serializer.endTag("", "id");
 				        	}
 				        	

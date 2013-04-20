@@ -86,7 +86,7 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
  					builder.append(line);
  				} 				
  				result = builder.toString();
- 				Utilities.log(this.LOG_TAG, result);
+ 				//Utilities.log(this.LOG_TAG, result);
  			} catch (Exception e) {
  				e.printStackTrace();
  			} finally {

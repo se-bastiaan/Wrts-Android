@@ -48,6 +48,14 @@ public class ApiHelper {
         }
         
         /**
+         * Get index of all lists containing all data except for the words using 
+         * @return
+         */
+        public String getDetailIndexSince(String date) {
+        	return this.getString("lists?since="+date);
+        }
+        
+        /**
          * Get specific list containing all data
          * @param id
          * @return
