@@ -9,7 +9,6 @@ import java.net.URL;
 import javax.net.ssl.SSLException;
 
 import nl.digischool.wrts.classes.Params;
-import nl.digischool.wrts.classes.Utilities;
 
 public class ApiConnector {
 	

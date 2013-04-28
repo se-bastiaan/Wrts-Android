@@ -1,5 +1,7 @@
 package nl.digischool.wrts.api;
 
+import java.util.ArrayList;
+
 import nl.digischool.wrts.objects.Word;
 import nl.digischool.wrts.objects.WordList;
 
@@ -7,23 +9,28 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class WordListXmlHandler extends DefaultHandler {
-	
+import android.annotation.SuppressLint;
+import android.util.Log;
+
+@SuppressLint("DefaultLocale")
+public class SyncXmlHandler extends DefaultHandler {
+
 	private Boolean elementSelected = false, inList = false, inWords = false, inWord = false;
 	private String elementValue = null;
-	private WordList list = new WordList();
-	private Word word = new Word();
-    
-    public WordList getList() {
-    	return list;
-    }
+	private ArrayList<WordList> listData;
+	private WordList list;
+	private Word word;
+	
+	public ArrayList<WordList> getData() {
+		return listData;
+	}
     
     public void startDocument () {
-        //Log.d("Parser", "Start");
+    	listData = new ArrayList<WordList>();
     }
     
     public void endDocument () {
-        //Log.d("Parser", "Einde");     
+       
     }
     
     @Override
@@ -32,8 +39,9 @@ public class WordListXmlHandler extends DefaultHandler {
     	elementValue = null;
     	if(localName.equals("list")) {
     		inList = true;
+    		list = new WordList();
     	}
-    	if(inList) {
+    	if(inList) {    		
     		if(localName.equals("words")) {
     			inWords = false;
     		}
@@ -45,36 +53,39 @@ public class WordListXmlHandler extends DefaultHandler {
     	}
     }
     
-    @Override
+    @SuppressLint("DefaultLocale")
+	@Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
     	elementSelected = false;    	
     	if(inList) {
     		if(localName.equals("list")) {
         		inList = false;
+        		listData.add(list);
+        		Log.d("data", list.lang_a);
         	} else if(localName.equals("id")) {
     			list.id = elementValue;
     		} else if(localName.equals("title")) {
     			list.title = elementValue;
     		} else if(localName.equals("lang-a")) {
-    			list.lang_a = elementValue;
+    			list.lang_a = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-b")) {
-    			list.lang_b = elementValue;
+    			list.lang_b = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-c")) {
-    			list.lang_c = elementValue;
+    			list.lang_c = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-d")) {
-    			list.lang_d = elementValue;
+    			list.lang_d = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-e")) {
-    			list.lang_e = elementValue;
+    			list.lang_e = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-f")) {
-    			list.lang_f = elementValue;
+    			list.lang_f = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-g")) {
-    			list.lang_g = elementValue;
+    			list.lang_g = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-h")) {
-    			list.lang_h = elementValue;
+    			list.lang_h = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-i")) {
-    			list.lang_i = elementValue;
+    			list.lang_i = elementValue.toLowerCase().trim();
     		} else if(localName.equals("lang-j")) {
-    			list.lang_j = elementValue;
+    			list.lang_j = elementValue.toLowerCase().trim();
     		} else if(localName.equals("created-on")) {
     			list.created_on = elementValue;
     		} else if(localName.equals("updated-on")) {
@@ -126,5 +137,5 @@ public class WordListXmlHandler extends DefaultHandler {
             elementValue = new String(ch, start, length);
             elementSelected = false;
         }
-    }
+    }	
 }

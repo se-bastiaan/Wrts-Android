@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import nl.digischool.wrts.objects.WordList;
-
+import android.annotation.SuppressLint;
 import android.util.Log;
 
 import com.db4o.ObjectContainer;
@@ -21,24 +21,39 @@ public class DbModel {
 		db.commit();
 	}
 	
+	@SuppressLint("DefaultLocale")
 	public static List<String> getLanguages(ObjectContainer db) {
 		HashSet<String> set = new HashSet<String>();
 		 
         WordList type = new WordList(); 
         ObjectSet<WordList> result = db.queryByExample(type);
- 
+        int i = 0;
+        ArrayList<String> strings;
+        WordList list;
         while (result.hasNext()) {
-        	WordList d = result.next();
-        	Log.d("loj", "log");
-        	String[] strings = new String[] { d.lang_a, d.lang_b, d.lang_c, d.lang_d, d.lang_e, d.lang_f, d.lang_g, d.lang_h, d.lang_i, d.lang_j };
-        	set.addAll(Arrays.asList(strings));
+        	list = result.next();
+        	strings = new ArrayList<String>();
+        	if(list.lang_a != null) strings.add(list.lang_a);
+        	if(list.lang_b != null) strings.add(list.lang_b);
+        	if(list.lang_c != null) strings.add(list.lang_c);
+        	if(list.lang_d != null) strings.add(list.lang_d);
+        	if(list.lang_e != null) strings.add(list.lang_e);
+        	if(list.lang_f != null) strings.add(list.lang_f);
+        	if(list.lang_g != null) strings.add(list.lang_g);
+        	if(list.lang_h != null) strings.add(list.lang_h);
+        	if(list.lang_i != null) strings.add(list.lang_i);
+        	if(list.lang_j != null) strings.add(list.lang_j);
+        	Log.d("t", strings.toString());
+        	set.addAll(strings);
         }
         
-        ArrayList<String> list = new ArrayList<String>();
-        list.addAll(set);
-        Collections.sort(list);
+        ArrayList<String> conversion = new ArrayList<String>();
+        conversion.addAll(set);
+        Collections.sort(conversion);
         
-        return list;
+        db.close();
+        
+        return conversion;
 	}
 	
 	public static ObjectSet<WordList> getWordListsByLanguage(ObjectContainer db, final String language) {
@@ -53,6 +68,9 @@ public class DbModel {
 				return false;
 			}
 		});
+		
+		db.close();
+		
 		return result;
 	}
 	
@@ -68,10 +86,14 @@ public class DbModel {
 				return (obj.id.equals(id));
 			}
 		});
+		
+		db.close();
+		
 		return result.get(0);
 	}
 	
 	public static void deleteWordList(ObjectContainer db, String id) {
 		db.delete(DbModel.getWordList(db, id));
+		db.close();
 	}
 }

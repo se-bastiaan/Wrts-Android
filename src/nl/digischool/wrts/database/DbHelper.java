@@ -2,6 +2,7 @@ package nl.digischool.wrts.database;
 
 import nl.digischool.wrts.classes.Params;
 import android.content.Context;
+import android.util.Log;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -38,7 +39,13 @@ public class DbHelper {
 	}
 
 	public ObjectContainer openDbSession() {
-		return database.ext().openSession();
+		try {
+			return database.ext().openSession();
+		} catch (Exception e) {
+			Log.w("DbHelper", "Check if database is opened");
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
