@@ -38,6 +38,8 @@ public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
 				WordList list = data.get(i);			
 				DbModel.saveWordList(cont, list);
 			}
+			cont.close();
+			db.closeDatabase();
 		} catch (Exception e) {
 			e.printStackTrace();
 			// TODO

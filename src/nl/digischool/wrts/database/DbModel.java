@@ -8,7 +8,6 @@ import java.util.List;
 
 import nl.digischool.wrts.objects.WordList;
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -27,7 +26,6 @@ public class DbModel {
 		 
         WordList type = new WordList(); 
         ObjectSet<WordList> result = db.queryByExample(type);
-        int i = 0;
         ArrayList<String> strings;
         WordList list;
         while (result.hasNext()) {
@@ -43,7 +41,6 @@ public class DbModel {
         	if(list.lang_h != null) strings.add(list.lang_h);
         	if(list.lang_i != null) strings.add(list.lang_i);
         	if(list.lang_j != null) strings.add(list.lang_j);
-        	Log.d("t", strings.toString());
         	set.addAll(strings);
         }
         
