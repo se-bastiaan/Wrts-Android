@@ -17,35 +17,17 @@ import android.widget.ListView;
 
 import com.actionbarsherlock.view.MenuItem;
 import com.db4o.ObjectContainer;
-import com.slidingmenu.lib.SlidingMenu;
-import com.slidingmenu.lib.app.SlidingActivity;
 
-public class OverviewActivity extends SlidingActivity {
-	
-	private ApiHelper api;
-	private DbHelper db;
-    private SlidingMenu slidingMenu;
+public class OverviewActivity extends BaseActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Crashlytics.start(this);
-		setTheme(R.style.Theme_Wrts_SlidingMenu);
 		setContentView(R.layout.activity_overview);
-		setBehindContentView(R.layout.activity_overview_slidingmenu);
-		
-		slidingMenu = getSlidingMenu();
-		slidingMenu.setFadeEnabled(true);
-		slidingMenu.setFadeDegree(0.20f);
-		slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-		slidingMenu.setShadowDrawable(R.drawable.wrts_slidingmenu_shadow);
-		slidingMenu.setShadowWidthRes(R.dimen.shadow_width_slidingmenu);
-		slidingMenu.setBehindOffsetRes(R.dimen.wrts_slidingmenu_offset);
 		
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
-		api = new ApiHelper(this);
-		db = new DbHelper(this);
+
 
 		/* Generate data *//*
 		ArrayList<Map<String, Object>> object = new ArrayList<Map<String, Object>>();
@@ -73,7 +55,7 @@ public class OverviewActivity extends SlidingActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			toggle();
+
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

@@ -55,7 +55,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="SlidingMenu" exported="" />
     <orderEntry type="module" module-name="ActionBarSherlock" exported="" />
   </component>
 </module>

@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
+import nl.digischool.wrts.classes.Utilities;
 
 public class DbHelper {
 
@@ -42,7 +43,7 @@ public class DbHelper {
 		try {
 			return database.ext().openSession();
 		} catch (Exception e) {
-			Log.w("DbHelper", "Check if database is opened");
+			Utilities.log("DbHelper", "Check if database is opened");
 			e.printStackTrace();
 		}
 		return null;
