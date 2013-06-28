@@ -9,7 +9,7 @@ import android.content.SharedPreferences;
 public class ApiHelper {
 
     private SharedPreferences settings;
-    private ApiCallback callback;
+    private ApiCallback callback = null;
     private static final String
             NOT_AUTHENTICATED = "401: User Not Authenticated",
             NOT_FOUND = "404: Page Not Found";
@@ -18,8 +18,18 @@ public class ApiHelper {
      * Constructor
      * @param context Context of the Application, Activity or Service in which the helper is constructed.
      */
+    public ApiHelper(Context context) {
+        this.settings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+    }
+
+    /**
+     * Constructor
+     * @param context Context of the Application, Activity or Service in which the helper is constructed.
+     * @param callback Callback function to use in onPostExecute of ApiConnectorTask
+     */
     public ApiHelper(Context context, ApiCallback callback) {
         this.settings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+        this.callback = callback;
     }
 
     /**
