@@ -11,14 +11,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class SlidingMenuListAdapter extends BaseAdapter {
+public class DrawerListAdapter extends BaseAdapter {
 	
 	private enum ViewType { HEADER, ITEM };
 	private class ViewHolder { TextView text1; }
 	private ArrayList<Map<String, Object>> data;
 	private LayoutInflater inflater;
 
-	public SlidingMenuListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
+	public DrawerListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
 		this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.data = dataObject;
 	}
