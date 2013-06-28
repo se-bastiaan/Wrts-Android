@@ -29,8 +29,8 @@ public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
 	@Override
 	protected Boolean doInBackground(Void... params) {
 		try {
-			ApiConnector api = new ApiConnector(this.authString);
-			String syncXml = api.getDataFromServer("/lists/all"+sinceString);
+			ApiConnector connector = new ApiConnector("/lists/all"+sinceString, this.authString);
+			String syncXml = connector.execute();
 			List<WordList> data = XmlReader.readSyncXml(syncXml);
 			db.openDatabase();
 			ObjectContainer cont = db.openDbSession();
@@ -42,7 +42,7 @@ public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
 			db.closeDatabase();
 		} catch (Exception e) {
 			e.printStackTrace();
-			// TODO
+			// TODO: Proper exception handling
 		}
 		return true;
 	}

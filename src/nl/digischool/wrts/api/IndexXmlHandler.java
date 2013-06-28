@@ -2,6 +2,7 @@ package nl.digischool.wrts.api;
 
 import java.util.ArrayList;
 
+import nl.digischool.wrts.classes.Utilities;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -9,17 +10,18 @@ import org.xml.sax.helpers.DefaultHandler;
 public class IndexXmlHandler extends DefaultHandler {
 	
 	private ArrayList<String> data = new ArrayList<String>();
+    private String LOG_TAG = getClass().getSimpleName();
     
     public ArrayList<String> getData() {
     	return data;
     }
     
     public void startDocument () {
-        //Log.d("Parser", "Start");
+        Utilities.log(LOG_TAG, "Start parser");
     }
     
     public void endDocument () {
-        //Log.d("Parser", "Einde");     
+        Utilities.log(LOG_TAG, "End parser");
     }
     
     @Override

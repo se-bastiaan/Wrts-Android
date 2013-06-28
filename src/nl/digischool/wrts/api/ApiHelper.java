@@ -175,15 +175,21 @@ public class ApiHelper {
      */
     private String getString(String method) {
         ApiConnectorTask connection = new ApiConnectorTask(method, this.getAuthString());
-        try {
-            String result = connection.execute().get();
-            if(!result.contains("error code=\"401\"")) {
-                return result;
-            } else {
-                return ApiHelper.NOT_AUTHENTICATED;
+        if(this.callback != null) {
+            connection.setCallback(this.callback);
+            connection.execute();
+            return "Returned to callback";
+        } else {
+            try {
+                String result = connection.execute().get();
+                if(!result.contains("error code=\"401\"")) {
+                    return result;
+                } else {
+                    return ApiHelper.NOT_AUTHENTICATED;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -196,16 +202,21 @@ public class ApiHelper {
      */
     private String postString(String method, String output) {
         ApiConnectorTask connection = new ApiConnectorTask(method, this.getAuthString(), output);
-        if(this.callback != null) connection.setCallback(this.callback);
-        try {
-            String result = connection.execute().get();
-            if(!result.contains("error code=\"401\"")) {
-                return result;
-            } else {
-                return ApiHelper.NOT_AUTHENTICATED;
+        if(this.callback != null) {
+            connection.setCallback(this.callback);
+            connection.execute();
+            return "Returned to callback";
+        } else {
+            try {
+                String result = connection.execute().get();
+                if(!result.contains("error code=\"401\"")) {
+                    return result;
+                } else {
+                    return ApiHelper.NOT_AUTHENTICATED;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }

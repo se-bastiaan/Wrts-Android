@@ -24,7 +24,7 @@ public class XmlBuilder {
 	
 	/**
 	 * Create new XmlBuilder with specified WordList
-	 * @param list
+	 * @param list containing all data
 	 */
 	public XmlBuilder(WordList list) {
 		dataList = list;
@@ -32,7 +32,7 @@ public class XmlBuilder {
 	
 	/**
 	 * Specify WordList title
-	 * @param title
+	 * @param title set title of list
 	 */
 	public void setTitle(String title) {
 		dataList.title = title;
@@ -97,7 +97,7 @@ public class XmlBuilder {
 	
 	/**
 	 * Specify WordList words ArrayList containing all Word objects for the list
-	 * @param words
+	 * @param words words to be added to WordList
 	 */
 	public void setWords(ArrayList<Word> words) {
 		dataList.words = words;
@@ -105,7 +105,7 @@ public class XmlBuilder {
 	
 	/**
 	 * Return WordList
-	 * @return
+	 * @return get the list which has been created
 	 */
 	public WordList getList() {
 		return dataList;

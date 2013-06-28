@@ -57,56 +57,14 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	 * @return String
 	 */
 	protected String doInBackground(Void... params) {
-		// Create result variable
-		String result = "";
-		try {
-			// Create connection to server
-		    URL url = new URL(Params.apiUrl + "/" + this.API_METHOD);
-		    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection(); 
-		    urlConnection.setRequestProperty("Authorization", "Basic " + this.API_AUTH);
-		    urlConnection.setRequestProperty("User-Agent", Params.userAgent);
-		    
-		    urlConnection.setUseCaches(false);
-			try {
-			    // Set request as POST to post the parameters if they're set
-			    if(this.API_DO_OUTPUT) {
-			    	Utilities.log(this.LOG_TAG, "Do API Output");
-			    	urlConnection.setRequestMethod("POST");
-			    	
- 	 			    urlConnection.setRequestProperty("Content-Type","application/xml");
-	 				urlConnection.setDoOutput(true);
-		 			urlConnection.setChunkedStreamingMode(0);
-		
-		 			// Post data to server
-		 			DataOutputStream writeStream = new DataOutputStream (urlConnection.getOutputStream());
-		 			writeStream.writeBytes(API_OUTPUT);
-		 			writeStream.flush();
-		 			writeStream.close();
-			    }
-			    	
-	 			// Read result and return xml string
- 				InputStreamReader inputStream = new InputStreamReader(urlConnection.getInputStream(), "UTF-8");
- 				StringBuilder builder = new StringBuilder();
- 				BufferedReader reader = new BufferedReader(inputStream);
- 				String line;
- 				while ((line = reader.readLine()) != null) {
- 					builder.append(line);
- 				} 				
- 				result = builder.toString();
- 				//Utilities.log(this.LOG_TAG, result);
- 			} catch (Exception e) {
- 				e.printStackTrace();
- 			} finally {
- 				urlConnection.disconnect();
- 			}
-			return result;
-		} catch (SSLException e) {
-			e.printStackTrace();				
-			return null;
-    	} catch (Exception e) {
-    		e.printStackTrace();
-    		return null;
-    	}
+        ApiConnector connector = null;
+        if(this.API_DO_OUTPUT) {
+            connector = new ApiConnector(this.API_METHOD, this.API_AUTH, this.API_OUTPUT);
+        } else {
+            connector = new ApiConnector(this.API_METHOD, this.API_AUTH);
+        }
+
+		return connector.execute();
     }    	
 	
     protected void onPostExecute(String result) {

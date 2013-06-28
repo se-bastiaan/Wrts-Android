@@ -2,6 +2,7 @@ package nl.digischool.wrts.api;
 
 import java.util.ArrayList;
 
+import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.objects.Word;
 import nl.digischool.wrts.objects.WordList;
 
@@ -20,17 +21,26 @@ public class SyncXmlHandler extends DefaultHandler {
 	private ArrayList<WordList> listData;
 	private WordList list;
 	private Word word;
-	
+    private String LOG_TAG = getClass().getSimpleName();
+
+    /**
+     * Give data to requestor
+     * @return ArrayList containing all listdata
+     */
 	public ArrayList<WordList> getData() {
 		return listData;
 	}
-    
+
+    /**
+     * Create ArrayList on document start
+     */
     public void startDocument () {
     	listData = new ArrayList<WordList>();
+        Utilities.log(LOG_TAG, "Start parser");
     }
     
     public void endDocument () {
-       
+        Utilities.log(LOG_TAG, "End parser");
     }
     
     @Override

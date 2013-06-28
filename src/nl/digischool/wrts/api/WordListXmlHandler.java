@@ -1,5 +1,6 @@
 package nl.digischool.wrts.api;
 
+import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.objects.Word;
 import nl.digischool.wrts.objects.WordList;
 
@@ -13,19 +14,20 @@ public class WordListXmlHandler extends DefaultHandler {
 	private String elementValue = null;
 	private WordList list = new WordList();
 	private Word word = new Word();
-    
+    private String LOG_TAG = getClass().getSimpleName();
+
     public WordList getList() {
     	return list;
     }
-    
+
     public void startDocument () {
-        //Log.d("Parser", "Start");
+        Utilities.log(LOG_TAG, "Start parser");
     }
-    
+
     public void endDocument () {
-        //Log.d("Parser", "Einde");     
+        Utilities.log(LOG_TAG, "End parser");
     }
-    
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
     	elementSelected = true;
