@@ -17,12 +17,12 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	private String API_METHOD, API_OUTPUT, API_AUTH;
 	private String LOG_TAG = getClass().getSimpleName();
 	private Boolean API_DO_OUTPUT;
+    private ApiCallback CALLBACK = null;
 	
 	/**
 	 * ApiConnectorTask without server post
-	 * @param context
 	 * @param method
-	 * @param method
+	 * @param auth
 	 */
 	public ApiConnectorTask(String method, String auth) {
 		this.API_METHOD = method;
@@ -32,7 +32,6 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	
 	/**
 	 * ApiConnectorTask with post to server
-	 * @param context
 	 * @param method
 	 * @param auth
 	 * @param output
@@ -43,6 +42,14 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 		this.API_AUTH = auth;
 		this.API_DO_OUTPUT = true;
 	}
+
+    /**
+     * set callback to perform in onPostExecute
+     * @param callback
+     */
+    public void setCallback(ApiCallback callback) {
+        this.CALLBACK = callback;
+    }
 	
 	/**
 	 * doInBackground connecting to the server en performing the request (GET or POST)
@@ -104,6 +111,7 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+        if(this.CALLBACK != null) CALLBACK.apiResponseCallback(result);
     }
     
 }

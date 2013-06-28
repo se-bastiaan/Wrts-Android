@@ -22,9 +22,9 @@ import com.slidingmenu.lib.app.SlidingActivity;
 
 public class OverviewActivity extends SlidingActivity {
 	
-	private SlidingMenu slidingMenu;
 	private ApiHelper api;
 	private DbHelper db;
+    private SlidingMenu slidingMenu;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

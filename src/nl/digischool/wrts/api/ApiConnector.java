@@ -18,9 +18,7 @@ public class ApiConnector {
 	
 	/**
 	 * ApiConnector without server post
-	 * @param context
-	 * @param method
-	 * @param method
+	 * @param auth
 	 */
 	public ApiConnector(String auth) {
 		this.API_AUTH = auth;
@@ -29,8 +27,6 @@ public class ApiConnector {
 	
 	/**
 	 * ApiConnectorTask with post to server
-	 * @param context
-	 * @param method
 	 * @param auth
 	 * @param output
 	 */
