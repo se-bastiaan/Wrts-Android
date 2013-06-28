@@ -58,9 +58,9 @@ public class SlidingMenuListAdapter extends BaseAdapter {
 		ViewHolder holder;
 		if(convertView == null) {
 			if(itemViewType == ViewType.HEADER.ordinal()) {
-				convertView = inflater.inflate(R.layout.activity_overview_slidingmenu_list_header, null);
+				convertView = inflater.inflate(R.layout.activity_overview_drawer_list_header, null);
 			} else if(itemViewType == ViewType.ITEM.ordinal()) {
-				convertView = inflater.inflate(R.layout.activity_overview_slidingmenu_list_item, null);
+				convertView = inflater.inflate(R.layout.activity_overview_drawer_list_item, null);
 			}
 			holder = new ViewHolder();
 			holder.text1 = (TextView) convertView.findViewById(R.id.text1);

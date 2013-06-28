@@ -24,40 +24,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable-hdpi\style_ab_indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable-ldpi\style_ab_indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable-mdpi\style_ab_indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable-xhdpi\style_ab_indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_ab_indicator_bitmap.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_ab_pressed_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_ab_selectable_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_pressed_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_selectable_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\drawable\wrts_slidingmenu_shadow.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\layout\activity_overview_slidingmenu.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\layout\activity_overview_slidingmenu_list_header.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\layout\activity_overview_slidingmenu_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-land\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-large-land\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-large\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-sw600dp\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-sw720dp-land\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-v11\wrts_slidingmenu_styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-xlarge-land\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-xlarge\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\values\wrts_slidingmenu_styles.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/BaseActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbHelper.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WrtsDigischool.iml" afterPath="$PROJECT_DIR$/WrtsDigischool.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wrts_drawer_pressed_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wrts_drawer_selectable_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/SlidingMenuListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/SlidingMenuListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WrtsDigischool.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372439237883" ignored="false" />
+    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372442080005" ignored="false" />
     <file path="$PROJECT_DIR$/../SlidingMenu/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362192565" ignored="false" />
     <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362254769" ignored="false" />
     <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372439319603" ignored="false" />
@@ -135,13 +113,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OverviewActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OverviewActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="750" selection-end="750" vertical-scroll-proportion="0.4441417">
+            <state line="28" column="24" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SlidingMenuListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/SlidingMenuListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="71" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_overview_drawer_list_header.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="53" selection-start="870" selection-end="890" vertical-scroll-proportion="-7.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_overview_drawer_list_item.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="59" selection-start="262" selection-end="287" vertical-scroll-proportion="0.31954888">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -206,7 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiCallback.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Params.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
@@ -220,7 +239,9 @@
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbHelper.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_overview_slidingmenu_list_header.xml" />
         <option value="$PROJECT_DIR$/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" />
       </list>
     </option>
   </component>
@@ -673,7 +694,11 @@
       <created>1372439246900</created>
       <updated>1372439246900</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Deleted all SlidingMenu references">
+      <created>1372442084319</created>
+      <updated>1372442084319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -698,28 +723,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.67064846" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -766,7 +791,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restored ApiConnector class and improved it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted all SlidingMenu references" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -783,6 +808,7 @@
     <MESSAGE value="Completed ApiHelper docs and added callback" />
     <MESSAGE value="Added extra callback constructor in ApiHelper and deleted ApiConnector.class" />
     <MESSAGE value="Restored ApiConnector class and improved it." />
+    <MESSAGE value="Deleted all SlidingMenu references" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -792,15 +818,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="42" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.20284697">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/IndexXmlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="42" selection-start="631" selection-end="631" vertical-scroll-proportion="0.54448396">
@@ -882,19 +899,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="55" selection-start="198" selection-end="198" vertical-scroll-proportion="0.1852861">
+        <state line="28" column="24" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/SlidingMenuListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="71" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/OverviewActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="750" selection-end="750" vertical-scroll-proportion="0.4441417">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="21" column="53" selection-start="870" selection-end="890" vertical-scroll-proportion="-7.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="59" selection-start="262" selection-end="287" vertical-scroll-proportion="0.31954888">
+          <folding />
         </state>
       </provider>
     </entry>

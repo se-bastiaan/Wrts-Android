@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wrts_slidingmenu_bg">
+	
+    <RelativeLayout
+        android:id="@+id/abs__action_bar_slidingmenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abs__action_bar_default_height"
+        android:background="@color/wrts_slidingmenu_ab_bg"
+    >
+    	
+        <ImageButton 
+		    android:id="@+id/abs__settings_action"
+		    android:layout_width="@dimen/abs__action_button_min_width"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentRight="true"
+		    android:background="@drawable/wrts_slidingmenu_ab_selectable_bg"
+		    android:src="@drawable/ic_action_settings"
+		    android:gravity="center"
+			android:contentDescription="@string/action_settings"
+			android:onClick="settingsAction"
+		/>
+        
+		<TextView
+		    android:id="@+id/abs__action_bar_title"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_toLeftOf="@id/abs__settings_action"
+		    android:layout_centerVertical="true"
+		    android:paddingLeft="16dp"
+		    android:singleLine="true"
+		    android:ellipsize="end"
+		    android:textColor="@color/wrts_slidingmenu_ab_textcolor"
+		    android:textSize="@dimen/wrts_slidingmenu_ab_textsize"
+		    android:text="se_bastiaan@outlook.com"
+		/>
+
+    </RelativeLayout>
+	 
+    <ListView
+        android:id="@+id/slidingmenu_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/abs__action_bar_slidingmenu"
+    	android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:fadingEdgeLength="0dp"
+    	android:background="@color/transparent"
+    	android:cacheColorHint="@color/transparent"
+    	android:divider="@null"
+    	android:dividerHeight="0dp">
+        
+    </ListView>
+    
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="9dp"
+	    android:background="@drawable/abs__ab_solid_shadow_holo"
+	    android:layout_below="@id/abs__action_bar_slidingmenu"
+	/>	
+
+</RelativeLayout>
