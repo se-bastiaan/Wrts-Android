@@ -14,10 +14,10 @@ import android.os.AsyncTask;
 
 public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	
-	private String API_METHOD, API_OUTPUT, API_AUTH;
+	private String mApiMethod, mApiOutput, mApiAuth;
 	private String LOG_TAG = getClass().getSimpleName();
-	private Boolean API_DO_OUTPUT;
-    private ApiCallback CALLBACK = null;
+	private Boolean mApiDoOutput;
+    private ApiCallback mCallback = null;
 	
 	/**
 	 * ApiConnectorTask without server post
@@ -25,9 +25,9 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	 * @param auth
 	 */
 	public ApiConnectorTask(String method, String auth) {
-		this.API_METHOD = method;
-		this.API_AUTH = auth;
-		this.API_DO_OUTPUT = false;
+		this.mApiMethod = method;
+		this.mApiAuth = auth;
+		this.mApiDoOutput = false;
 	}
 	
 	/**
@@ -37,18 +37,18 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	 * @param output
 	 */
 	public ApiConnectorTask(String method, String auth, String output) {
-		this.API_METHOD = method;
-		this.API_OUTPUT = output;
-		this.API_AUTH = auth;
-		this.API_DO_OUTPUT = true;
+		this.mApiMethod = method;
+		this.mApiOutput = output;
+		this.mApiAuth = auth;
+		this.mApiDoOutput = true;
 	}
 
     /**
-     * set callback to perform in onPostExecute
-     * @param callback
+     * set mCallback to perform in onPostExecute
+     * @param callback Callback
      */
     public void setCallback(ApiCallback callback) {
-        this.CALLBACK = callback;
+        this.mCallback = callback;
     }
 	
 	/**
@@ -58,10 +58,10 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	 */
 	protected String doInBackground(Void... params) {
         ApiConnector connector = null;
-        if(this.API_DO_OUTPUT) {
-            connector = new ApiConnector(this.API_METHOD, this.API_AUTH, this.API_OUTPUT);
+        if(mApiDoOutput) {
+            connector = new ApiConnector(mApiMethod, mApiAuth, mApiOutput);
         } else {
-            connector = new ApiConnector(this.API_METHOD, this.API_AUTH);
+            connector = new ApiConnector(mApiMethod, mApiAuth);
         }
 
 		return connector.execute();
@@ -69,7 +69,7 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        if(this.CALLBACK != null) CALLBACK.apiResponseCallback(result);
+        if(mCallback != null) mCallback.apiResponseCallback(mApiMethod, result);
     }
     
 }

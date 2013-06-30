@@ -2,17 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/wrts_slidingmenu_bg">
+    android:background="@color/wrts_drawer_bg">
 	 
     <ListView
-        android:id="@+id/slidingmenu_list"
+        android:id="@+id/drawer_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-    	android:paddingLeft="@dimen/activity_horizontal_margin"
-    	android:paddingRight="@dimen/activity_horizontal_margin"
     	android:fadingEdgeLength="0dp"
     	android:background="@color/transparent"
     	android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
     	android:divider="@null"
     	android:dividerHeight="0dp">
         

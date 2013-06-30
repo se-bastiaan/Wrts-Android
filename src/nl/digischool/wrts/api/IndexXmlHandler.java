@@ -9,11 +9,11 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class IndexXmlHandler extends DefaultHandler {
 	
-	private ArrayList<String> data = new ArrayList<String>();
+	private ArrayList<String> mData = new ArrayList<String>();
     private String LOG_TAG = getClass().getSimpleName();
     
     public ArrayList<String> getData() {
-    	return data;
+    	return mData;
     }
     
     public void startDocument () {
@@ -26,7 +26,7 @@ public class IndexXmlHandler extends DefaultHandler {
     
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if(localName.equals("lijst")) data.add(attributes.getValue("id"));
+        if(localName.equals("lijst")) mData.add(attributes.getValue("id"));
     }
 	
 }

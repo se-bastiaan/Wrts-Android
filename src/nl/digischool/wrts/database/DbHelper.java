@@ -10,19 +10,19 @@ import nl.digischool.wrts.classes.Utilities;
 
 public class DbHelper {
 
-	private ObjectContainer database;
+	private ObjectContainer mDatabase;
 	private static final int DATABASE_MODE = 0;
-	private Context context; 
+	private Context mContext;
 
 	public DbHelper(Context context) {
-		this.context = context;
-		this.database = null;
+		mContext = context;
+		mDatabase = null;
 	}
 
 	public void openDatabase() {
 		try {
-			if (this.database == null) {
-				this.database = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), getDbPath());
+			if (mDatabase == null) {
+			    mDatabase = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), getDbPath());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -30,18 +30,18 @@ public class DbHelper {
 	}
 	
 	public void closeDatabase() {
-		if (this.database != null) {
-			this.database.close();
+		if (mDatabase != null) {
+			mDatabase.close();
 		}
 	}
 
 	private String getDbPath() {
-		return context.getDir("data", DATABASE_MODE) + "/" + Params.databaseName;
+		return mContext.getDir("data", DATABASE_MODE) + "/" + Params.databaseName;
 	}
 
 	public ObjectContainer openDbSession() {
 		try {
-			return database.ext().openSession();
+			return mDatabase.ext().openSession();
 		} catch (Exception e) {
 			Utilities.log("DbHelper", "Check if database is opened");
 			e.printStackTrace();

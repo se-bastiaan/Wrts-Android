@@ -7,5 +7,5 @@ package nl.digischool.wrts.api;
  * Time: 17:36
  */
 public interface ApiCallback {
-    public void apiResponseCallback(String result);
+    public void apiResponseCallback(String method, String result);
 }

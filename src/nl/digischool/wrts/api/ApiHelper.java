@@ -8,8 +8,8 @@ import android.content.SharedPreferences;
 
 public class ApiHelper {
 
-    private SharedPreferences settings;
-    private ApiCallback callback = null;
+    private SharedPreferences mSettings;
+    private ApiCallback mCallback = null;
     private static final String
             NOT_AUTHENTICATED = "401: User Not Authenticated",
             NOT_FOUND = "404: Page Not Found";
@@ -19,7 +19,7 @@ public class ApiHelper {
      * @param context Context of the Application, Activity or Service in which the helper is constructed.
      */
     public ApiHelper(Context context) {
-        this.settings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+        mSettings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
     }
 
     /**
@@ -28,16 +28,16 @@ public class ApiHelper {
      * @param callback Callback function to use in onPostExecute of ApiConnectorTask
      */
     public ApiHelper(Context context, ApiCallback callback) {
-        this.settings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
-        this.callback = callback;
+        mSettings = context.getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+        mCallback = callback;
     }
 
     /**
-     * Set callback which has to be used
+     * Set mCallback which has to be used
      * @param callback
      */
     public void setCallback(ApiCallback callback) {
-        this.callback = callback;
+        mCallback = callback;
     }
 
     /**
@@ -175,10 +175,10 @@ public class ApiHelper {
      */
     private String getString(String method) {
         ApiConnectorTask connection = new ApiConnectorTask(method, this.getAuthString());
-        if(this.callback != null) {
-            connection.setCallback(this.callback);
+        if(mCallback != null) {
+            connection.setCallback(mCallback);
             connection.execute();
-            return "Returned to callback";
+            return "Returned to mCallback";
         } else {
             try {
                 String result = connection.execute().get();
@@ -202,10 +202,10 @@ public class ApiHelper {
      */
     private String postString(String method, String output) {
         ApiConnectorTask connection = new ApiConnectorTask(method, this.getAuthString(), output);
-        if(this.callback != null) {
-            connection.setCallback(this.callback);
+        if(mCallback != null) {
+            connection.setCallback(mCallback);
             connection.execute();
-            return "Returned to callback";
+            return "Returned to mCallback";
         } else {
             try {
                 String result = connection.execute().get();
@@ -227,7 +227,7 @@ public class ApiHelper {
      * @param password Password of the user
      */
     public void saveUserData(String username, String password) {
-        SharedPreferences.Editor editor = this.settings.edit();
+        SharedPreferences.Editor editor = mSettings.edit();
         editor.putString("username", username);
         editor.putString("password", password);
         editor.commit();
@@ -238,8 +238,8 @@ public class ApiHelper {
      * @return String
      */
     public String getAuthString() {
-        String username = this.settings.getString("username", "");
-        String password = this.settings.getString("password", "");
+        String username = mSettings.getString("username", "");
+        String password = mSettings.getString("password", "");
         if(username.equals("") || password.equals("")) return ApiHelper.NOT_AUTHENTICATED;
         String userPassString = username+":"+password;
         log(userPassString);

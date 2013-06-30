@@ -11,17 +11,17 @@ import nl.digischool.wrts.database.DbHelper;
 
 public class BaseActivity extends SherlockFragmentActivity {
 
-    protected SharedPreferences settings;
-    protected ApiHelper api;
-    protected DbHelper db;
+    protected SharedPreferences mSettings;
+    protected ApiHelper mApi;
+    protected DbHelper mDb;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-        settings = getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
-        api = new ApiHelper(this);
-        db = new DbHelper(this);
+        mSettings = getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+        mApi = new ApiHelper(this);
+        mDb = new DbHelper(this);
 	}
 	
 }

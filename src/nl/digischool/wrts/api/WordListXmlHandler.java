@@ -10,14 +10,14 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class WordListXmlHandler extends DefaultHandler {
 	
-	private Boolean elementSelected = false, inList = false, inWords = false, inWord = false;
-	private String elementValue = null;
-	private WordList list = new WordList();
-	private Word word = new Word();
+	private Boolean mElementSelected = false, mInList = false, mInWords = false, inWord = false;
+	private String mElementValue = null;
+	private WordList mList = new WordList();
+	private Word mWord = new Word();
     private String LOG_TAG = getClass().getSimpleName();
 
     public WordList getList() {
-    	return list;
+    	return mList;
     }
 
     public void startDocument () {
@@ -30,92 +30,92 @@ public class WordListXmlHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-    	elementSelected = true;
-    	elementValue = null;
-    	if(localName.equals("list")) {
-    		inList = true;
+    	mElementSelected = true;
+    	mElementValue = null;
+    	if(localName.equals("mList")) {
+    		mInList = true;
     	}
-    	if(inList) {
+    	if(mInList) {
     		if(localName.equals("words")) {
-    			inWords = false;
+    			mInWords = false;
     		}
     		
-    		if(inWords && localName.equals("word")) {
+    		if(mInWords && localName.equals("word")) {
     			inWord = true;
-    			word = new Word();
+                mWord = new Word();
     		}
     	}
     }
     
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-    	elementSelected = false;    	
-    	if(inList) {
-    		if(localName.equals("list")) {
-        		inList = false;
+    	mElementSelected = false;    	
+    	if(mInList) {
+    		if(localName.equals("mList")) {
+        		mInList = false;
         	} else if(localName.equals("id")) {
-    			list.id = elementValue;
+    			mList.id = mElementValue;
     		} else if(localName.equals("title")) {
-    			list.title = elementValue;
+    			mList.title = mElementValue;
     		} else if(localName.equals("lang-a")) {
-    			list.lang_a = elementValue;
+    			mList.lang_a = mElementValue;
     		} else if(localName.equals("lang-b")) {
-    			list.lang_b = elementValue;
+    			mList.lang_b = mElementValue;
     		} else if(localName.equals("lang-c")) {
-    			list.lang_c = elementValue;
+    			mList.lang_c = mElementValue;
     		} else if(localName.equals("lang-d")) {
-    			list.lang_d = elementValue;
+    			mList.lang_d = mElementValue;
     		} else if(localName.equals("lang-e")) {
-    			list.lang_e = elementValue;
+    			mList.lang_e = mElementValue;
     		} else if(localName.equals("lang-f")) {
-    			list.lang_f = elementValue;
+    			mList.lang_f = mElementValue;
     		} else if(localName.equals("lang-g")) {
-    			list.lang_g = elementValue;
+    			mList.lang_g = mElementValue;
     		} else if(localName.equals("lang-h")) {
-    			list.lang_h = elementValue;
+    			mList.lang_h = mElementValue;
     		} else if(localName.equals("lang-i")) {
-    			list.lang_i = elementValue;
+    			mList.lang_i = mElementValue;
     		} else if(localName.equals("lang-j")) {
-    			list.lang_j = elementValue;
+    			mList.lang_j = mElementValue;
     		} else if(localName.equals("created-on")) {
-    			list.created_on = elementValue;
+    			mList.created_on = mElementValue;
     		} else if(localName.equals("updated-on")) {
-    			list.updated_on = elementValue;
+    			mList.updated_on = mElementValue;
     		} else if(localName.equals("share")) {
-    			list.shared = (elementValue.equals("true"));
+    			mList.shared = (mElementValue.equals("true"));
     		} else if(localName.equals("result-count")) {
-    			list.result_count = Integer.parseInt(elementValue);
+    			mList.result_count = Integer.parseInt(mElementValue);
     		}
     		
-    		if(inWords) {
+    		if(mInWords) {
     			if(localName.equals("words")) {
-        			inWords = false;
+        			mInWords = false;
         		} else if(localName.equals("word")) {
     				inWord = false;
-    				list.words.add(word);
+    				mList.words.add(mWord);
     			}
     			
     			if(inWord) {
     				if(localName.equals("word-a")) {
-    					word.word_a = elementValue;
+                        mWord.word_a = mElementValue;
     				} else if(localName.equals("word-b")) {
-    					word.word_b = elementValue;
+                        mWord.word_b = mElementValue;
     				} else if(localName.equals("word-c")) {
-    					word.word_c = elementValue;
+                        mWord.word_c = mElementValue;
     				} else if(localName.equals("word-d")) {
-    					word.word_d = elementValue;
+                        mWord.word_d = mElementValue;
     				} else if(localName.equals("word-e")) {
-    					word.word_e = elementValue;
+                        mWord.word_e = mElementValue;
     				} else if(localName.equals("word-f")) {
-    					word.word_f = elementValue;
+                        mWord.word_f = mElementValue;
     				} else if(localName.equals("word-g")) {
-    					word.word_g = elementValue;
+                        mWord.word_g = mElementValue;
     				} else if(localName.equals("word-h")) {
-    					word.word_h = elementValue;
+                        mWord.word_h = mElementValue;
     				} else if(localName.equals("word-i")) {
-    					word.word_i = elementValue;
+                        mWord.word_i = mElementValue;
     				} else if(localName.equals("word-j")) {
-    					word.word_j = elementValue;
+                        mWord.word_j = mElementValue;
     				}
     			}
     		}
@@ -124,9 +124,9 @@ public class WordListXmlHandler extends DefaultHandler {
     
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        if (elementSelected) {
-            elementValue = new String(ch, start, length);
-            elementSelected = false;
+        if (mElementSelected) {
+            mElementValue = new String(ch, start, length);
+            mElementSelected = false;
         }
     }
 }

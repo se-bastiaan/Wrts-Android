@@ -2,6 +2,7 @@ package nl.digischool.wrts.api;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -9,12 +10,13 @@ import java.net.URL;
 import javax.net.ssl.SSLException;
 
 import nl.digischool.wrts.classes.Params;
+import nl.digischool.wrts.classes.Utilities;
 
 public class ApiConnector {
 
-    private String API_METHOD, API_OUTPUT, API_AUTH;
-    private String LOG_TAG = getClass().getSimpleName();
-    private Boolean API_DO_OUTPUT;
+    private String mApiMethod, mApiOutput, mApiAuth;
+    private final String LOG_TAG = getClass().getSimpleName();
+    private Boolean mApiDoOutput;
 
     /**
      * ApiConnector without server post
@@ -22,8 +24,9 @@ public class ApiConnector {
      * @param auth Authentication Base64 string
      */
     public ApiConnector(String method, String auth) {
-        this.API_AUTH = auth;
-        this.API_DO_OUTPUT = false;
+        this.mApiMethod = method;
+        this.mApiAuth = auth;
+        this.mApiDoOutput = false;
     }
 
     /**
@@ -33,29 +36,30 @@ public class ApiConnector {
      * @param output Postdata
      */
     public ApiConnector(String method, String auth, String output) {
-        this.API_OUTPUT = output;
-        this.API_AUTH = auth;
-        this.API_DO_OUTPUT = true;
+        this.mApiMethod = method;
+        this.mApiOutput = output;
+        this.mApiAuth = auth;
+        this.mApiDoOutput = true;
     }
 
     /**
      * Execute the HTTP request
-     * @return String containing response data
+     * @return String containg
      */
     public String execute() {
         // Create result variable
         String result = "";
         try {
             // Create connection to server
-            URL url = new URL(Params.apiUrl + "/" + this.API_METHOD);
+            URL url = new URL(Params.apiUrl + "/" + this.mApiMethod);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestProperty("Authorization", "Basic " + this.API_AUTH);
-            urlConnection.setRequestProperty("User-Agent", Params.userAgent);
+            urlConnection.setRequestProperty("Authorization", "Basic " + this.mApiAuth);
+            //urlConnection.setRequestProperty("User-Agent", Params.userAgent);
 
             urlConnection.setUseCaches(false);
             try {
                 // Set request as POST to post the parameters if they're set
-                if(this.API_DO_OUTPUT) {
+                if(this.mApiDoOutput) {
                     urlConnection.setRequestMethod("POST");
 
                     urlConnection.setRequestProperty("Content-Type","application/xml");
@@ -64,7 +68,7 @@ public class ApiConnector {
 
                     // Post data to server
                     DataOutputStream writeStream = new DataOutputStream (urlConnection.getOutputStream());
-                    writeStream.writeBytes(API_OUTPUT);
+                    writeStream.writeBytes(mApiOutput);
                     writeStream.flush();
                     writeStream.close();
                 }
@@ -78,7 +82,17 @@ public class ApiConnector {
                     builder.append(line);
                 }
                 result = builder.toString();
-                //Utilities.log(this.LOG_TAG, result);
+                Utilities.log(this.LOG_TAG, result);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                InputStreamReader inputStream = new InputStreamReader(urlConnection.getErrorStream(), "UTF-8");
+                StringBuilder builder = new StringBuilder();
+                BufferedReader reader = new BufferedReader(inputStream);
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    builder.append(line);
+                }
+                Utilities.log(LOG_TAG, "Errorstream: " + builder.toString());
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

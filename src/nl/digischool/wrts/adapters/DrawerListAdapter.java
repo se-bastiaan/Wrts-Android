@@ -15,12 +15,12 @@ public class DrawerListAdapter extends BaseAdapter {
 	
 	private enum ViewType { HEADER, ITEM };
 	private class ViewHolder { TextView text1; }
-	private ArrayList<Map<String, Object>> data;
-	private LayoutInflater inflater;
+	private ArrayList<Map<String, Object>> mData;
+	private LayoutInflater mInflater;
 
 	public DrawerListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
-		this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		this.data = dataObject;
+        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		mData = dataObject;
 	}
 	
 	@Override
@@ -30,7 +30,7 @@ public class DrawerListAdapter extends BaseAdapter {
 	
 	@Override
     public int getItemViewType(int position) {
-		if(data.get(position).containsKey("header")) {
+		if(mData.get(position).containsKey("header")) {
 			return ViewType.HEADER.ordinal();
 		} else {
 			return ViewType.ITEM.ordinal();
@@ -39,12 +39,12 @@ public class DrawerListAdapter extends BaseAdapter {
 	
 	@Override
 	public int getCount() {
-		return data.size();
+		return mData.size();
 	}
 
 	@Override
 	public Map<String, Object> getItem(int position) {
-		return data.get(position);
+		return mData.get(position);
 	}
 
 	@Override
@@ -58,9 +58,10 @@ public class DrawerListAdapter extends BaseAdapter {
 		ViewHolder holder;
 		if(convertView == null) {
 			if(itemViewType == ViewType.HEADER.ordinal()) {
-				convertView = inflater.inflate(R.layout.activity_overview_drawer_list_header, null);
+				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_header, null);
+
 			} else if(itemViewType == ViewType.ITEM.ordinal()) {
-				convertView = inflater.inflate(R.layout.activity_overview_drawer_list_item, null);
+				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_item, null);
 			}
 			holder = new ViewHolder();
 			holder.text1 = (TextView) convertView.findViewById(R.id.text1);

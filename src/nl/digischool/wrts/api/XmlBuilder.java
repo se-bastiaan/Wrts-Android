@@ -13,13 +13,13 @@ import android.util.Xml;
 
 public class XmlBuilder {
 	
-	private WordList dataList;
+	private WordList mDataList;
 	
 	/**
 	 * Create new XmlBuilder without specified WordLst
 	 */
 	public XmlBuilder() {
-		dataList = new WordList();
+		mDataList = new WordList();
 	}
 	
 	/**
@@ -27,7 +27,7 @@ public class XmlBuilder {
 	 * @param list containing all data
 	 */
 	public XmlBuilder(WordList list) {
-		dataList = list;
+		mDataList = list;
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class XmlBuilder {
 	 * @param title set title of list
 	 */
 	public void setTitle(String title) {
-		dataList.title = title;
+		mDataList.title = title;
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class XmlBuilder {
 	 * @param id
 	 */
 	public void setId(String id) {
-		dataList.id = id;
+		mDataList.id = id;
 	}
 	
 	/**
@@ -63,34 +63,34 @@ public class XmlBuilder {
 	public void setLang(Integer lang_index, String lang) {
 		switch(lang_index) {
 			case 0:
-				dataList.lang_a = lang;
+				mDataList.lang_a = lang;
 				break;
 			case 1:
-				dataList.lang_b = lang;
+				mDataList.lang_b = lang;
 				break;
 			case 2:
-				dataList.lang_c = lang;
+				mDataList.lang_c = lang;
 				break;
 			case 3:
-				dataList.lang_d = lang;
+				mDataList.lang_d = lang;
 				break;
 			case 4:
-				dataList.lang_e = lang;
+				mDataList.lang_e = lang;
 				break;
 			case 5:
-				dataList.lang_f = lang;
+				mDataList.lang_f = lang;
 				break;
 			case 6:
-				dataList.lang_g = lang;
+				mDataList.lang_g = lang;
 				break;
 			case 7:
-				dataList.lang_h = lang;
+				mDataList.lang_h = lang;
 				break;
 			case 8:
-				dataList.lang_i = lang;
+				mDataList.lang_i = lang;
 				break;
 			case 9:
-				dataList.lang_j = lang;
+				mDataList.lang_j = lang;
 				break;
 		} 
 	}
@@ -100,7 +100,7 @@ public class XmlBuilder {
 	 * @param words words to be added to WordList
 	 */
 	public void setWords(ArrayList<Word> words) {
-		dataList.words = words;
+		mDataList.words = words;
 	}
 	
 	/**
@@ -108,7 +108,7 @@ public class XmlBuilder {
 	 * @return get the list which has been created
 	 */
 	public WordList getList() {
-		return dataList;
+		return mDataList;
 	}
 
 	/**
@@ -129,17 +129,17 @@ public class XmlBuilder {
 				        serializer.setOutput(writer);
 				        serializer.startTag("", "list");
 				        
-				        	if(dataList.id != null) {
+				        	if(mDataList.id != null) {
 					        	serializer.startTag("", "id");
-					        	serializer.text(dataList.id);
+					        	serializer.text(mDataList.id);
 					        	serializer.endTag("", "id");
 				        	}
 				        	
 				        	serializer.startTag("", "title");
-				        	serializer.text(dataList.title);
+				        	serializer.text(mDataList.title);
 				        	serializer.endTag("", "title");
 				        
-				        	String[] languages = new String[]{ dataList.lang_a, dataList.lang_b, dataList.lang_c, dataList.lang_d, dataList.lang_e, dataList.lang_f, dataList.lang_g, dataList.lang_h, dataList.lang_i, dataList.lang_j };
+				        	String[] languages = new String[]{ mDataList.lang_a, mDataList.lang_b, mDataList.lang_c, mDataList.lang_d, mDataList.lang_e, mDataList.lang_f, mDataList.lang_g, mDataList.lang_h, mDataList.lang_i, mDataList.lang_j };
 				        	for(int i = 0; i < languages.length; i++) {
 				        		String str = languages[i];
 				        		char current_lang = "abcdefghij".charAt(i);
@@ -150,8 +150,8 @@ public class XmlBuilder {
 				        		}
 				        	}
 				        	
-				        	if(dataList.words != null) {
-					        	ArrayList<Word> wordsData = dataList.words;
+				        	if(mDataList.words != null) {
+					        	ArrayList<Word> wordsData = mDataList.words;
 					        	for(int i = 0; i < wordsData.size(); i++) {
 					        		Word word = wordsData.get(i);
 					        		String[] words = new String[]{ word.word_a, word.word_b, word.word_c, word.word_d, word.word_e, word.word_f, word.word_g, word.word_h, word.word_i, word.word_j };

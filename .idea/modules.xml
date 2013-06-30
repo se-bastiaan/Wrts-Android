@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlockNavigationDrawer/ActionBarSherlockNavigationDrawer.iml" filepath="$PROJECT_DIR$/../ActionBarSherlockNavigationDrawer/ActionBarSherlockNavigationDrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/WrtsDigischool.iml" filepath="$PROJECT_DIR$/WrtsDigischool.iml" />
     </modules>
   </component>

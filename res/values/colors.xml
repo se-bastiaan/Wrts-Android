@@ -23,12 +23,9 @@
     <color name="transparent">#00000000</color>
     
     <!-- Slidingmenu colors -->
-    <color name="wrts_slidingmenu_bg">#f2f7fa</color>
-    <color name="wrts_slidingmenu_pressed">#e2edf3</color>
-    <color name="wrts_slidingmenu_textcolor">#2d2f31</color>
-    <color name="wrts_slidingmenu_header_color">#213039</color>
-    <color name="wrts_slidingmenu_ab_bg">#e2edf3</color>
-    <color name="wrts_slidingmenu_ab_pressed">#dbe5eb</color>
-    <color name="wrts_slidingmenu_ab_textcolor">#2d2f31</color>
-    <color name="wrts_slidingmenu_divider">#b3bbc0</color>
+    <color name="wrts_drawer_bg">#f2f7fa</color>
+    <color name="wrts_drawer_pressed">#e2edf3</color>
+    <color name="wrts_drawer_textcolor">#2d2f31</color>
+    <color name="wrts_drawer_header_color">#213039</color>
+    <color name="wrts_drawer_divider">#b3bbc0</color>
 </resources>
