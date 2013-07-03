@@ -21,8 +21,12 @@
     <color name="pressed_wrts">#CCFBAC1C</color>
     <color name="wrts_ab_action_pressed">#1D2931</color>
     <color name="transparent">#00000000</color>
-    
-    <!-- Slidingmenu colors -->
+    <color name="bg">#F2F2F2</color>
+
+    <!-- List colors -->
+    <color name="wrts_list_pressed">#EAEAEA</color>
+
+    <!-- Drawer colors -->
     <color name="wrts_drawer_bg">#F2F7FA</color>
     <color name="wrts_drawer_pressed">#E2EDF3</color>
     <color name="wrts_drawer_textcolor">#2D2F31</color>

@@ -11,6 +11,7 @@
         <item name="actionModeBackground">@drawable/style_cab_background_top_wrts</item>
         <item name="actionModeSplitBackground">@drawable/style_cab_background_bottom_wrts</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Wrts</item>
+        <item name="android:windowBackground">@color/bg</item>
 
                 <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Wrts.Widget</item>

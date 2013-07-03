@@ -10,7 +10,6 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import nl.digischool.wrts.R;
-import nl.digischool.wrts.adapters.OverviewDrawerListAdapter;
 import nl.digischool.wrts.adapters.OverviewListAdapter;
 import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.database.DbHelper;
@@ -33,12 +32,12 @@ public class OverviewListFragment extends SherlockFragment {
     private ListView mListView;
     private final String LOG_TAG = getClass().getSimpleName();
 
-    public void OverviewListFragment() {
+    public OverviewListFragment() {
 
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_overview_drawer, group, false);
+        View v = inflater.inflate(R.layout.activity_overview_list, group, false);
 
         mListView = (ListView) v.findViewById(R.id.drawer_list);
         mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);

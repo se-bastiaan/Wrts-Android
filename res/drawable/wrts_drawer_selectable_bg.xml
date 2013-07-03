@@ -3,6 +3,6 @@
         android:exitFadeDuration="@android:integer/config_mediumAnimTime" >
     <item android:state_pressed="false" android:state_focused="true" android:drawable="@drawable/style_wrts_slidingmenu_list_focused" />
     <item android:state_pressed="true" android:drawable="@drawable/wrts_drawer_pressed_bg" />
-    <item android:state_selected="true" android:drawable="@android:color/white" />
+    <item android:state_selected="true" android:state_pressed="false" android:state_focused="false" android:drawable="@android:color/white" />
     <item android:drawable="@android:color/transparent" />
 </selector>

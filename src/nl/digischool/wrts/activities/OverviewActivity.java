@@ -18,17 +18,17 @@ import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
 import nl.digischool.wrts.api.SyncListsTask;
+import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.fragments.OverviewDrawerFragment;
 import nl.digischool.wrts.fragments.OverviewListFragment;
 
 public class OverviewActivity extends BaseActivity implements ApiBooleanCallback {
 
     private DrawerLayout mDrawerLayout;
-    private FrameLayout mMenu, mContent;
+    private FrameLayout mMenu;
     private SherlockActionBarDrawerToggle mDrawerToggle;
     private Boolean mIsDrawerLayout = false;
 
-    private FragmentManager mFragmentManager;
     private OverviewDrawerFragment mMenuFragment;
     private OverviewListFragment mContentFragment;
 
@@ -80,15 +80,14 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
         }
 
         mMenu = (FrameLayout) findViewById(R.id.menu_frame);
-        mContent = (FrameLayout) findViewById(R.id.content_frame);
 
-        mFragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         mMenuFragment = new OverviewDrawerFragment();
-        mFragmentManager.beginTransaction().replace(R.id.menu_frame, mMenuFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.menu_frame, mMenuFragment).commit();
 
         mContentFragment = new OverviewListFragment();
-        mFragmentManager.beginTransaction().replace(R.id.content_frame, mContentFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, mContentFragment).commit();
 	}
 
     @Override
@@ -101,10 +100,11 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
-        if(mIsDrawerLayout) {
+        /*if(mIsDrawerLayout) {
+            // TODO: Create ActionItems and use visibility
             boolean drawerOpen = mDrawerLayout.isDrawerOpen(mMenu);
             //menu.findItem(R.id.syncAction).setVisible(!drawerOpen);
-        }
+        }*/
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -129,8 +129,8 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 
     @Override
     public void setTitle(CharSequence title) {
-        mTitle = title;
-        getActionBar().setTitle(mTitle);
+        mTitle = Utilities.uppercaseFirst(title.toString());
+        getSupportActionBar().setTitle(mTitle);
     }
 
     /**
@@ -139,6 +139,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
      * @param language String
      */
     public void setOverviewLanguage(final String language) {
+        setTitle(language);
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected void onPreExecute() {

@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static android.widget.AdapterView.*;
+
 /**
  * Sébastiaanmaakt
  * http://sebastiaanmaakt.nl/
@@ -28,16 +30,15 @@ import java.util.Map;
 public class OverviewDrawerFragment extends SherlockFragment {
 
     protected DbHelper mDb;
-    private OverviewDrawerListAdapter mAdapter;
     private ListView mListView;
-    private final String LOG_TAG = getClass().getSimpleName();
+    //private final String LOG_TAG = getClass().getSimpleName();
 
-    public void OverviewDrawerFragment() {
+    public OverviewDrawerFragment() {
 
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_overview_drawer, group, false);
+        View v = inflater.inflate(R.layout.activity_overview_list, group, false);
 
         mListView = (ListView) v.findViewById(R.id.drawer_list);
         mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -63,15 +64,18 @@ public class OverviewDrawerFragment extends SherlockFragment {
         cont.close();
         mDb.closeDatabase();
 
-        mAdapter = new OverviewDrawerListAdapter(getSherlockActivity(), dataList);
+        OverviewDrawerListAdapter mAdapter = new OverviewDrawerListAdapter(getSherlockActivity(), dataList);
         mListView.setAdapter(mAdapter);
     }
 
-    private AdapterView.OnItemClickListener mOnItemClickListener = new AdapterView.OnItemClickListener() {
+    private OnItemClickListener mOnItemClickListener = new OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            HashMap<String, Object> data = (HashMap<String, Object>) parent.getAdapter().getItem(position);
-            if(!data.containsKey("header")) setOverviewLanguage(data.get("string").toString());
+            Object item = parent.getAdapter().getItem(position);
+            if(item instanceof HashMap) {
+                HashMap<String, Object> data = (HashMap<String, Object>) item;
+                if(!data.containsKey("header")) setOverviewLanguage(data.get("string").toString());
+            }
         }
     };
 
