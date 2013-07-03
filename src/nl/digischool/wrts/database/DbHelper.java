@@ -36,7 +36,7 @@ public class DbHelper {
 	}
 
 	private String getDbPath() {
-		return mContext.getDir("data", DATABASE_MODE) + "/" + Params.databaseName;
+		return mContext.getDir("data", DATABASE_MODE).getPath() + "/" + Params.databaseName;
 	}
 
 	public ObjectContainer openDbSession() {

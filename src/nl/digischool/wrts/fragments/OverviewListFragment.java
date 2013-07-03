@@ -8,16 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.db4o.ObjectContainer;
-import nl.digischool.wrts.activities.OverviewActivity;
+import com.db4o.ObjectSet;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.adapters.OverviewDrawerListAdapter;
+import nl.digischool.wrts.adapters.OverviewListAdapter;
+import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.database.DbHelper;
 import nl.digischool.wrts.database.DbModel;
+import nl.digischool.wrts.objects.WordList;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Sébastiaanmaakt
@@ -25,14 +25,15 @@ import java.util.Map;
  * Date: 28-6-13
  * Time: 23:03
  */
-public class OverviewDrawerFragment extends SherlockFragment {
+public class OverviewListFragment extends SherlockFragment {
 
     protected DbHelper mDb;
-    private OverviewDrawerListAdapter mAdapter;
+    private OverviewListAdapter mAdapter;
+    private String mLanguage = null;
     private ListView mListView;
     private final String LOG_TAG = getClass().getSimpleName();
 
-    public void OverviewDrawerFragment() {
+    public void OverviewListFragment() {
 
     }
 
@@ -46,36 +47,47 @@ public class OverviewDrawerFragment extends SherlockFragment {
         return v;
     }
 
+    public void setLanguage(String language) {
+        mLanguage = language;
+        if(mLanguage.equalsIgnoreCase("alle talen")) mLanguage = null;
+        refreshList();
+    }
+
     public void refreshList() {
         ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         mDb = new DbHelper(getActivity());
         mDb.openDatabase();
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("header", true);
-        map.put("string", "Talen");
-        dataList.add(map);
-        map = new HashMap<String, Object>();
-        map.put("string", "Alle talen");
-        dataList.add(map);
         ObjectContainer cont = mDb.openDbSession();
-        List<Map<String, Object>> langs = DbModel.getLanguages(cont);
-        dataList.addAll(langs);
+        ObjectSet<WordList> lists = DbModel.getWordListsByLanguage(cont, mLanguage);
+        Utilities.log(LOG_TAG, "List size:" + lists.size());
+        while(lists.hasNext()) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            WordList list = lists.next();
+            Utilities.log(LOG_TAG, list.title);
+            map.put("string", list.title);
+            //map.put("count", list.words.size());
+            dataList.add(map);
+        }
         cont.close();
         mDb.closeDatabase();
 
-        mAdapter = new OverviewDrawerListAdapter(getSherlockActivity(), dataList);
+        Collections.sort(dataList, new Comparator<Map<String, Object>>() {
+            public int compare(Map<String, Object> a, Map<String, Object> b) {
+                String strA = (String) a.get("string");
+                String strB = (String) b.get("string");
+                return strA.compareToIgnoreCase(strB);
+            }
+        });
+
+        mAdapter = new OverviewListAdapter(getSherlockActivity(), dataList);
         mListView.setAdapter(mAdapter);
     }
 
     private AdapterView.OnItemClickListener mOnItemClickListener = new AdapterView.OnItemClickListener() {
+
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            HashMap<String, Object> data = (HashMap<String, Object>) parent.getAdapter().getItem(position);
-            if(!data.containsKey("header")) setOverviewLanguage(data.get("string").toString());
+
         }
     };
-
-    private void setOverviewLanguage(String language) {
-        ((OverviewActivity) getSherlockActivity()).setOverviewLanguage(language);
-    }
 }

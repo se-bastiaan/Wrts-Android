@@ -79,25 +79,25 @@ public class SyncXmlHandler extends DefaultHandler {
     		} else if(localName.equals("title")) {
     			mList.title = mElementValue;
     		} else if(localName.equals("lang-a")) {
-    			mList.lang_a = mElementValue.toLowerCase().trim();
+    			mList.lang_a = mElementValue;
     		} else if(localName.equals("lang-b")) {
-    			mList.lang_b = mElementValue.toLowerCase().trim();
+    			mList.lang_b = mElementValue;
     		} else if(localName.equals("lang-c")) {
-    			mList.lang_c = mElementValue.toLowerCase().trim();
+    			mList.lang_c = mElementValue;
     		} else if(localName.equals("lang-d")) {
-    			mList.lang_d = mElementValue.toLowerCase().trim();
+    			mList.lang_d = mElementValue;
     		} else if(localName.equals("lang-e")) {
-    			mList.lang_e = mElementValue.toLowerCase().trim();
+    			mList.lang_e = mElementValue;
     		} else if(localName.equals("lang-f")) {
-    			mList.lang_f = mElementValue.toLowerCase().trim();
+    			mList.lang_f = mElementValue;
     		} else if(localName.equals("lang-g")) {
-    			mList.lang_g = mElementValue.toLowerCase().trim();
+    			mList.lang_g = mElementValue;
     		} else if(localName.equals("lang-h")) {
-    			mList.lang_h = mElementValue.toLowerCase().trim();
+    			mList.lang_h = mElementValue;
     		} else if(localName.equals("lang-i")) {
-    			mList.lang_i = mElementValue.toLowerCase().trim();
+    			mList.lang_i = mElementValue;
     		} else if(localName.equals("lang-j")) {
-    			mList.lang_j = mElementValue.toLowerCase().trim();
+    			mList.lang_j = mElementValue;
     		} else if(localName.equals("created-on")) {
     			mList.created_on = mElementValue;
     		} else if(localName.equals("updated-on")) {

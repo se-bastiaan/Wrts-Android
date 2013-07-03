@@ -1,11 +1,8 @@
 package nl.digischool.wrts.database;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
+import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.objects.WordList;
 import android.annotation.SuppressLint;
 
@@ -13,60 +10,116 @@ import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import com.db4o.query.Predicate;
 
+/**
+ * DbModel can be used to access items in the database in a fast way
+ */
 public class DbModel {
 
+    /**
+     * Save a WordList to the database
+     * @param db ObjectContainer
+     * @param list WordList
+     */
 	public static void saveWordList(ObjectContainer db, WordList list) {
 		db.store(list);
 		db.commit();
 	}
-	
+
+    /**
+     * Returns list of all languages in the database
+     * @param db ObjectContainer
+     * @return List<String> containing all languages
+     */
 	@SuppressLint("DefaultLocale")
-	public static List<String> getLanguages(ObjectContainer db) {
-		HashSet<String> set = new HashSet<String>();
+	public static List<Map<String, Object>> getLanguages(ObjectContainer db) {
+        ArrayList<String> dataList = new ArrayList<String>();
+		HashSet<String> stringSet = new HashSet<String>();
 		 
         WordList type = new WordList(); 
         ObjectSet<WordList> result = db.queryByExample(type);
-        ArrayList<String> strings;
+        HashSet<String> strings;
         WordList list;
         while (result.hasNext()) {
         	list = result.next();
-        	strings = new ArrayList<String>();
-        	if(list.lang_a != null) strings.add(list.lang_a);
-        	if(list.lang_b != null) strings.add(list.lang_b);
-        	if(list.lang_c != null) strings.add(list.lang_c);
-        	if(list.lang_d != null) strings.add(list.lang_d);
-        	if(list.lang_e != null) strings.add(list.lang_e);
-        	if(list.lang_f != null) strings.add(list.lang_f);
-        	if(list.lang_g != null) strings.add(list.lang_g);
-        	if(list.lang_h != null) strings.add(list.lang_h);
-        	if(list.lang_i != null) strings.add(list.lang_i);
-        	if(list.lang_j != null) strings.add(list.lang_j);
-        	set.addAll(strings);
+        	strings = new HashSet<String>();
+        	if(list.lang_a != null) strings.add(list.lang_a.toLowerCase());
+        	if(list.lang_b != null) strings.add(list.lang_b.toLowerCase());
+        	if(list.lang_c != null) strings.add(list.lang_c.toLowerCase());
+        	if(list.lang_d != null) strings.add(list.lang_d.toLowerCase());
+        	if(list.lang_e != null) strings.add(list.lang_e.toLowerCase());
+        	if(list.lang_f != null) strings.add(list.lang_f.toLowerCase());
+        	if(list.lang_g != null) strings.add(list.lang_g.toLowerCase());
+        	if(list.lang_h != null) strings.add(list.lang_h.toLowerCase());
+        	if(list.lang_i != null) strings.add(list.lang_i.toLowerCase());
+        	if(list.lang_j != null) strings.add(list.lang_j.toLowerCase());
+            dataList.addAll(strings);
+            stringSet.addAll(strings);
         }
-        
-        ArrayList<String> conversion = new ArrayList<String>();
-        conversion.addAll(set);
-        Collections.sort(conversion);
-        
-        db.close();
-        
+
+        ArrayList<String> stringList = new ArrayList<String>();
+        stringList.addAll(stringSet);
+        stringSet.clear();
+        ArrayList<Map<String, Object>> conversion = new ArrayList<Map<String, Object>>();
+
+        for(int i = 0; i < stringList.size(); i++) {
+            int count = Collections.frequency(dataList, stringList.get(i));
+            HashMap<String, Object> map = new HashMap<String, Object>();
+            map.put("string", stringList.get(i));
+            map.put("count", count);
+            conversion.add(map);
+        }
+
+        Utilities.log("DbModel", dataList.toString());
+
+        stringList.clear();
+
+        Collections.sort(conversion, new Comparator<Map<String, Object>>() {
+            public int compare(Map<String, Object> a, Map<String, Object> b) {
+                Integer countA = (Integer) a.get("count");
+                Integer countB = (Integer) b.get("count");
+                String strA = (String) a.get("string");
+                String strB = (String) b.get("string");
+                if(countA > countB) {
+                    return -1;
+                }
+                if(countA < countB) {
+                    return 1;
+                }
+                return strA.compareToIgnoreCase(strB);
+            }
+        });
+
         return conversion;
 	}
-	
-	public static ObjectSet<WordList> getWordListsByLanguage(ObjectContainer db, final String language) {
-		ObjectSet<WordList> result = db.query(new Predicate<WordList>() {
-			private static final long serialVersionUID = 7660551150119674532L;
 
+    /**
+     * Returns all WordList objects that has the language in one of the fields a-j
+     * @param db ObjectContainer
+     * @param language String
+     * @return ObjectSet
+     */
+	public static ObjectSet<WordList> getWordListsByLanguage(ObjectContainer db, final String language) {
+
+		ObjectSet<WordList> result = db.query(new Predicate<WordList>() {
 			public boolean match(WordList obj) {
-				String[] langs = new String[]{ obj.lang_a, obj.lang_b, obj.lang_c, obj.lang_d, obj.lang_e, obj.lang_f, obj.lang_g, obj.lang_h, obj.lang_i, obj.lang_j };
-				if(Arrays.asList(langs).contains(language)) {
+                if(language == null) {
+                    return true;
+                }
+				if( obj.lang_a.equalsIgnoreCase(language) ||
+                    obj.lang_b.equalsIgnoreCase(language) ||
+                    obj.lang_c.equalsIgnoreCase(language) ||
+                    obj.lang_d.equalsIgnoreCase(language) ||
+                    obj.lang_e.equalsIgnoreCase(language) ||
+                    obj.lang_f.equalsIgnoreCase(language) ||
+                    obj.lang_g.equalsIgnoreCase(language) ||
+                    obj.lang_h.equalsIgnoreCase(language) ||
+                    obj.lang_i.equalsIgnoreCase(language) ||
+                    obj.lang_j.equalsIgnoreCase(language)) {
 					return true;
 				}
-				return false;
+                return false;
 			}
 		});
-		
-		db.close();
 		
 		return result;
 	}
@@ -83,14 +136,20 @@ public class DbModel {
 				return (obj.id.equals(id));
 			}
 		});
-		
-		db.close();
-		
+
 		return result.get(0);
 	}
 	
 	public static void deleteWordList(ObjectContainer db, String id) {
 		db.delete(DbModel.getWordList(db, id));
-		db.close();
 	}
+
+    public static void deleteAllWordLists(ObjectContainer db) {
+        WordList n = new WordList();
+        ObjectSet result= db.queryByExample(n);
+        if(result.hasNext()) {
+            WordList d = (WordList) result.next();
+            db.delete(d);
+        }
+    }
 }

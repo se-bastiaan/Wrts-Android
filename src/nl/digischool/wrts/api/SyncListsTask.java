@@ -1,5 +1,6 @@
 package nl.digischool.wrts.api;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import com.db4o.ObjectContainer;
@@ -10,22 +11,22 @@ import nl.digischool.wrts.objects.WordList;
 
 import java.util.List;
 
-public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
+public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
 	
 	private String mAuthString, mSinceString = "";
 	private DbHelper mDb;
     private ApiBooleanCallback mCallback;
     private final String LOG_TAG = getClass().getSimpleName();
 	
-	public SyncListsTask(Context context, String auth, String since) {
+	public SyncListsTask(Activity activity, String auth, String since) {
 		mAuthString = auth;
 		mSinceString = "?since="+since;
-		mDb = new DbHelper(context);
+		mDb = new DbHelper(activity);
 	}
 	
-	public SyncListsTask(Context context, String auth) {
+	public SyncListsTask(Activity activity, String auth) {
 		mAuthString = auth;
-		mDb = new DbHelper(context);
+		mDb = new DbHelper(activity);
 	}
 
     public void setCallBack(ApiBooleanCallback callback) {
@@ -40,8 +41,8 @@ public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
 			List<WordList> data = XmlReader.readSyncXml(syncXml);
 			mDb.openDatabase();
 			ObjectContainer cont = mDb.openDbSession();
+            if(mSinceString.isEmpty()) DbModel.deleteAllWordLists(cont);
 			for(int i = 0; i < data.size(); i++) {
-                Utilities.log(LOG_TAG, data.get(i));
 				WordList list = data.get(i);			
 				DbModel.saveWordList(cont, list);
 			}
@@ -53,6 +54,11 @@ public class SyncListsTask extends AsyncTask<Void, Void, Boolean> {
 			return false;
 		}
 	}
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        super.onProgressUpdate(values);    //To change body of overridden methods use File | Settings | File Templates.
+    }
 
     @Override
     protected void onPostExecute(Boolean aBoolean) {

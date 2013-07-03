@@ -10,16 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import nl.digischool.wrts.classes.Utilities;
 
-public class DrawerListAdapter extends BaseAdapter {
-	
+public class OverviewDrawerListAdapter extends BaseAdapter {
+
 	private enum ViewType { HEADER, ITEM };
-	private class ViewHolder { TextView text1; }
+	private class ViewHolder { TextView text1; TextView count; }
 	private ArrayList<Map<String, Object>> mData;
 	private LayoutInflater mInflater;
 
-	public DrawerListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
-        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	public OverviewDrawerListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
+        mInflater = LayoutInflater.from(context);
 		mData = dataObject;
 	}
 	
@@ -57,25 +58,31 @@ public class DrawerListAdapter extends BaseAdapter {
 		int itemViewType = getItemViewType(position);
 		ViewHolder holder;
 		if(convertView == null) {
+            holder = new ViewHolder();
 			if(itemViewType == ViewType.HEADER.ordinal()) {
 				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_header, null);
 
 			} else if(itemViewType == ViewType.ITEM.ordinal()) {
 				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_item, null);
+                holder.count = (TextView) convertView.findViewById(R.id.count);
 			}
-			holder = new ViewHolder();
 			holder.text1 = (TextView) convertView.findViewById(R.id.text1);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		Map<String, Object> object = getItem(position);
-		String text = (String) object.get("text");
+		String text = (String) object.get("string");
 		if(itemViewType == ViewType.HEADER.ordinal()) text = text.toUpperCase();
+        if(itemViewType == ViewType.ITEM.ordinal()) text = Utilities.uppercaseFirst(text);
 		holder.text1.setText(text);
-		
-		if(position != getCount() - 1 && getItemViewType(position + 1) != ViewType.HEADER.ordinal() && itemViewType != ViewType.HEADER.ordinal()) convertView.findViewById(R.id.list_item_separator).setVisibility(View.VISIBLE);
-		if(position != getCount() - 1 && getItemViewType(position + 1) == ViewType.HEADER.ordinal()) convertView.findViewById(R.id.list_item_separator).setVisibility(View.GONE);
+        if(object.containsKey("count")) {
+            holder.count.setText(object.get("count").toString());
+            holder.count.setVisibility(TextView.VISIBLE);
+        } else {
+            if(holder.count != null) holder.count.setVisibility(TextView.GONE);
+        }
+
 		return convertView;
 	}
 

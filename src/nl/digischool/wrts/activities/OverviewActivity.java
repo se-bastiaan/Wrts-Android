@@ -1,6 +1,8 @@
-package nl.digischool.wrts;
+package nl.digischool.wrts.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -13,9 +15,11 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.crashlytics.android.Crashlytics;
 import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
+import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
 import nl.digischool.wrts.api.SyncListsTask;
 import nl.digischool.wrts.fragments.OverviewDrawerFragment;
+import nl.digischool.wrts.fragments.OverviewListFragment;
 
 public class OverviewActivity extends BaseActivity implements ApiBooleanCallback {
 
@@ -24,7 +28,9 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     private SherlockActionBarDrawerToggle mDrawerToggle;
     private Boolean mIsDrawerLayout = false;
 
+    private FragmentManager mFragmentManager;
     private OverviewDrawerFragment mMenuFragment;
+    private OverviewListFragment mContentFragment;
 
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
@@ -35,7 +41,11 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 		Crashlytics.start(this);
 		setContentView(R.layout.activity_overview);
 
-        mSettings.edit().putString("username", "se_bastiaan@outlook.com").putString("password", "beest01").commit();
+        if(!mSettings.contains("username") || !mSettings.contains("password") || !mSettings.contains("downloaded_lists")) {
+            Intent i = new Intent(this, FirstStartActivity.class);
+            startActivity(i);
+            finish();
+        }
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -72,31 +82,13 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
         mMenu = (FrameLayout) findViewById(R.id.menu_frame);
         mContent = (FrameLayout) findViewById(R.id.content_frame);
 
+        mFragmentManager = getSupportFragmentManager();
+
         mMenuFragment = new OverviewDrawerFragment();
+        mFragmentManager.beginTransaction().replace(R.id.menu_frame, mMenuFragment).commit();
 
-        FragmentManager fm = getSupportFragmentManager();
-        fm.beginTransaction().replace(R.id.menu_frame, mMenuFragment).commit();
-
-		/* Generate data *//*
-		ArrayList<Map<String, Object>> object = new ArrayList<Map<String, Object>>();
-		db.openDatabase();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("header", true);
-		map.put("text", "Talen");
-		object.add(map);
-		ObjectContainer cont = db.openDbSession();
-		List<String> langs = DbModel.getLanguages(cont);
-		for(int i = 0; i < langs.size(); i++) {
-			map = new HashMap<String, Object>();
-			map.put("text", langs.get(i));
-			object.add(map);
-		}
-		cont.close();
-		db.closeDatabase();
-		
-		SlidingMenuListAdapter adapter = new SlidingMenuListAdapter(this, object);
-		ListView sm_list = (ListView) findViewById(R.id.slidingmenu_list);
-		sm_list.setAdapter(adapter);*/
+        mContentFragment = new OverviewListFragment();
+        mFragmentManager.beginTransaction().replace(R.id.content_frame, mContentFragment).commit();
 	}
 
     @Override
@@ -139,6 +131,36 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     public void setTitle(CharSequence title) {
         mTitle = title;
         getActionBar().setTitle(mTitle);
+    }
+
+    /**
+     * Set language of the lists that are being shown. Uses little UI hack to create smooth transition.
+     * Passes the variable to the mContentFragment.
+     * @param language String
+     */
+    public void setOverviewLanguage(final String language) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                mContentFragment.setLanguage(language);
+            }
+            @Override
+            protected Void doInBackground(Void... params) {
+                return null;
+            }
+            @Override
+            protected void onPostExecute(Void result) {
+                super.onPostExecute(result);
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+            }
+        }.execute();
+    }
+
+    public void closeDrawer() {
+        if(mIsDrawerLayout) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        }
     }
 
     public boolean isDrawerLayout() {

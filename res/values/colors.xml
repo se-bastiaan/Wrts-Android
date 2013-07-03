@@ -19,13 +19,13 @@
 
 <resources>
     <color name="pressed_wrts">#CCFBAC1C</color>
-    <color name="wrts_ab_action_pressed">#1d2931</color>
+    <color name="wrts_ab_action_pressed">#1D2931</color>
     <color name="transparent">#00000000</color>
     
     <!-- Slidingmenu colors -->
-    <color name="wrts_drawer_bg">#f2f7fa</color>
-    <color name="wrts_drawer_pressed">#e2edf3</color>
-    <color name="wrts_drawer_textcolor">#2d2f31</color>
+    <color name="wrts_drawer_bg">#F2F7FA</color>
+    <color name="wrts_drawer_pressed">#E2EDF3</color>
+    <color name="wrts_drawer_textcolor">#2D2F31</color>
     <color name="wrts_drawer_header_color">#213039</color>
-    <color name="wrts_drawer_divider">#b3bbc0</color>
+    <color name="wrts_drawer_divider">#CCCCD4D9</color>
 </resources>

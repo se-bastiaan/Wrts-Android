@@ -12,9 +12,7 @@
     	android:background="@color/transparent"
     	android:cacheColorHint="@color/transparent"
         android:listSelector="@color/transparent"
-    	android:divider="@null"
-    	android:dividerHeight="0dp">
-        
-    </ListView>
+    	android:divider="@color/wrts_drawer_divider"
+    	android:dividerHeight="0.5dp" />
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package nl.digischool.wrts;
+package nl.digischool.wrts.activities;
 
 import android.content.Context;
 import android.content.SharedPreferences;

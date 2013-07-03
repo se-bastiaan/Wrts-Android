@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
+    android:minHeight="48dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:background="@color/transparent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/transparent">
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="4dp"
-        android:paddingLeft="5dp"
+        android:layout_height="48dp"
+        android:paddingBottom="6dp"
         android:gravity="bottom|left"
         android:ellipsize="end"
         android:singleLine="true"
@@ -23,12 +22,7 @@
         android:textSize="@dimen/wrts_header_textsize"
         android:textStyle="bold"
         android:typeface="sans"
+        android:text="Text"
     />
-    
-    <View
-        android:id="@+id/headerLine"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/wrts_drawer_header_color" />
 
 </LinearLayout>
