@@ -14,7 +14,18 @@
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Wrts</item>
         <item name="android:windowBackground">@color/bg</item>
 
-                <!-- Light.DarkActionBar specific -->
+        <!-- Generated with http://android-holo-colors.com -->
+        <item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_holo_light</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_light</item>
+        <item name="android:buttonStyle">@style/ButtonWrts</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWrts</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarWrts</item>
+        <item name="android:buttonStyleToggle">@style/ToggleWrts</item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_holo_light</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_holo_light</item>
+
+        <!-- Light.DarkActionBar specific -->
         <item name="android:actionBarWidgetTheme">@style/Theme.Wrts.Widget</item>
 
     </style>
@@ -35,6 +46,23 @@
     <style name="Theme.Wrts.Widget" parent="@style/Theme.Sherlock">
         <item name="android:popupMenuStyle">@style/PopupMenu.Wrts</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+    </style>
+
+    <style name="ButtonWrts" parent="android:Widget.Holo.Light.Button">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+    </style>
+
+    <style name="ImageButtonWrts" parent="android:Widget.Holo.Light.ImageButton">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+    </style>
+
+    <style name="ProgressBarWrts" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal_holo_light</item>
+    </style>
+
+    <style name="ToggleWrts" parent="android:Widget.Holo.Light.Button.Toggle">
+        <item name="android:background">@drawable/btn_toggle_holo_light</item>
     </style>
 
 </resources>

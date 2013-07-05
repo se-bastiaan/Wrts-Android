@@ -82,7 +82,7 @@ public class ApiConnector {
                     builder.append(line);
                 }
                 result = builder.toString();
-                Utilities.log(this.LOG_TAG, result);
+                Utilities.log(LOG_TAG, result);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 InputStreamReader inputStream = new InputStreamReader(urlConnection.getErrorStream(), "UTF-8");
@@ -93,6 +93,7 @@ public class ApiConnector {
                     builder.append(line);
                 }
                 Utilities.log(LOG_TAG, "Errorstream: " + builder.toString());
+                result = builder.toString();
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

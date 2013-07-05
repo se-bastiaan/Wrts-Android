@@ -13,7 +13,19 @@
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Wrts</item>
         <item name="android:windowBackground">@color/bg</item>
 
-                <!-- Light.DarkActionBar specific -->
+        <!-- Generated with http://android-holo-colors.com -->
+        <item name="android:editTextStyle">@style/EditTextWrts</item>
+        <item name="android:checkboxStyle">@style/CheckBoxWrts</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonWrts</item>
+        <item name="android:buttonStyle">@style/ButtonWrts</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonWrts</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarWrts</item>
+        <item name="android:buttonStyleToggle">@style/ToggleWrts</item>
+        <item name="android:listViewStyle">@style/ListViewWrts</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewWrts.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemWrts</item>
+
+        <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Wrts.Widget</item>
 
     </style>
@@ -60,6 +72,55 @@
     <style name="Theme.Wrts.Widget" parent="@style/Theme.Sherlock">
         <item name="popupMenuStyle">@style/PopupMenu.Wrts</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Wrts</item>
+    </style>
+
+    <style name="EditTextWrts" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="CheckBoxWrts" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/btn_check_holo_light</item>
+    </style>
+
+    <style name="RadioButtonWrts" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/btn_radio_holo_light</item>
+    </style>
+
+    <style name="ButtonWrts" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ImageButtonWrts" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+    </style>
+
+    <style name="ProgressBarWrts" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal_holo_light</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+    <style name="ToggleWrts" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/btn_toggle_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ListViewWrts" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+
+    <style name="ListViewWrts.White" parent="android:Widget.ListView.White">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+
+    <style name="SpinnerItemWrts" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000000</item>
     </style>
 
 </resources>

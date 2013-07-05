@@ -16,6 +16,20 @@
         <option name="name" value="DbModel.getWordListsByLanguage" />
         <option name="pid" value="" />
       </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="authenticateUser" />
+        <option name="name" value="authenticateUser" />
+        <option name="pid" value="" />
+      </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="ApiConnector" />
+        <option name="name" value="ApiConnector" />
+        <option name="pid" value="" />
+      </filter>
     </filters>
   </component>
   <component name="AndroidDesignerProfile">
@@ -45,36 +59,223 @@
     </device-configurations>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="ApiConnector" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_firststart.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/wrts_list_selectable_bg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_check_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_check_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_check_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_default_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_default_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_default_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_default_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_default_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_default_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_default_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_default_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_default_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_default_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_default_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_default_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_default_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_default_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_default_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_off_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_off_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_off_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_off_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_off_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_on_disabled_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_on_disabled_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_on_focused_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_on_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_radio_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_radio_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_radio_on_pressed_holo_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_off_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_off_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_off_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_off_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_off_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_off_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_off_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_off_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_off_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_off_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_off_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_off_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_off_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_off_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_off_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_on_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_on_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_on_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_on_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_on_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_on_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_on_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_on_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_on_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_on_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_on_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_on_normal_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_toggle_on_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_toggle_on_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_toggle_on_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_activated_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_activated_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_activated_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_focused_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_longpressed_holo.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_pressed_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/list_selector_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_bg_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_bg_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_bg_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_primary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_primary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_primary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progress_secondary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progress_secondary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progress_secondary_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/progressbar_indeterminate_holo8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/progressbar_indeterminate_holo8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/progressbar_indeterminate_holo8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/textfield_activated_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/textfield_activated_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/textfield_activated_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/textfield_default_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/textfield_default_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/textfield_default_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/textfield_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/textfield_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/textfield_disabled_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/textfield_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/textfield_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/textfield_disabled_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/textfield_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/textfield_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/textfield_focused_holo_light.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstDownloadActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstLoginActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/WebActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/activated_background_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_firstlogin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_framelayout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/btn_check_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/btn_default_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/btn_radio_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/btn_toggle_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/edit_text_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/item_background_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/list_selector_background_transition_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/list_selector_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/progress_horizontal_holo_light.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/progress_indeterminate_horizontal_holo_light.xml" />
+      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\res\layout\activity_firststart.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\FirstStartActivity.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/wrts_drawer_selectable_bg.xml" afterPath="$PROJECT_DIR$/res/drawable/wrts_drawer_selectable_bg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/wrts_styles.xml" afterPath="$PROJECT_DIR$/res/values/wrts_styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-v14/wrts_styles.xml" afterPath="$PROJECT_DIR$/res/values-v14/wrts_styles.xml" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\res\layout\activity_overview_drawer.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list.xml" />
+      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\res\values-v14\wrts_styles.xml" afterPath="$PROJECT_DIR$/res/values-v11/wrts_styles.xml" />
     </list>
     <ignored path="WrtsDigischool.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372853950607" ignored="false" />
+    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372883279271" ignored="false" />
     <file path="$PROJECT_DIR$/../SlidingMenu/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362192565" ignored="false" />
     <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372851824199" ignored="false" />
     <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854627266" ignored="false" />
-    <file path="/ApiConnector.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372505836238" ignored="false" />
-    <file path="/ApiConnectorTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372506347514" ignored="false" />
+    <file path="/ApiConnector.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372882514706" ignored="false" />
+    <file path="/ApiConnectorTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372881235408" ignored="false" />
     <file path="/ApiCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372506282826" ignored="false" />
-    <file path="/ApiHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372852104596" ignored="false" />
+    <file path="/ApiHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372879914170" ignored="false" />
     <file path="/Utilities.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372614783482" ignored="false" />
     <file path="/Params.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372434163113" ignored="false" />
     <file path="/SyncListsTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372684498179" ignored="false" />
@@ -82,7 +283,7 @@
     <file path="/WordListXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372438943406" ignored="false" />
     <file path="/IndexXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372446525226" ignored="false" />
     <file path="/XmlBuilder.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372439124948" ignored="false" />
-    <file path="/BaseActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372445674448" ignored="false" />
+    <file path="/BaseActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372878872026" ignored="false" />
     <file path="/DbHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372675037840" ignored="false" />
     <file path="/SlidingMenuListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372442730324" ignored="false" />
     <file path="/activity_overview_drawer.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372623305074" ignored="false" />
@@ -90,7 +291,7 @@
     <file path="$PROJECT_DIR$/../NavigationDrawer/res/layout/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/DrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686256276" ignored="false" />
-    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372855081926" ignored="false" />
+    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372879068830" ignored="false" />
     <file path="/colors.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854584206" ignored="false" />
     <file path="/OverviewDrawerFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372852507626" ignored="false" />
     <file path="/MainActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372453647978" ignored="false" />
@@ -111,7 +312,7 @@
     <file path="/ListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372668426565" ignored="false" />
     <file path="/OverviewListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372687375550" ignored="false" />
     <file path="/WrtsApplication.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372674455292" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372851885885" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372877060507" ignored="false" />
     <file path="$PROJECT_DIR$/gen/nl/digischool/wrts/BuildConfig.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372675072210" ignored="false" />
     <file path="/OverviewListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686066170" ignored="false" />
     <file path="/OverviewDrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372687655580" ignored="false" />
@@ -119,7 +320,12 @@
     <file path="/wrts_styles.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854463996" ignored="false" />
     <file path="/activity_overview_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854150252" ignored="false" />
     <file path="/wrts_list_selectable_bg.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854387694" ignored="false" />
-    <file path="/activity_firststart.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372855094947" ignored="false" />
+    <file path="/activity_firststart.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372875007103" ignored="false" />
+    <file path="/FirstStartActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372879324310" ignored="false" />
+    <file path="/activity_fragmentlayout.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372875182237" ignored="false" />
+    <file path="/WebActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372877089131" ignored="false" />
+    <file path="/FirstLoginActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372878961577" ignored="false" />
+    <file path="/FirstDownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372883310279" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +340,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -171,6 +376,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -180,22 +386,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_firststart.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_firststart.xml">
+      <file leaf-file-name="FirstLoginActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstLoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="4" selection-start="397" selection-end="550" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstDownloadActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstDownloadActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="54" selection-start="395" selection-end="395" vertical-scroll-proportion="0.61445785">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_firstdownload.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_firstdownload.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="15" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-38.76">
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiConnectorTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="33" selection-start="308" selection-end="308" vertical-scroll-proportion="0.37777779">
+            <state line="63" column="45" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="30" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="117" column="32" selection-start="4368" selection-end="4368" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/WebActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="50" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_framelayout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_framelayout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="26" selection-start="137" selection-end="137" vertical-scroll-proportion="-1.36">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="379" selection-end="397" vertical-scroll-proportion="0.0">
+            <state line="18" column="35" selection-start="826" selection-end="843" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,22 +499,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstStartActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview.xml" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/wrts_list_selectable_bg.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/wrts_drawer_selectable_bg.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_fragmentlayout.xml" />
         <option value="$PROJECT_DIR$/res/values/wrts_styles.xml" />
-        <option value="$PROJECT_DIR$/res/values-v14/wrts_styles.xml" />
-        <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_firststart.xml" />
+        <option value="$PROJECT_DIR$/res/values-v11/wrts_styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_framelayout.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstStartActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/WebActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstLoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstDownloadActivity.java" />
       </list>
     </option>
   </component>
@@ -366,6 +642,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="adapters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -405,6 +703,10 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -424,10 +726,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,16 +778,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BlariacumRoosterwijzigingen" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="I55009f31050b" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="NexusOne" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -497,6 +831,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -522,19 +869,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -669,7 +1003,11 @@
       <created>1372852251161</created>
       <updated>1372852251161</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="New liststyles in overview, other colors, main bg and firststartactivity">
+      <created>1372855192088</created>
+      <updated>1372855192088</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -694,28 +1032,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.64675766" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.64675766" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25597268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25597268" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.64675766" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3532423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3532423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -762,7 +1102,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Drawer and list in overview connected and working. Drawer layout in Holo theme and selectables working." />
+    <option name="LAST_COMMIT_MESSAGE" value="New liststyles in overview, other colors, main bg and firststartactivity" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -784,6 +1124,7 @@
     <MESSAGE value="Deleted old XML from layout" />
     <MESSAGE value="Fixed SyncXMLHandler, added new action icons, change slidingmenu names, updated variable names" />
     <MESSAGE value="Drawer and list in overview connected and working. Drawer layout in Holo theme and selectables working." />
+    <MESSAGE value="New liststyles in overview, other colors, main bg and firststartactivity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -793,130 +1134,128 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewDrawerListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="35" selection-start="2345" selection-end="2345" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="67" selection-start="2630" selection-end="2630" vertical-scroll-proportion="2.6114457">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="10" selection-start="985" selection-end="985" vertical-scroll-proportion="0.46084338">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.71686745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_list_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="459" selection-end="459" vertical-scroll-proportion="0.67460316">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="0" selection-end="1255" vertical-scroll-proportion="0.6849817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="367" selection-end="367" vertical-scroll-proportion="-6.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/wrts_list_selectable_bg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="85" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/wrts_drawer_selectable_bg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="98" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/wrts_styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="55" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
+        <state line="97" column="52" selection-start="5148" selection-end="5148" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-v14/wrts_styles.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_framelayout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="55" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
+        <state line="2" column="26" selection-start="137" selection-end="137" vertical-scroll-proportion="-1.36">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="43" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
+        <state line="31" column="49" selection-start="1163" selection-end="1163" vertical-scroll-proportion="1.0090362">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/WebActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="50" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="30" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="379" selection-end="397" vertical-scroll-proportion="0.0">
+        <state line="18" column="35" selection-start="826" selection-end="843" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="77" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.44299674">
+        <state line="117" column="32" selection-start="4368" selection-end="4368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_firststart.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="308" selection-end="308" vertical-scroll-proportion="0.37777779">
+        <state line="63" column="45" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_list.xml">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="16" selection-start="3575" selection-end="3575" vertical-scroll-proportion="2.3554218">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="17" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.38762215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_firstlogin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="39" selection-start="0" selection-end="2418" vertical-scroll-proportion="0.4642857">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="40" selection-start="155" selection-end="155" vertical-scroll-proportion="-1.36">
+        <state line="18" column="4" selection-start="397" selection-end="550" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_firstdownload.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="15" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-38.76">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/FirstDownloadActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="54" selection-start="395" selection-end="395" vertical-scroll-proportion="0.61445785">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

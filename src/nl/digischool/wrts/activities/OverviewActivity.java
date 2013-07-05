@@ -42,7 +42,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 		setContentView(R.layout.activity_overview);
 
         if(!mSettings.contains("username") || !mSettings.contains("password") || !mSettings.contains("downloaded_lists")) {
-            Intent i = new Intent(this, FirstStartActivity.class);
+            Intent i = new Intent(this, FirstLoginActivity.class);
             startActivity(i);
             finish();
         }

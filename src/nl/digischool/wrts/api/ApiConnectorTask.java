@@ -63,8 +63,10 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
         } else {
             connector = new ApiConnector(mApiMethod, mApiAuth);
         }
-
-		return connector.execute();
+        String result = connector.execute();
+        Utilities.log(LOG_TAG, LOG_TAG);
+        Utilities.log(LOG_TAG, result);
+		return result;
     }    	
 	
     protected void onPostExecute(String result) {

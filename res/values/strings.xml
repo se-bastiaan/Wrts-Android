@@ -10,5 +10,14 @@
 
     <!-- FirstStartActivity text -->
     <string name="firststart_welcome">Welkom bij Wrts voor Android. Voordat je kunt beginnen met leren, moet je eerst inloggen.</string>
+    <string name="email">E-mailadres</string>
+    <string name="password">Wachtwoord</string>
+    <string name="register">Registreren</string>
+    <string name="login">Inloggen</string>
+    <string name="bad_auth">De inloggegevens zijn onjuist</string>
+    <string name="checking_data">Controleren...</string>
+    <string name="a_moment_patience">Een moment geduld a.u.b.</string>
+
+    <string name="cantfindurl">Deze webpagina kan niet gevonden worden.</string>
 
 </resources>

@@ -2,6 +2,7 @@ package nl.digischool.wrts.activities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -14,6 +15,7 @@ public class BaseActivity extends SherlockFragmentActivity {
     protected SharedPreferences mSettings;
     protected ApiHelper mApi;
     protected DbHelper mDb;
+    protected Resources mRes;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class BaseActivity extends SherlockFragmentActivity {
         mSettings = getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
         mApi = new ApiHelper(this);
         mDb = new DbHelper(this);
+        mRes = getResources();
 	}
 	
 }
