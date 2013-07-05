@@ -7,13 +7,15 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
     <FrameLayout
         android:id="@+id/menu_frame"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/wrts_drawer_bg"/>
+        android:background="@color/wrts_drawer_bg"
+        />
 
 </android.support.v4.widget.DrawerLayout>

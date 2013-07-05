@@ -14,7 +14,7 @@ import nl.digischool.wrts.R;
  * Date: 3-7-13
  * Time: 13:43
  */
-public class FirstLoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class FirstLoginActivity extends BaseActivity {
         if(mApi.authenticateUser(email, password) && !email.isEmpty() && !password.isEmpty()) {
             dialog.dismiss();
             mApi.saveUserData(email, password);
-            Intent i = new Intent(this, OverviewActivity.class);
+            Intent i = new Intent(this, DownloadActivity.class);
             startActivity(i);
             finish();
         } else {

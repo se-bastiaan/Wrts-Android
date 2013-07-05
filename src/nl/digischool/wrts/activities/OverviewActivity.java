@@ -41,8 +41,12 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 		Crashlytics.start(this);
 		setContentView(R.layout.activity_overview);
 
-        if(!mSettings.contains("username") || !mSettings.contains("password") || !mSettings.contains("downloaded_lists")) {
-            Intent i = new Intent(this, FirstLoginActivity.class);
+        if(!mSettings.contains("username") || !mSettings.contains("password")) {
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        } else if(!mSettings.contains("downloaded_lists")) {
+            Intent i = new Intent(this, DownloadActivity.class);
             startActivity(i);
             finish();
         }
