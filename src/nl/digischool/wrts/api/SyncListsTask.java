@@ -19,7 +19,7 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
 	private String mAuthString, mSinceString = "";
     private ProgressBar mProgressBar;
     private TextView mTextView;
-    private Integer mProgress, mMaxProgress;
+    private Integer mProgress = 0, mMaxProgress = 0;
 	private DbHelper mDb;
     private ApiBooleanCallback mCallback;
     private Activity mActivity;
@@ -60,12 +60,13 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
             super.publishProgress(0);
 			mDb.openDatabase();
 			ObjectContainer cont = mDb.openDbSession();
-            DbModel.deleteAllWordLists(cont);
+            //DbModel.deleteAllWordLists(cont);
 			for(int i = 0; i < data.size(); i++) {
                 super.publishProgress(mProgress + 1);
 				WordList list = data.get(i);			
-				DbModel.saveWordList(cont, list);
+				DbModel.saveWordList(cont, list, false);
 			}
+            cont.commit();
 			cont.close();
 			mDb.closeDatabase();
             return true;

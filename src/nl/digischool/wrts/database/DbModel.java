@@ -26,6 +26,17 @@ public class DbModel {
 	}
 
     /**
+     * Save a WordList to the database
+     * @param db ObjectContainer
+     * @param list WordList
+     * @param commit Do commit?
+     */
+    public static void saveWordList(ObjectContainer db, WordList list, Boolean commit) {
+        db.store(list);
+        if(commit) db.commit();
+    }
+
+    /**
      * Returns list of all languages in the database
      * @param db ObjectContainer
      * @return List<String> containing all languages
@@ -144,12 +155,12 @@ public class DbModel {
 		db.delete(DbModel.getWordList(db, id));
 	}
 
-    public static void deleteAllWordLists(ObjectContainer db) {
-        WordList n = new WordList();
-        ObjectSet result= db.queryByExample(n);
-        if(result.hasNext()) {
-            WordList d = (WordList) result.next();
-            db.delete(d);
+    public static void deleteAllWordLists(ObjectContainer c) {
+        WordList w = new WordList();
+        ObjectSet<WordList> lists = c.queryByExample(w);
+        for(WordList list: lists) {
+            c.delete(list);
         }
+        c.close();
     }
 }

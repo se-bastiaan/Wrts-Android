@@ -14,13 +14,17 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.crashlytics.android.Crashlytics;
+import com.db4o.ObjectContainer;
+import com.db4o.ObjectSet;
 import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
 import nl.digischool.wrts.api.SyncListsTask;
 import nl.digischool.wrts.classes.Utilities;
+import nl.digischool.wrts.database.DbModel;
 import nl.digischool.wrts.fragments.OverviewDrawerFragment;
 import nl.digischool.wrts.fragments.OverviewListFragment;
+import nl.digischool.wrts.objects.WordList;
 
 public class OverviewActivity extends BaseActivity implements ApiBooleanCallback {
 
@@ -115,16 +119,20 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (mIsDrawerLayout && mDrawerToggle.onOptionsItemSelected(item)) {
+        if (isDrawerLayout() && mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
         // Handle action buttons
         switch(item.getItemId()) {
             case R.id.syncAction:
-                SyncListsTask task = new SyncListsTask(this, mApi.getAuthString());
-                task.setCallBack(this);
-                task.execute();
+                mDb.openDatabase();
+                ObjectContainer c = mDb.openDbSession();
+                DbModel.deleteAllWordLists(c);
+                c.close();
+                mDb.closeDatabase();
+                mMenuFragment.refreshList();
+                setOverviewLanguage("alle talen");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -143,7 +151,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
      * @param language String
      */
     public void setOverviewLanguage(final String language) {
-        setTitle(language);
+        if(language != null) setTitle(language);
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected void onPreExecute() {
@@ -157,13 +165,13 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
             @Override
             protected void onPostExecute(Void result) {
                 super.onPostExecute(result);
-                mDrawerLayout.closeDrawer(GravityCompat.START);
+                closeDrawer();
             }
         }.execute();
     }
 
     public void closeDrawer() {
-        if(mIsDrawerLayout) {
+        if(isDrawerLayout()) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         }
     }
@@ -176,14 +184,14 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
-        if(mIsDrawerLayout) mDrawerToggle.syncState();
+        if(isDrawerLayout()) mDrawerToggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
-        if(mIsDrawerLayout) mDrawerToggle.onConfigurationChanged(newConfig);
+        if(isDrawerLayout()) mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
     @Override

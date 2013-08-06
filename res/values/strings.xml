@@ -8,19 +8,23 @@
     <string name="drawer_open">Open navigatie lade</string>
     <string name="drawer_close">Close navigatie lade</string>
 
-    <!-- LoginActivity/DownloadActivity text -->
+    <!-- Login -->
     <string name="firststart_welcome">Welkom bij Wrts voor Android. Voordat je kunt beginnen met leren, moet je eerst inloggen.</string>
     <string name="email">E-mailadres</string>
     <string name="password">Wachtwoord</string>
     <string name="register">Registreren</string>
     <string name="login">Inloggen</string>
-    <string name="bad_auth">De inloggegevens zijn onjuist</string>
+
+    <!-- Download -->
     <string name="checking_data">Controleren...</string>
     <string name="a_moment_patience">Een moment geduld a.u.b.</string>
     <string name="downloading_lists">Lijsten downloaden...</string>
     <string name="saved_lists">%s lijsten opgeslagen...</string>
     <string name="done">Klaar</string>
 
+    <!-- Errors -->
+    <string name="no_server_response">Er kon geen contact gemaakt worden met de server van Wrts</string>
+    <string name="bad_auth">De inloggegevens zijn onjuist</string>
 
     <string name="cantfindurl">Deze webpagina kan niet gevonden worden.</string>
 

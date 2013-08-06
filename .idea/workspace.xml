@@ -60,39 +60,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/crashlytics.jar" afterPath="$PROJECT_DIR$/libs/crashlytics.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbModel.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" afterPath="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_firstlogin.xml" afterPath="$PROJECT_DIR$/res/layout/activity_firstlogin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_framelayout.xml" afterPath="$PROJECT_DIR$/res/layout/activity_framelayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-large-land/activity_overview.xml" afterPath="$PROJECT_DIR$/res/layout-large-land/activity_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-xlarge/activity_overview.xml" afterPath="$PROJECT_DIR$/res/layout-xlarge/activity_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_list.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/com_crashlytics_export_strings.xml" afterPath="$PROJECT_DIR$/res/values/com_crashlytics_export_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-project.txt" afterPath="$PROJECT_DIR$/proguard-project.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\FirstDownloadActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\FirstLoginActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java" />
     </list>
     <ignored path="WrtsDigischool.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373050457922" ignored="false" />
+    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1375798013161" ignored="false" />
     <file path="$PROJECT_DIR$/../SlidingMenu/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362192565" ignored="false" />
     <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372851824199" ignored="false" />
-    <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373060354429" ignored="false" />
+    <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373112688696" ignored="false" />
     <file path="/ApiConnector.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372882514706" ignored="false" />
     <file path="/ApiConnectorTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372881235408" ignored="false" />
     <file path="/ApiCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372506282826" ignored="false" />
     <file path="/ApiHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373062638973" ignored="false" />
     <file path="/Utilities.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372614783482" ignored="false" />
     <file path="/Params.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372434163113" ignored="false" />
-    <file path="/SyncListsTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373063561875" ignored="false" />
+    <file path="/SyncListsTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373113027658" ignored="false" />
     <file path="/SyncXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372684523370" ignored="false" />
     <file path="/WordListXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372438943406" ignored="false" />
     <file path="/IndexXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372446525226" ignored="false" />
@@ -105,7 +97,7 @@
     <file path="$PROJECT_DIR$/../NavigationDrawer/res/layout/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/DrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686256276" ignored="false" />
-    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373063953927" ignored="false" />
+    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373107251125" ignored="false" />
     <file path="/colors.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854584206" ignored="false" />
     <file path="/OverviewDrawerFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372852507626" ignored="false" />
     <file path="/MainActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372453647978" ignored="false" />
@@ -122,13 +114,13 @@
     <file path="/activity_overview_drawer_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372630519904" ignored="false" />
     <file path="/activity_overview_drawer_list_header.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372624018936" ignored="false" />
     <file path="/StickyHeaderExpandableListView.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372621866643" ignored="false" />
-    <file path="/DbModel.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686199694" ignored="false" />
+    <file path="/DbModel.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373113013577" ignored="false" />
     <file path="/ListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372668426565" ignored="false" />
-    <file path="/OverviewListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372687375550" ignored="false" />
+    <file path="/OverviewListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373108862547" ignored="false" />
     <file path="/WrtsApplication.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372674455292" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373060377983" ignored="false" />
     <file path="$PROJECT_DIR$/gen/nl/digischool/wrts/BuildConfig.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372675072210" ignored="false" />
-    <file path="/OverviewListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686066170" ignored="false" />
+    <file path="/OverviewListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1375805383011" ignored="false" />
     <file path="/OverviewDrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372687655580" ignored="false" />
     <file path="/LoginActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373060307849" ignored="false" />
     <file path="/wrts_styles.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854463996" ignored="false" />
@@ -142,7 +134,8 @@
     <file path="/FirstDownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372883310279" ignored="false" />
     <file path="/activity_firstlogin.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373060158488" ignored="false" />
     <file path="/activity_firstdownload.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373064007729" ignored="false" />
-    <file path="/DownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373063941270" ignored="false" />
+    <file path="/DownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373107152324" ignored="false" />
+    <file path="/proguard-project.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1375813296339" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +150,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -193,7 +187,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -203,81 +196,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="12" selection-start="1616" selection-end="1698" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DownloadActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="826" selection-end="826" vertical-scroll-proportion="0.5391566">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SyncListsTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="46" selection-start="2577" selection-end="2586" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_firstdownload.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_firstdownload.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="35" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-6.16">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_firstlogin.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_firstlogin.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.12">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OverviewActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="21" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+            <state line="25" column="19" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="SyncXmlHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="29" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
+            <state line="29" column="42" selection-start="869" selection-end="869" vertical-scroll-proportion="10.68">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordListXmlHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/WordListXmlHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/database/DbModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="9" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proguard-project.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="0" selection-start="2001" selection-end="2001" vertical-scroll-proportion="1.1823056">
               <folding />
             </state>
           </provider>
@@ -289,6 +256,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\Users\Sébastiaan\Documents\Sébastiaanmaakt\Wrts\keystore" />
+    <option name="KEY_ALIAS" value="wrtsapp" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -305,22 +277,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/activity_framelayout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_list.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" />
         <option value="$PROJECT_DIR$/res/layout-large-land/activity_overview.xml" />
         <option value="$PROJECT_DIR$/res/layout-xlarge/activity_overview.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_firstlogin.xml" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/database/DbModel.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
+        <option value="$PROJECT_DIR$/proguard-project.txt" />
       </list>
     </option>
   </component>
@@ -408,26 +380,8 @@
               <option name="myItemId" value="wrts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wrts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragments" />
+              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,10 +400,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wrts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,7 +421,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="adapters" />
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,97 +457,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-v11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout-xlarge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout-large-land" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -607,29 +467,34 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="Android 4.2.2 Platform" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="jdk.selected.JAVA_MODULE" value="Android 4.2.2 Platform" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
-    <property name="options.lastSelected" value="editor" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="ExportedApkPath" value="D:\Android Workspace\WrtsDigischool\WrtsDigischool.apk" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BlariacumRoosterwijzigingen" />
-    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="I55009f31050b" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="ExportedModule" value="WrtsDigischool" />
+    <property name="last_opened_file_path" value="D:/Users/Sébastiaan/Documents/Sébastiaanmaakt/Wrts/keystore" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="NexusOne" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="AndroidIncludeSystemProguardFile" value="true" />
+    <property name="AndroidProguardConfigPath" value="D:\Android Workspace\WrtsDigischool\proguard-project.txt" />
+    <property name="options.lastSelected" value="editor" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="true" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -849,7 +714,11 @@
       <created>1372855192088</created>
       <updated>1372855192088</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added first download page">
+      <created>1373064045424</created>
+      <updated>1373064045424</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -876,28 +745,28 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.64675766" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3208191" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31911263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25597268" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.64675766" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3532423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6808874" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3532423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -944,7 +813,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="New liststyles in overview, other colors, main bg and firststartactivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added first download page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -967,6 +836,7 @@
     <MESSAGE value="Fixed SyncXMLHandler, added new action icons, change slidingmenu names, updated variable names" />
     <MESSAGE value="Drawer and list in overview connected and working. Drawer layout in Holo theme and selectables working." />
     <MESSAGE value="New liststyles in overview, other colors, main bg and firststartactivity" />
+    <MESSAGE value="Added first download page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -976,19 +846,28 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_list_item.xml">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/classes/Params.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="287" selection-end="287" vertical-scroll-proportion="0.25105485">
+        <state line="5" column="34" selection-start="180" selection-end="189" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="22" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.45075756" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_list.xml">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.07053942">
+        <state line="30" column="32" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-large-land/activity_overview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="13" selection-start="52" selection-end="52" vertical-scroll-proportion="0.032945737">
           <folding />
         </state>
       </provider>
@@ -998,116 +877,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_overview.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="38" selection-start="217" selection-end="217" vertical-scroll-proportion="0.13737373">
+        <state line="8" column="25" selection-start="287" selection-end="307" vertical-scroll-proportion="0.27474746">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-xlarge/activity_overview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="595" selection-end="595" vertical-scroll-proportion="0.6181818">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-large-land/activity_overview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="595" selection-end="595" vertical-scroll-proportion="0.6181818">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="45" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.562982">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="30" selection-start="5929" selection-end="5929" vertical-scroll-proportion="2.0604396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="46" selection-start="2577" selection-end="2586" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="12" selection-start="1616" selection-end="1698" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="21" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+        <state line="30" column="38" selection-start="1194" selection-end="1207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+        <state line="25" column="19" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_firstlogin.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.12">
+        <state line="29" column="42" selection-start="869" selection-end="869" vertical-scroll-proportion="10.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_firstdownload.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/WordListXmlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-6.16">
+        <state line="10" column="13" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/objects/WordList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="8" selection-start="826" selection-end="826" vertical-scroll-proportion="0.5391566">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="4" column="13" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/objects/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="50" selection-end="50" vertical-scroll-proportion="0.096317284">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/database/DbModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="9" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BlariacumRoosterwijzigingen/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="0" selection-end="872" vertical-scroll-proportion="0.38636363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Android/android-sdk/tools/proguard/proguard-android.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="109" selection-end="1981" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2001" selection-end="2001" vertical-scroll-proportion="1.1823056">
+          <folding />
         </state>
       </provider>
     </entry>

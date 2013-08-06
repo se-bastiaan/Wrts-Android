@@ -73,7 +73,7 @@ public class SyncXmlHandler extends DefaultHandler {
     		if(localName.equals("list")) {
         		mInList = false;
         		mListData.add(mList);
-        		Log.d("data", mList.lang_a);
+        		//Log.d("data", mList.lang_a);
         	} else if(localName.equals("id")) {
     			mList.id = mElementValue;
     		} else if(localName.equals("title")) {

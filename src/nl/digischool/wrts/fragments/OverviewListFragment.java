@@ -62,7 +62,7 @@ public class OverviewListFragment extends SherlockFragment {
         while(lists.hasNext()) {
             Map<String, Object> map = new HashMap<String, Object>();
             WordList list = lists.next();
-            Utilities.log(LOG_TAG, list.title);
+            //Utilities.log(LOG_TAG, list.title);
             map.put("string", list.title);
             //map.put("count", list.words.size());
             dataList.add(map);

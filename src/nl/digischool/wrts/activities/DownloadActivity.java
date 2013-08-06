@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
 import nl.digischool.wrts.api.ApiCallback;
@@ -34,10 +35,14 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
 
     @Override
     public void apiResponseCallback(String method, Boolean result) {
-        mText.setText(mRes.getString(R.string.done));
-        mSettings.edit().putBoolean("downloaded_lists", true).commit();
-        Intent i = new Intent(this, OverviewActivity.class);
-        startActivity(i);
-        finish();
+        if(result) {
+            mText.setText(mRes.getString(R.string.done));
+            mSettings.edit().putBoolean("downloaded_lists", true).commit();
+            Intent i = new Intent(this, OverviewActivity.class);
+            startActivity(i);
+            finish();
+        } else {
+            Toast.makeText(this, mRes.getString(R.string.no_server_response), Toast.LENGTH_SHORT).show();
+        }
     }
 }

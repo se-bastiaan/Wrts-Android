@@ -51,7 +51,7 @@ public class OverviewListAdapter extends BaseAdapter {
         }
         Map<String, Object> object = getItem(position);
         String text = (String) object.get("string");
-        holder.text1.setText(Utilities.uppercaseFirst(text));
+        holder.text1.setText(text);
 
         return convertView;
     }
