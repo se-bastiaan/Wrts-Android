@@ -44,25 +44,23 @@ public class DbModel {
 	@SuppressLint("DefaultLocale")
 	public static List<Map<String, Object>> getLanguages(ObjectContainer db) {
         ArrayList<String> dataList = new ArrayList<String>();
-		HashSet<String> stringSet = new HashSet<String>();
-		 
-        WordList type = new WordList(); 
+        TreeSet<String> stringSet = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
+
+        WordList type = new WordList();
         ObjectSet<WordList> result = db.queryByExample(type);
-        HashSet<String> strings;
+        TreeSet<String> strings;
         WordList list;
         while (result.hasNext()) {
         	list = result.next();
-        	strings = new HashSet<String>();
-        	if(list.lang_a != null) strings.add(list.lang_a.toLowerCase());
-        	if(list.lang_b != null) strings.add(list.lang_b.toLowerCase());
-        	if(list.lang_c != null) strings.add(list.lang_c.toLowerCase());
-        	if(list.lang_d != null) strings.add(list.lang_d.toLowerCase());
-        	if(list.lang_e != null) strings.add(list.lang_e.toLowerCase());
-        	if(list.lang_f != null) strings.add(list.lang_f.toLowerCase());
-        	if(list.lang_g != null) strings.add(list.lang_g.toLowerCase());
-        	if(list.lang_h != null) strings.add(list.lang_h.toLowerCase());
-        	if(list.lang_i != null) strings.add(list.lang_i.toLowerCase());
-        	if(list.lang_j != null) strings.add(list.lang_j.toLowerCase());
+        	strings = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
+            Utilities.log("DbModel", list.languages.toString());
+
+            for(int i = 0; i < 10; i++) {
+                String languageName = Utilities.getLanguageName(i);
+                Utilities.log("DbModel", languageName);
+                if(list.languages.containsKey(languageName) && !list.languages.get(languageName).isEmpty())
+                    strings.add(list.languages.get(languageName));
+            }
             dataList.addAll(strings);
             stringSet.addAll(strings);
         }
@@ -73,7 +71,10 @@ public class DbModel {
         ArrayList<Map<String, Object>> conversion = new ArrayList<Map<String, Object>>();
 
         for(int i = 0; i < stringList.size(); i++) {
-            int count = Collections.frequency(dataList, stringList.get(i));
+            int count = 0;
+            for(String item : dataList) {
+                count += (item.equalsIgnoreCase(stringList.get(i)) ? 1 : 0);
+            }
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("string", stringList.get(i));
             map.put("count", count);
@@ -116,22 +117,16 @@ public class DbModel {
                 if(language == null) {
                     return true;
                 }
-				if( obj.lang_a.equalsIgnoreCase(language) ||
-                    obj.lang_b.equalsIgnoreCase(language) ||
-                    obj.lang_c.equalsIgnoreCase(language) ||
-                    obj.lang_d.equalsIgnoreCase(language) ||
-                    obj.lang_e.equalsIgnoreCase(language) ||
-                    obj.lang_f.equalsIgnoreCase(language) ||
-                    obj.lang_g.equalsIgnoreCase(language) ||
-                    obj.lang_h.equalsIgnoreCase(language) ||
-                    obj.lang_i.equalsIgnoreCase(language) ||
-                    obj.lang_j.equalsIgnoreCase(language)) {
-					return true;
-				}
+
+                for(int i = 0; i < 10; i++) {
+                    String languageName = Utilities.getLanguageName(i);
+                    if(obj.languages.containsValue(language))
+                        return true;
+                }
                 return false;
 			}
 		});
-		
+
 		return result;
 	}
 	

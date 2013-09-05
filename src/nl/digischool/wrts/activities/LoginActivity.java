@@ -17,8 +17,10 @@ import nl.digischool.wrts.R;
 public class LoginActivity extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlogin);
+
     }
 
     public void registerClick(View v) {

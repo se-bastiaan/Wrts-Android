@@ -23,6 +23,11 @@
     <color name="transparent">#00000000</color>
     <color name="bg">#F2F2F2</color>
 
+    <!-- Tab colors -->
+    <color name="tab_bg">#38424b</color>
+    <color name="tab_bg_pressed">#4E5A66</color>
+    <color name="tab_indicator">#FAAC1C</color>
+
     <!-- List colors -->
     <color name="wrts_list_pressed">#EAEAEA</color>
 

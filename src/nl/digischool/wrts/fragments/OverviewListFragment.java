@@ -1,5 +1,6 @@
 package nl.digischool.wrts.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import nl.digischool.wrts.R;
+import nl.digischool.wrts.activities.ListDetailActivity;
 import nl.digischool.wrts.adapters.OverviewListAdapter;
 import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.database.DbHelper;
@@ -37,6 +39,7 @@ public class OverviewListFragment extends SherlockFragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
+
         View v = inflater.inflate(R.layout.activity_overview_list, group, false);
 
         mListView = (ListView) v.findViewById(R.id.drawer_list);
@@ -44,15 +47,19 @@ public class OverviewListFragment extends SherlockFragment {
         mListView.setOnItemClickListener(mOnItemClickListener);
         refreshList();
         return v;
+
     }
 
     public void setLanguage(String language) {
+
         mLanguage = language;
         if(mLanguage.equalsIgnoreCase("alle talen")) mLanguage = null;
         refreshList();
+
     }
 
     public void refreshList() {
+
         ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         mDb = new DbHelper(getActivity());
         mDb.openDatabase();
@@ -62,9 +69,8 @@ public class OverviewListFragment extends SherlockFragment {
         while(lists.hasNext()) {
             Map<String, Object> map = new HashMap<String, Object>();
             WordList list = lists.next();
-            //Utilities.log(LOG_TAG, list.title);
             map.put("string", list.title);
-            //map.put("count", list.words.size());
+            map.put("id", list.id);
             dataList.add(map);
         }
         cont.close();
@@ -80,12 +86,18 @@ public class OverviewListFragment extends SherlockFragment {
 
         mAdapter = new OverviewListAdapter(getSherlockActivity(), dataList);
         mListView.setAdapter(mAdapter);
+
     }
 
     private AdapterView.OnItemClickListener mOnItemClickListener = new AdapterView.OnItemClickListener() {
-
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            Map<String, Object> map = mAdapter.getItem(position);
+            Integer listId = Integer.parseInt((String)map.get("id"));
+            Intent intent = new Intent(getActivity(), ListDetailActivity.class);
+            intent.putExtra("id", listId);
+            startActivity(intent);
 
         }
     };

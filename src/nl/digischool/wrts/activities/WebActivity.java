@@ -18,6 +18,7 @@ import nl.digischool.wrts.R;
 public class WebActivity extends SherlockActivity {
 
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent i = getIntent();
@@ -33,10 +34,12 @@ public class WebActivity extends SherlockActivity {
             Toast.makeText(this, getResources().getString(R.string.cantfindurl), Toast.LENGTH_SHORT).show();
             finish();
         }
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch(item.getItemId()) {
             case android.R.id.home:
                 finish();
@@ -44,6 +47,7 @@ public class WebActivity extends SherlockActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 
 }

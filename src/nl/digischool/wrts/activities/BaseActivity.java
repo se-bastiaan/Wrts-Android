@@ -19,12 +19,14 @@ public class BaseActivity extends SherlockFragmentActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 
         mSettings = getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
         mApi = new ApiHelper(this);
         mDb = new DbHelper(this);
         mRes = getResources();
+
 	}
 	
 }

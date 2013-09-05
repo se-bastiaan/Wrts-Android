@@ -20,41 +20,54 @@ public class OverviewDrawerListAdapter extends BaseAdapter {
 	private LayoutInflater mInflater;
 
 	public OverviewDrawerListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
+
         mInflater = LayoutInflater.from(context);
 		mData = dataObject;
+
 	}
 	
 	@Override
     public int getViewTypeCount() {
+
         return ViewType.values().length;
+
     }
 	
 	@Override
     public int getItemViewType(int position) {
+
 		if(mData.get(position).containsKey("header")) {
 			return ViewType.HEADER.ordinal();
 		} else {
 			return ViewType.ITEM.ordinal();
 		}
+
     }
 	
 	@Override
 	public int getCount() {
+
 		return mData.size();
+
 	}
 
 	@Override
 	public Map<String, Object> getItem(int position) {
+
 		return mData.get(position);
+
 	}
 
 	@Override
 	public long getItemId(int position) {
+
 		return 0;
+
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+
 		int itemViewType = getItemViewType(position);
 		ViewHolder holder;
 		if(convertView == null) {
@@ -74,7 +87,6 @@ public class OverviewDrawerListAdapter extends BaseAdapter {
 		Map<String, Object> object = getItem(position);
 		String text = (String) object.get("string");
 		if(itemViewType == ViewType.HEADER.ordinal()) text = text.toUpperCase();
-        if(itemViewType == ViewType.ITEM.ordinal()) text = Utilities.uppercaseFirst(text);
 		holder.text1.setText(text);
         if(object.containsKey("count")) {
             holder.count.setText(object.get("count").toString());
@@ -84,6 +96,7 @@ public class OverviewDrawerListAdapter extends BaseAdapter {
         }
 
 		return convertView;
+
 	}
 
 }

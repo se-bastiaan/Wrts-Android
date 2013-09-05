@@ -1,41 +1,50 @@
 package nl.digischool.wrts.adapters;
 
-import java.util.ArrayList;
-import java.util.Map;
-
-import nl.digischool.wrts.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import nl.digischool.wrts.R;
 import nl.digischool.wrts.classes.Utilities;
+import nl.digischool.wrts.objects.WordList;
 
-public class OverviewListAdapter extends BaseAdapter {
+import java.util.ArrayList;
+import java.util.Map;
+
+/**
+ * Sébastiaanmaakt
+ * http://sebastiaanmaakt.nl/
+ * Date: 5-9-13
+ * Time: 22:37
+ */
+public class WordsListAdapter extends BaseAdapter {
 
     private class ViewHolder { TextView text1; }
-    private ArrayList<Map<String, Object>> mData;
+    private ArrayList<Map<String, String>> mWords;
     private LayoutInflater mInflater;
+    private String mWordName;
 
-    public OverviewListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
+    public WordsListAdapter(Context context, ArrayList<Map<String, String>> words, String wordName) {
 
         mInflater = LayoutInflater.from(context);
-        mData = dataObject;
+        mWords = words;
+        mWordName = wordName;
 
     }
 
     @Override
     public int getCount() {
 
-        return mData.size();
+        return mWords.size();
 
     }
 
     @Override
-    public Map<String, Object> getItem(int position) {
+    public Map<String, String> getItem(int position) {
 
-        return mData.get(position);
+        return mWords.get(position);
 
     }
 
@@ -58,8 +67,8 @@ public class OverviewListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Map<String, Object> object = getItem(position);
-        String text = (String) object.get("string");
+        Map<String, String> object = getItem(position);
+        String text = (String) object.get(mWordName);
         holder.text1.setText(text);
 
         return convertView;

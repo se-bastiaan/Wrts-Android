@@ -1,64 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
-
-    <TextView
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:text="@string/firststart_welcome"
-        />
-
-    <EditText
-        android:id="@+id/emailEdit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        />
-
-    <EditText
-        android:id="@+id/passwordEdit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        />
-
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
     <LinearLayout
-        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/registerButton"
+        <ImageView
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_weight="0.5"
-            android:text="@string/register"
-            android:onClick="registerClick"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:src="@drawable/login_image"
+            android:contentDescription="@string/app_name"
             />
 
-        <Button
-            android:id="@+id/loginButton"
+        <TextView
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_weight="0.5"
-            android:text="@string/login"
-            android:onClick="loginClick"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/firststart_welcome"
             />
 
+        <EditText
+            android:id="@+id/emailEdit"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minWidth="300dp"
+            android:maxWidth="700dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minWidth="300dp"
+            android:maxWidth="700dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/register"
+                android:onClick="registerClick"
+                />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/login"
+                android:onClick="loginClick"
+                />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

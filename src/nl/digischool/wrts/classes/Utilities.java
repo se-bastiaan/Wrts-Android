@@ -20,5 +20,21 @@ public class Utilities {
     public static String uppercaseFirst(String str) {
         return Character.toUpperCase(str.charAt(0)) + str.substring(1).toLowerCase();
     }
+
+    public static String getLanguageName(Integer i) {
+        String alpha = "abcdefghij";
+        return "lang-" + alpha.charAt(i);
+    }
+
+    public static String getWordName(Integer i) {
+        String alpha = "abcdefghij";
+        return "word-" + alpha.charAt(i);
+    }
+
+    public static String getWordNameByLanguage(String language) {
+        Utilities.log("getWordNameByLanguage", language);
+        String postfix = language.substring(language.length() - 1);
+        return "word-" + postfix;
+    }
 	
 }

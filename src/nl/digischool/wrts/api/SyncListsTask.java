@@ -26,43 +26,55 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
     private final String LOG_TAG = getClass().getSimpleName();
 	
 	public SyncListsTask(Activity activity, String auth, String since) {
+
         mActivity = activity;
 		mAuthString = auth;
 		mSinceString = "?since="+since;
 		mDb = new DbHelper(activity);
+
 	}
 	
 	public SyncListsTask(Activity activity, String auth) {
+
         mActivity = activity;
 		mAuthString = auth;
 		mDb = new DbHelper(activity);
+
 	}
 
     public void setCallBack(ApiBooleanCallback callback) {
+
         mCallback = callback;
+
     }
 
     public void setProgressBar(ProgressBar v) {
+
         mProgressBar = v;
+
     }
 
     public void setTextView(TextView v) {
+
         mTextView = v;
+
     }
 
 	@Override
 	protected Boolean doInBackground(Void... params) {
+
 		try {
 			ApiConnector connector = new ApiConnector("lists/all" + mSinceString, mAuthString);
 			String syncXml = connector.execute();
 			List<WordList> data = XmlReader.readSyncXml(syncXml);
+            Utilities.log(LOG_TAG, "Total list size: "+ data.size());
             mMaxProgress = data.size();
             super.publishProgress(0);
 			mDb.openDatabase();
 			ObjectContainer cont = mDb.openDbSession();
-            //DbModel.deleteAllWordLists(cont);
 			for(int i = 0; i < data.size(); i++) {
-                super.publishProgress(mProgress + 1);
+                mProgress = i + 1;
+                super.publishProgress(mProgress);
 				WordList list = data.get(i);			
 				DbModel.saveWordList(cont, list, false);
 			}
@@ -74,10 +86,12 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
 			e.printStackTrace();
 			return false;
 		}
+
 	}
 
     @Override
     protected void onProgressUpdate(Integer... progress) {
+
         super.onProgressUpdate(progress);
         mProgress = progress[0];
         if(mProgressBar != null) {
@@ -85,16 +99,20 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> {
                 mProgressBar.setIndeterminate(false);
                 mProgressBar.setMax(mMaxProgress);
             }
+            Utilities.log(LOG_TAG, "Saving list: " + mProgress);
             mProgressBar.setProgress(mProgress);
         }
+
         if(mTextView != null) {
-            mTextView.setText(mActivity.getResources().getString(R.string.saved_lists).replace("%s", Integer.toString(mProgress)));
+            mTextView.setText(mActivity.getResources().getQuantityString(R.plurals.saved_lists, mProgress, mProgress));
         }
+
     }
 
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
         if(mCallback != null) mCallback.apiResponseCallback("SyncListsTask", aBoolean);
+
     }
 }

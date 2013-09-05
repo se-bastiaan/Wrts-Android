@@ -19,8 +19,14 @@
     <string name="checking_data">Controleren...</string>
     <string name="a_moment_patience">Een moment geduld a.u.b.</string>
     <string name="downloading_lists">Lijsten downloaden...</string>
-    <string name="saved_lists">%s lijsten opgeslagen...</string>
+    <plurals name="saved_lists">
+        <item quantity="one">1 lijst opgeslagen...</item>
+        <item quantity="other">%d lijsten opgeslagen...</item>
+    </plurals>
     <string name="done">Klaar</string>
+
+    <!-- Overview -->
+    <string name="all_languages">alle talen</string>
 
     <!-- Errors -->
     <string name="no_server_response">Er kon geen contact gemaakt worden met de server van Wrts</string>

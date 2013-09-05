@@ -41,6 +41,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		Crashlytics.start(this);
 		setContentView(R.layout.activity_overview);
@@ -96,17 +97,23 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 
         mContentFragment = new OverviewListFragment();
         fragmentManager.beginTransaction().replace(R.id.content_frame, mContentFragment).commit();
+
+        setTitle(Utilities.uppercaseFirst(mRes.getString(R.string.all_languages)));
+
 	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.activity_overview_menu, menu);
         return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+
         // If the nav drawer is open, hide action items related to the content view
         /*if(mIsDrawerLayout) {
             // TODO: Create ActionItems and use visibility
@@ -114,6 +121,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
             //menu.findItem(R.id.syncAction).setVisible(!drawerOpen);
         }*/
         return super.onPrepareOptionsMenu(menu);
+
     }
 
     @Override
@@ -132,17 +140,23 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
                 c.close();
                 mDb.closeDatabase();
                 mMenuFragment.refreshList();
-                setOverviewLanguage("alle talen");
+                mSettings.edit().remove("downloaded_lists").commit();
+                setOverviewLanguage(mRes.getString(R.string.all_languages));
+                startActivity(new Intent(this, DownloadActivity.class));
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 
     @Override
     public void setTitle(CharSequence title) {
-        mTitle = Utilities.uppercaseFirst(title.toString());
+
+        mTitle = title.toString();
         getSupportActionBar().setTitle(mTitle);
+
     }
 
     /**
@@ -151,6 +165,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
      * @param language String
      */
     public void setOverviewLanguage(final String language) {
+
         if(language != null) setTitle(language);
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -168,12 +183,15 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
                 closeDrawer();
             }
         }.execute();
+
     }
 
     public void closeDrawer() {
+
         if(isDrawerLayout()) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         }
+
     }
 
     public boolean isDrawerLayout() {
@@ -182,20 +200,25 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
+
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         if(isDrawerLayout()) mDrawerToggle.syncState();
+
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
+
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         if(isDrawerLayout()) mDrawerToggle.onConfigurationChanged(newConfig);
+
     }
 
     @Override
     public void apiResponseCallback(String method, Boolean result) {
+
         if(method.equals("SyncListsTask")) {
             if(result) {
                 mMenuFragment.refreshList();

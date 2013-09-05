@@ -57,6 +57,8 @@
     </orderEntry>
     <orderEntry type="module" module-name="ActionBarSherlock" exported="" />
     <orderEntry type="module" module-name="ActionBarSherlockNavigationDrawer" exported="" />
+    <orderEntry type="module" module-name="ListViewAnimations" exported="" />
+    <orderEntry type="module" module-name="PagerSlidingTabStrip" exported="" />
   </component>
 </module>
 

@@ -1,9 +1,10 @@
 package nl.digischool.wrts.api;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.objects.Word;
 import nl.digischool.wrts.objects.WordList;
 
 import org.xml.sax.Attributes;
@@ -11,7 +12,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 @SuppressLint("DefaultLocale")
 public class SyncXmlHandler extends DefaultHandler {
@@ -20,7 +20,7 @@ public class SyncXmlHandler extends DefaultHandler {
 	private String mElementValue = null;
 	private ArrayList<WordList> mListData;
 	private WordList mList;
-	private Word mWord;
+	private Map<String, String> mWord;
     private final String LOG_TAG = getClass().getSimpleName();
 
     /**
@@ -51,16 +51,18 @@ public class SyncXmlHandler extends DefaultHandler {
     	if(localName.equals("list")) {
     		mInList = true;
     		mList = new WordList();
+            mList.languages = new HashMap<String, String>();
+            mList.words = new ArrayList<Map<String, String>>();
     	}
 
     	if(mInList) {    		
     		if(localName.equals("words")) {
-    			mInWords = false;
+    			mInWords = true;
     		}
     		
     		if(mInWords && localName.equals("word")) {
     			mInWord = true;
-                mWord = new Word();
+                mWord = new HashMap<String, String>();
     		}
     	}
     }
@@ -78,26 +80,10 @@ public class SyncXmlHandler extends DefaultHandler {
     			mList.id = mElementValue;
     		} else if(localName.equals("title")) {
     			mList.title = mElementValue;
-    		} else if(localName.equals("lang-a")) {
-    			mList.lang_a = mElementValue;
-    		} else if(localName.equals("lang-b")) {
-    			mList.lang_b = mElementValue;
-    		} else if(localName.equals("lang-c")) {
-    			mList.lang_c = mElementValue;
-    		} else if(localName.equals("lang-d")) {
-    			mList.lang_d = mElementValue;
-    		} else if(localName.equals("lang-e")) {
-    			mList.lang_e = mElementValue;
-    		} else if(localName.equals("lang-f")) {
-    			mList.lang_f = mElementValue;
-    		} else if(localName.equals("lang-g")) {
-    			mList.lang_g = mElementValue;
-    		} else if(localName.equals("lang-h")) {
-    			mList.lang_h = mElementValue;
-    		} else if(localName.equals("lang-i")) {
-    			mList.lang_i = mElementValue;
-    		} else if(localName.equals("lang-j")) {
-    			mList.lang_j = mElementValue;
+    		} else if(localName.startsWith("lang-")) {
+                if(mElementValue != null && !mElementValue.isEmpty() && mElementValue.length() > 0) {
+                    mList.languages.put(localName, mElementValue);
+                }
     		} else if(localName.equals("created-on")) {
     			mList.created_on = mElementValue;
     		} else if(localName.equals("updated-on")) {
@@ -113,31 +99,19 @@ public class SyncXmlHandler extends DefaultHandler {
         			mInWords = false;
         		} else if(localName.equals("word")) {
     				mInWord = false;
+                    Utilities.log(LOG_TAG, mWord);
     				mList.words.add(mWord);
     			}
     			
     			if(mInWord) {
-    				if(localName.equals("word-a")) {
-                        mWord.word_a = mElementValue;
-    				} else if(localName.equals("word-b")) {
-                        mWord.word_b = mElementValue;
-    				} else if(localName.equals("word-c")) {
-                        mWord.word_c = mElementValue;
-    				} else if(localName.equals("word-d")) {
-                        mWord.word_d = mElementValue;
-    				} else if(localName.equals("word-e")) {
-                        mWord.word_e = mElementValue;
-    				} else if(localName.equals("word-f")) {
-                        mWord.word_f = mElementValue;
-    				} else if(localName.equals("word-g")) {
-                        mWord.word_g = mElementValue;
-    				} else if(localName.equals("word-h")) {
-                        mWord.word_h = mElementValue;
-    				} else if(localName.equals("word-i")) {
-                        mWord.word_i = mElementValue;
-    				} else if(localName.equals("word-j")) {
-                        mWord.word_j = mElementValue;
-    				}
+    				if(localName.startsWith("word-")) {
+                        if(mElementValue != null && !mElementValue.isEmpty()) {
+                            mWord.put(localName, mElementValue);
+                        } else {
+                            mWord.put(localName, "\"Leeg\"");
+                        }
+
+                    }
     			}
     		}
     	}

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlockNavigationDrawer/ActionBarSherlockNavigationDrawer.iml" filepath="$PROJECT_DIR$/../ActionBarSherlockNavigationDrawer/ActionBarSherlockNavigationDrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ListViewAnimations/library/ListViewAnimations.iml" filepath="$PROJECT_DIR$/../ListViewAnimations/library/ListViewAnimations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PagerSlidingTabStrip-master/library/PagerSlidingTabStrip.iml" filepath="$PROJECT_DIR$/../PagerSlidingTabStrip-master/library/PagerSlidingTabStrip.iml" />
       <module fileurl="file://$PROJECT_DIR$/WrtsDigischool.iml" filepath="$PROJECT_DIR$/WrtsDigischool.iml" />
     </modules>
   </component>

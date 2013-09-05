@@ -21,6 +21,7 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
     private TextView mText;
 
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstdownload);
 
@@ -31,6 +32,7 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
         task.setTextView(mText);
         task.setCallBack(this);
         task.execute();
+
     }
 
     @Override
@@ -44,5 +46,6 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
         } else {
             Toast.makeText(this, mRes.getString(R.string.no_server_response), Toast.LENGTH_SHORT).show();
         }
+
     }
 }
