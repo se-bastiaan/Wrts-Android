@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.objects.WordList;
 
+import nl.digischool.wrts.dao.WordList;
 import org.xmlpull.v1.XmlSerializer;
 
 import android.os.AsyncTask;
@@ -14,13 +14,13 @@ import android.util.Xml;
 
 public class XmlBuilder {
 	
-	private WordList mDataList;
+	private WordList mList;
 	
 	/**
 	 * Create new XmlBuilder without specified WordLst
 	 */
 	public XmlBuilder() {
-		mDataList = new WordList();
+		mList = new WordList();
 	}
 	
 	/**
@@ -28,7 +28,7 @@ public class XmlBuilder {
 	 * @param list containing all data
 	 */
 	public XmlBuilder(WordList list) {
-		mDataList = list;
+		mList = list;
 	}
 	
 	/**
@@ -36,7 +36,7 @@ public class XmlBuilder {
 	 * @param title set title of list
 	 */
 	public void setTitle(String title) {
-		mDataList.title = title;
+		mList.setTitle(title);
 	}
 	
 	/**
@@ -44,8 +44,16 @@ public class XmlBuilder {
 	 * @param id
 	 */
 	public void setId(String id) {
-		mDataList.id = id;
+		mList.setId(Long.getLong(id));
 	}
+
+    /**
+     * Specify WordList id
+     * @param id
+     */
+    public void setId(Long id) {
+        mList.setId(id);
+    }
 	
 	/**
 	 * Specify WordList language using string lang_id
@@ -62,15 +70,38 @@ public class XmlBuilder {
 	 * @param lang
 	 */
 	public void setLang(Integer lang_index, String lang) {
-        mDataList.languages.put(Utilities.getLanguageName(lang_index), lang);
-	}
-	
-	/**
-	 * Specify WordList words ArrayList containing all Word objects for the list
-	 * @param words words to be added to WordList
-	 */
-	public void setWords(ArrayList<Map<String, String>> words) {
-		mDataList.words = words;
+        switch(lang_index) {
+            case 0:
+                mList.setLang_a(lang);
+                break;
+            case 1:
+                mList.setLang_b(lang);
+                break;
+            case 2:
+                mList.setLang_c(lang);
+                break;
+            case 3:
+                mList.setLang_d(lang);
+                break;
+            case 4:
+                mList.setLang_e(lang);
+                break;
+            case 5:
+                mList.setLang_f(lang);
+                break;
+            case 6:
+                mList.setLang_g(lang);
+                break;
+            case 7:
+                mList.setLang_h(lang);
+                break;
+            case 8:
+                mList.setLang_i(lang);
+                break;
+            case 9:
+                mList.setLang_j(lang);
+                break;
+        }
 	}
 	
 	/**
@@ -78,7 +109,7 @@ public class XmlBuilder {
 	 * @return get the list which has been created
 	 */
 	public WordList getList() {
-		return mDataList;
+		return mList;
 	}
 
 	/**
@@ -99,28 +130,61 @@ public class XmlBuilder {
 				        serializer.setOutput(writer);
 				        serializer.startTag("", "list");
 				        
-				        	if(mDataList.id != null) {
+				        	if(mList.getId() != null) {
 					        	serializer.startTag("", "id");
-					        	serializer.text(mDataList.id);
+					        	serializer.text(mList.getId().toString());
 					        	serializer.endTag("", "id");
 				        	}
 				        	
 				        	serializer.startTag("", "title");
-				        	serializer.text(mDataList.title);
+				        	serializer.text(mList.getTitle());
 				        	serializer.endTag("", "title");
-				        
+
 				        	for(int i = 0; i < 10; i++) {
+                                String language = null;
+                                switch(i) {
+                                    case 0:
+                                        language = mList.getLang_a();
+                                        break;
+                                    case 1:
+                                        language = mList.getLang_b();
+                                        break;
+                                    case 2:
+                                        language = mList.getLang_c();
+                                        break;
+                                    case 3:
+                                        language = mList.getLang_d();
+                                        break;
+                                    case 4:
+                                        language = mList.getLang_e();
+                                        break;
+                                    case 5:
+                                        language = mList.getLang_f();
+                                        break;
+                                    case 6:
+                                        language = mList.getLang_g();
+                                        break;
+                                    case 7:
+                                        language = mList.getLang_h();
+                                        break;
+                                    case 8:
+                                        language = mList.getLang_i();
+                                        break;
+                                    case 9:
+                                        language = mList.getLang_j();
+                                        break;
+                                }
 				        		String languageName = Utilities.getLanguageName(i);
-                                if(mDataList.languages.containsKey(languageName) && !mDataList.languages.get(languageName).isEmpty()) {
+                                if(language != null) {
                                     serializer.startTag("", languageName);
-                                    serializer.text(mDataList.languages.get(languageName));
+                                    serializer.text(language);
                                     serializer.endTag("", languageName);
                                 }
 				        	}
 				        	
-				        	if(mDataList.words != null) {
-					        	for(int i = 0; i < mDataList.words.size(); i++) {
-					        		Map<String, String> word = mDataList.words.get(i);
+				        	/*if(mList.words != null) {
+					        	for(int i = 0; i < mList.words.size(); i++) {
+					        		Map<String, String> word = mList.words.get(i);
 					        		for(int j = 0; j < 10; j++) {
                                         String wordName = Utilities.getWordName(j);
                                         if(word.containsKey(wordName) && !word.get(wordName).isEmpty()) {
@@ -131,7 +195,7 @@ public class XmlBuilder {
 						        	}
 						        	
 					        	}
-				        	}
+				        	}*/
 				        	
 				        serializer.endTag("", "list");
 				        serializer.endDocument();

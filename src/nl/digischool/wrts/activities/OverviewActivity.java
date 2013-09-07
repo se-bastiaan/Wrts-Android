@@ -15,16 +15,12 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.crashlytics.android.Crashlytics;
 import com.db4o.ObjectContainer;
-import com.db4o.ObjectSet;
 import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
-import nl.digischool.wrts.api.SyncListsTask;
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.database.DbModel;
 import nl.digischool.wrts.fragments.OverviewDrawerFragment;
 import nl.digischool.wrts.fragments.OverviewListFragment;
-import nl.digischool.wrts.objects.WordList;
 
 public class OverviewActivity extends BaseActivity implements ApiBooleanCallback {
 
@@ -134,11 +130,9 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
         // Handle action buttons
         switch(item.getItemId()) {
             case R.id.syncAction:
-                mDb.openDatabase();
-                ObjectContainer c = mDb.openDbSession();
-                DbModel.deleteAllWordLists(c);
-                c.close();
-                mDb.closeDatabase();
+                mDaoSession = mDaoMaster.newSession();
+                mDaoSession.getWordDao().deleteAll();
+                mDaoSession.getWordListDao().deleteAll();
                 mMenuFragment.refreshList();
                 mSettings.edit().remove("downloaded_lists").commit();
                 setOverviewLanguage(mRes.getString(R.string.all_languages));

@@ -59,6 +59,7 @@
     <orderEntry type="module" module-name="ActionBarSherlockNavigationDrawer" exported="" />
     <orderEntry type="module" module-name="ListViewAnimations" exported="" />
     <orderEntry type="module" module-name="PagerSlidingTabStrip" exported="" />
+    <orderEntry type="module" module-name="DaoCore" />
   </component>
 </module>
 

@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.objects.WordList;
 
+import nl.digischool.wrts.dao.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -18,24 +18,29 @@ public class SyncXmlHandler extends DefaultHandler {
 
 	private Boolean mElementSelected = false, mInList = false, mInWords = false, mInWord = false;
 	private String mElementValue = null;
-	private ArrayList<WordList> mListData;
 	private WordList mList;
-	private Map<String, String> mWord;
+	private Word mWord;
     private final String LOG_TAG = getClass().getSimpleName();
+    private ArrayList<WordList> mLists = new ArrayList<WordList>();
+    private ArrayList<Word> mWords = new ArrayList<Word>();
+    private ProgressUpdateCallback mCallback;
 
-    /**
-     * Give data to requestor
-     * @return ArrayList containing all mListdata
-     */
-	public ArrayList<WordList> getData() {
-		return mListData;
-	}
+    public SyncXmlHandler(ProgressUpdateCallback callback) {
+        mCallback = callback;
+    }
+
+    public ArrayList<WordList> getLists() {
+        return mLists;
+    }
+
+    public ArrayList<Word> getWords() {
+        return mWords;
+    }
 
     /**
      * Create ArrayList on document start
      */
     public void startDocument () {
-    	mListData = new ArrayList<WordList>();
         Utilities.log(LOG_TAG, "Start parser");
     }
     
@@ -51,8 +56,6 @@ public class SyncXmlHandler extends DefaultHandler {
     	if(localName.equals("list")) {
     		mInList = true;
     		mList = new WordList();
-            mList.languages = new HashMap<String, String>();
-            mList.words = new ArrayList<Map<String, String>>();
     	}
 
     	if(mInList) {    		
@@ -62,7 +65,8 @@ public class SyncXmlHandler extends DefaultHandler {
     		
     		if(mInWords && localName.equals("word")) {
     			mInWord = true;
-                mWord = new HashMap<String, String>();
+                mWord = new Word();
+                mWord.setList_id(mList.getId());
     		}
     	}
     }
@@ -74,24 +78,44 @@ public class SyncXmlHandler extends DefaultHandler {
     	if(mInList) {
     		if(localName.equals("list")) {
         		mInList = false;
-        		mListData.add(mList);
+                mLists.add(mList);
+                mCallback.updateProgress(mLists.size());
         		//Log.d("data", mList.lang_a);
         	} else if(localName.equals("id")) {
-    			mList.id = mElementValue;
+                Utilities.log(LOG_TAG, "id: "+Long.parseLong(mElementValue, 10));
+    			mList.setId(Long.parseLong(mElementValue, 10));
     		} else if(localName.equals("title")) {
-    			mList.title = mElementValue;
+    			mList.setTitle(mElementValue);
     		} else if(localName.startsWith("lang-")) {
-                if(mElementValue != null && !mElementValue.isEmpty() && mElementValue.length() > 0) {
-                    mList.languages.put(localName, mElementValue);
+                if(localName.endsWith("a")) {
+                    mList.setLang_a(mElementValue);
+                } else if(localName.endsWith("b")) {
+                    mList.setLang_b(mElementValue);
+                } else if(localName.endsWith("c")) {
+                    mList.setLang_c(mElementValue);
+                } else if(localName.endsWith("d")) {
+                    mList.setLang_d(mElementValue);
+                } else if(localName.endsWith("e")) {
+                    mList.setLang_e(mElementValue);
+                } else if(localName.endsWith("f")) {
+                    mList.setLang_f(mElementValue);
+                } else if(localName.endsWith("g")) {
+                    mList.setLang_g(mElementValue);
+                } else if(localName.endsWith("h")) {
+                    mList.setLang_h(mElementValue);
+                } else if(localName.endsWith("i")) {
+                    mList.setLang_i(mElementValue);
+                } else if(localName.endsWith("j")) {
+                    mList.setLang_j(mElementValue);
                 }
     		} else if(localName.equals("created-on")) {
-    			mList.created_on = mElementValue;
+    			mList.setCreated_on(mElementValue);
     		} else if(localName.equals("updated-on")) {
-    			mList.updated_on = mElementValue;
+    			mList.setUpdated_on(mElementValue);
     		} else if(localName.equals("share")) {
-    			mList.shared = (mElementValue.equals("true"));
+    			mList.setShared(mElementValue.equals("true"));
     		} else if(localName.equals("result-count")) {
-    			mList.result_count = Integer.parseInt(mElementValue);
+    			mList.setResult_count(Integer.parseInt(mElementValue));
     		}
     		
     		if(mInWords) {
@@ -99,18 +123,32 @@ public class SyncXmlHandler extends DefaultHandler {
         			mInWords = false;
         		} else if(localName.equals("word")) {
     				mInWord = false;
-                    Utilities.log(LOG_TAG, mWord);
-    				mList.words.add(mWord);
+                    mWords.add(mWord);
     			}
     			
     			if(mInWord) {
     				if(localName.startsWith("word-")) {
-                        if(mElementValue != null && !mElementValue.isEmpty()) {
-                            mWord.put(localName, mElementValue);
-                        } else {
-                            mWord.put(localName, "\"Leeg\"");
+                        if(localName.endsWith("a")) {
+                            mWord.setWord_a(mElementValue);
+                        } else if(localName.endsWith("b")) {
+                            mWord.setWord_b(mElementValue);
+                        } else if(localName.endsWith("c")) {
+                            mWord.setWord_c(mElementValue);
+                        } else if(localName.endsWith("d")) {
+                            mWord.setWord_d(mElementValue);
+                        } else if(localName.endsWith("e")) {
+                            mWord.setWord_e(mElementValue);
+                        } else if(localName.endsWith("f")) {
+                            mWord.setWord_f(mElementValue);
+                        } else if(localName.endsWith("g")) {
+                            mWord.setWord_g(mElementValue);
+                        } else if(localName.endsWith("h")) {
+                            mWord.setWord_h(mElementValue);
+                        } else if(localName.endsWith("i")) {
+                            mWord.setWord_i(mElementValue);
+                        } else if(localName.endsWith("j")) {
+                            mWord.setWord_j(mElementValue);
                         }
-
                     }
     			}
     		}
@@ -123,10 +161,6 @@ public class SyncXmlHandler extends DefaultHandler {
             mElementValue = new String(ch, start, length);
             mElementSelected = false;
         }
-    }
-
-    public void log(String obj) {
-        Utilities.log(LOG_TAG, obj);
     }
 
 }

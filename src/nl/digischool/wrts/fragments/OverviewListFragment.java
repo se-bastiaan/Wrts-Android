@@ -14,9 +14,6 @@ import nl.digischool.wrts.R;
 import nl.digischool.wrts.activities.ListDetailActivity;
 import nl.digischool.wrts.adapters.OverviewListAdapter;
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.database.DbHelper;
-import nl.digischool.wrts.database.DbModel;
-import nl.digischool.wrts.objects.WordList;
 
 import java.util.*;
 
@@ -28,7 +25,6 @@ import java.util.*;
  */
 public class OverviewListFragment extends SherlockFragment {
 
-    protected DbHelper mDb;
     private OverviewListAdapter mAdapter;
     private String mLanguage = null;
     private ListView mListView;
@@ -59,8 +55,8 @@ public class OverviewListFragment extends SherlockFragment {
     }
 
     public void refreshList() {
-
-        ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
+        // TODO: Refresh list using GreenDAO (new orm)
+        /*ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         mDb = new DbHelper(getActivity());
         mDb.openDatabase();
         ObjectContainer cont = mDb.openDbSession();
@@ -85,7 +81,7 @@ public class OverviewListFragment extends SherlockFragment {
         });
 
         mAdapter = new OverviewListAdapter(getSherlockActivity(), dataList);
-        mListView.setAdapter(mAdapter);
+        mListView.setAdapter(mAdapter);*/
 
     }
 

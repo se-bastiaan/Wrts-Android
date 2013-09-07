@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.widget.BaseAdapter;
 import nl.digischool.wrts.fragments.ListDetailWordsFragment;
-import nl.digischool.wrts.objects.WordList;
 
 import java.util.ArrayList;
 import java.util.Map;

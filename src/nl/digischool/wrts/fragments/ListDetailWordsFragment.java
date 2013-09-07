@@ -6,14 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
-import com.db4o.ObjectContainer;
 import nl.digischool.wrts.R;
-import nl.digischool.wrts.activities.BaseActivity;
 import nl.digischool.wrts.activities.ListDetailActivity;
 import nl.digischool.wrts.adapters.WordsListAdapter;
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.database.DbHelper;
-import nl.digischool.wrts.objects.WordList;
+import nl.digischool.wrts.dao.WordList;
 
 /**
  * Sébastiaanmaakt
@@ -30,12 +27,12 @@ public class ListDetailWordsFragment extends SherlockFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
         ListDetailActivity activity = (ListDetailActivity) getActivity();
         mList = activity.getWordList();
-        if(mList.words != null) Utilities.log("ListDetailWordsFragment", "not null");
+        //if(mList.words != null) Utilities.log("ListDetailWordsFragment", "not null");
 
         Bundle args = getArguments();
         mLanguage = args.getString("language");
         String wordName = Utilities.getWordNameByLanguage(mLanguage);
-        WordsListAdapter adapter = new WordsListAdapter(getActivity(), mList.words, wordName);
+        //WordsListAdapter adapter = new WordsListAdapter(getActivity(), mList.words, wordName);
 
         View v = inflater.inflate(R.layout.activity_overview_list, group, false);
 
@@ -43,7 +40,7 @@ public class ListDetailWordsFragment extends SherlockFragment {
         mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         //mListView.setOnItemClickListener(mOnItemClickListener);
 
-        mListView.setAdapter(adapter);
+        //mListView.setAdapter(adapter);
 
         return v;
     }

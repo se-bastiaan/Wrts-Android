@@ -1,5 +1,6 @@
 package nl.digischool.wrts.api;
 
+import java.io.InputStream;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +8,8 @@ import java.util.List;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import nl.digischool.wrts.objects.WordList;
-
+import android.view.View;
+import nl.digischool.wrts.dao.DaoMaster;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
@@ -30,32 +31,30 @@ public class XmlReader {
 		return null;
 	}
 	
-	public static WordList readListXml(String xml) {
+	public static Boolean readListXml(StringReader stringReader, ProgressUpdateCallback callback) {
 		try {
-			StringReader reader = new StringReader(xml);
-			SAXParserFactory saxPF = SAXParserFactory.newInstance();
+            SAXParserFactory saxPF = SAXParserFactory.newInstance();
 		    SAXParser saxP = saxPF.newSAXParser();
 		    XMLReader xmlR = saxP.getXMLReader();
 		    WordListXmlHandler XMLHandler = new WordListXmlHandler();
 		    xmlR.setContentHandler(XMLHandler);
-		    xmlR.parse(new InputSource(reader));		    
-			return XMLHandler.getList();
+		    xmlR.parse(new InputSource(stringReader));
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return false;
 	}
 
-	public static List<WordList> readSyncXml(String xml) {
+	public static SyncXmlHandler readSyncXml(StringReader stringReader, ProgressUpdateCallback callback) {
 		try {
-			StringReader reader = new StringReader(xml);
-			SAXParserFactory saxPF = SAXParserFactory.newInstance();
+            SAXParserFactory saxPF = SAXParserFactory.newInstance();
 		    SAXParser saxP = saxPF.newSAXParser();
 		    XMLReader xmlR = saxP.getXMLReader();
-		    SyncXmlHandler XMLHandler = new SyncXmlHandler();
+		    SyncXmlHandler XMLHandler = new SyncXmlHandler(callback);
 		    xmlR.setContentHandler(XMLHandler);
-		    xmlR.parse(new InputSource(reader));
-		    return XMLHandler.getData();
+		    xmlR.parse(new InputSource(stringReader));
+		    return XMLHandler;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

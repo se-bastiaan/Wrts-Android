@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import nl.digischool.wrts.R;
-import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.objects.WordList;
 
 import java.util.ArrayList;
 import java.util.Map;

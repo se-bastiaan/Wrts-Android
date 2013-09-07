@@ -11,8 +11,6 @@ import com.db4o.ObjectContainer;
 import nl.digischool.wrts.activities.OverviewActivity;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.adapters.OverviewDrawerListAdapter;
-import nl.digischool.wrts.database.DbHelper;
-import nl.digischool.wrts.database.DbModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +27,6 @@ import static android.widget.AdapterView.*;
  */
 public class OverviewDrawerFragment extends SherlockFragment {
 
-    protected DbHelper mDb;
     private ListView mListView;
     //private final String LOG_TAG = getClass().getSimpleName();
 
@@ -48,7 +45,8 @@ public class OverviewDrawerFragment extends SherlockFragment {
     }
 
     public void refreshList() {
-        ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
+        // TODO: Refresh list using GreenDAO (new orm)
+        /*ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         mDb = new DbHelper(getActivity());
         mDb.openDatabase();
         Map<String, Object> map = new HashMap<String, Object>();
@@ -65,7 +63,7 @@ public class OverviewDrawerFragment extends SherlockFragment {
         mDb.closeDatabase();
 
         OverviewDrawerListAdapter mAdapter = new OverviewDrawerListAdapter(getSherlockActivity(), dataList);
-        mListView.setAdapter(mAdapter);
+        mListView.setAdapter(mAdapter);*/
     }
 
     private OnItemClickListener mOnItemClickListener = new OnItemClickListener() {

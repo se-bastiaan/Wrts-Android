@@ -27,7 +27,7 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
 
         ProgressBar bar = (ProgressBar) findViewById(R.id.progressbar);
         mText = (TextView) findViewById(R.id.savedtext);
-        SyncListsTask task = new SyncListsTask(this, mApi.getAuthString());
+        SyncListsTask task = new SyncListsTask(this, mApi.getAuthString(), mDaoMaster);
         task.setProgressBar(bar);
         task.setTextView(mText);
         task.setCallBack(this);
