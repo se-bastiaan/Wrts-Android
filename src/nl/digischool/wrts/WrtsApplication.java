@@ -3,7 +3,7 @@ package nl.digischool.wrts;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 import nl.digischool.wrts.classes.Params;
-import nl.digischool.wrts.dao.DaoMaster;
+import nl.digischool.wrts.database.DaoMaster;
 
 /**
  * Sébastiaanmaakt

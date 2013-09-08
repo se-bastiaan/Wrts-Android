@@ -1,15 +1,11 @@
 package nl.digischool.wrts.api;
 
-import java.io.InputStream;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import android.view.View;
-import nl.digischool.wrts.dao.DaoMaster;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 

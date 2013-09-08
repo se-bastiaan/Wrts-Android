@@ -2,14 +2,11 @@ package nl.digischool.wrts.api;
 
 import nl.digischool.wrts.classes.Utilities;
 
-import nl.digischool.wrts.dao.Word;
-import nl.digischool.wrts.dao.WordList;
+import nl.digischool.wrts.database.Word;
+import nl.digischool.wrts.database.WordList;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class WordListXmlHandler extends DefaultHandler {
 	

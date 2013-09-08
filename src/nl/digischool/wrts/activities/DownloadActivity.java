@@ -2,12 +2,12 @@ package nl.digischool.wrts.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
-import nl.digischool.wrts.api.ApiCallback;
 import nl.digischool.wrts.api.SyncListsTask;
 
 /**
@@ -19,20 +19,31 @@ import nl.digischool.wrts.api.SyncListsTask;
 public class DownloadActivity extends BaseActivity implements ApiBooleanCallback {
 
     private TextView mText;
+    private ProgressBar mProgressBar;
 
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstdownload);
 
-        ProgressBar bar = (ProgressBar) findViewById(R.id.progressbar);
-        mText = (TextView) findViewById(R.id.savedtext);
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        mText = (TextView) findViewById(R.id.savedText);
+        executeDownload();
+    }
+
+    public void retryDownload(View v) {
+        v.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+        mText.setVisibility(View.VISIBLE);
+        findViewById(R.id.oneMoment).setVisibility(View.VISIBLE);
+    }
+
+    public void executeDownload() {
         SyncListsTask task = new SyncListsTask(this, mApi.getAuthString(), mDaoMaster);
-        task.setProgressBar(bar);
+        task.setProgressBar(mProgressBar);
         task.setTextView(mText);
         task.setCallBack(this);
         task.execute();
-
     }
 
     @Override
@@ -44,7 +55,10 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
             startActivity(i);
             finish();
         } else {
-            Toast.makeText(this, mRes.getString(R.string.no_server_response), Toast.LENGTH_SHORT).show();
+            mProgressBar.setVisibility(View.GONE);
+            mText.setText(mRes.getString(R.string.no_server_response));
+            findViewById(R.id.retryButton).setVisibility(View.VISIBLE);
+            findViewById(R.id.oneMoment).setVisibility(View.GONE);
         }
 
     }

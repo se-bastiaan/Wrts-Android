@@ -4,18 +4,15 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.db4o.ObjectContainer;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.dao.DaoMaster;
-import nl.digischool.wrts.dao.DaoSession;
-import nl.digischool.wrts.dao.Word;
-import nl.digischool.wrts.dao.WordList;
+import nl.digischool.wrts.database.DaoMaster;
+import nl.digischool.wrts.database.DaoSession;
+import nl.digischool.wrts.database.Word;
+import nl.digischool.wrts.database.WordList;
 
-import java.io.ByteArrayInputStream;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.List;
 
 public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> implements ProgressUpdateCallback {
 
@@ -52,15 +49,11 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> implements 
     }
 
     public void setProgressBar(ProgressBar v) {
-
         mProgressBar = v;
-
     }
 
     public void setTextView(TextView v) {
-
         mTextView = v;
-
     }
 
 	@Override

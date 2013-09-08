@@ -13,12 +13,21 @@ public class Utilities {
 	}
 
     /**
-     * First character to uppercase
+     * First character to uppercase, other characters lowercase
      * @param str Input string
      * @return String first uppercase
      */
     public static String uppercaseFirst(String str) {
         return Character.toUpperCase(str.charAt(0)) + str.substring(1).toLowerCase();
+    }
+
+    /**
+     * First character to uppercase, other characters the same
+     * @param str Input string
+     * @return String first uppercase
+     */
+    public static String uppercaseOnlyFirst(String str) {
+        return Character.toUpperCase(str.charAt(0)) + str.substring(1);
     }
 
     public static String getLanguageName(Integer i) {

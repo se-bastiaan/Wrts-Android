@@ -4,15 +4,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import com.actionbarsherlock.app.ActionBar;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
-import com.db4o.ObjectContainer;
 import nl.digischool.wrts.R;
-import nl.digischool.wrts.adapters.ListDetailPagerAdapter;
-import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.dao.WordList;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import nl.digischool.wrts.database.WordList;
 
 /**
  * Sébastiaanmaakt

@@ -8,9 +8,8 @@ import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.activities.ListDetailActivity;
-import nl.digischool.wrts.adapters.WordsListAdapter;
 import nl.digischool.wrts.classes.Utilities;
-import nl.digischool.wrts.dao.WordList;
+import nl.digischool.wrts.database.WordList;
 
 /**
  * Sébastiaanmaakt

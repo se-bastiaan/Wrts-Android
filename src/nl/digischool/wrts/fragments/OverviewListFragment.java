@@ -8,12 +8,18 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
-import com.db4o.ObjectContainer;
-import com.db4o.ObjectSet;
+import de.greenrobot.dao.query.CloseableListIterator;
+import de.greenrobot.dao.query.QueryBuilder;
+import de.greenrobot.dao.query.WhereCondition;
 import nl.digischool.wrts.R;
+import nl.digischool.wrts.activities.BaseActivity;
 import nl.digischool.wrts.activities.ListDetailActivity;
 import nl.digischool.wrts.adapters.OverviewListAdapter;
 import nl.digischool.wrts.classes.Utilities;
+import nl.digischool.wrts.database.DaoMaster;
+import nl.digischool.wrts.database.DaoSession;
+import nl.digischool.wrts.database.WordList;
+import nl.digischool.wrts.database.WordListDao;
 
 import java.util.*;
 
@@ -56,32 +62,37 @@ public class OverviewListFragment extends SherlockFragment {
 
     public void refreshList() {
         // TODO: Refresh list using GreenDAO (new orm)
-        /*ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
-        mDb = new DbHelper(getActivity());
-        mDb.openDatabase();
-        ObjectContainer cont = mDb.openDbSession();
-        ObjectSet<WordList> lists = DbModel.getWordListsByLanguage(cont, mLanguage);
-        Utilities.log(LOG_TAG, "List size:" + lists.size());
-        while(lists.hasNext()) {
+        DaoMaster daoMaster = ((BaseActivity)getActivity()).mDaoMaster;
+        DaoSession session = daoMaster.newSession();
+        WordListDao wordListDao = session.getWordListDao();
+
+        ArrayList<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
+        List<WordList> listsList;
+        QueryBuilder qb = wordListDao.queryBuilder();
+        if(mLanguage != null) {
+            String uLanguage = mLanguage.toUpperCase();
+            String whereString = "";
+            String abc = "ABCDEFGHIJ";
+            for(int i = 0; i < 10; i++) {
+                char lang = abc.charAt(i);
+                whereString += "UPPER(LANG_"+lang+") = '"+uLanguage+"'";
+
+                if(i != 9) whereString += " OR ";
+            }
+            listsList = qb.where(new WhereCondition.StringCondition(whereString)).orderAsc(WordListDao.Properties.Title).list();
+        } else {
+            listsList = qb.orderAsc(WordListDao.Properties.Title).list();
+        }
+
+        for(WordList list : listsList) {
             Map<String, Object> map = new HashMap<String, Object>();
-            WordList list = lists.next();
-            map.put("string", list.title);
-            map.put("id", list.id);
+            map.put("string", list.getTitle());
+            map.put("id", list.getId());
             dataList.add(map);
         }
-        cont.close();
-        mDb.closeDatabase();
-
-        Collections.sort(dataList, new Comparator<Map<String, Object>>() {
-            public int compare(Map<String, Object> a, Map<String, Object> b) {
-                String strA = (String) a.get("string");
-                String strB = (String) b.get("string");
-                return strA.compareToIgnoreCase(strB);
-            }
-        });
 
         mAdapter = new OverviewListAdapter(getSherlockActivity(), dataList);
-        mListView.setAdapter(mAdapter);*/
+        mListView.setAdapter(mAdapter);
 
     }
 
@@ -90,7 +101,7 @@ public class OverviewListFragment extends SherlockFragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             Map<String, Object> map = mAdapter.getItem(position);
-            Integer listId = Integer.parseInt((String)map.get("id"));
+            Long listId = (Long) map.get("id");
             Intent intent = new Intent(getActivity(), ListDetailActivity.class);
             intent.putExtra("id", listId);
             startActivity(intent);

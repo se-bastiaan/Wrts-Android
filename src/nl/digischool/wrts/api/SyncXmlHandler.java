@@ -1,12 +1,10 @@
 package nl.digischool.wrts.api;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import nl.digischool.wrts.classes.Utilities;
 
-import nl.digischool.wrts.dao.*;
+import nl.digischool.wrts.database.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

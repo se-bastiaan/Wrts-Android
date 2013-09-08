@@ -29,15 +29,6 @@
     <orderEntry type="jdk" jdkName="Android 4.2.2 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
-      <library name="db4o-8.0.249.16098-all-java5.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/db4o-8.0.249.16098-all-java5.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
       <library name="crashlytics.jar">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/crashlytics.jar!/" />

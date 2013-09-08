@@ -13,8 +13,6 @@
         android:listSelector="@color/transparent"
     	android:divider="@color/wrts_drawer_divider"
     	android:dividerHeight="0.5dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
         />
 
 </RelativeLayout>

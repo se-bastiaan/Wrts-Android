@@ -24,6 +24,7 @@
         <item quantity="other">%d lijsten opgeslagen...</item>
     </plurals>
     <string name="done">Klaar</string>
+    <string name="retry">Opnieuw proberen</string>
 
     <!-- Overview -->
     <string name="all_languages">alle talen</string>

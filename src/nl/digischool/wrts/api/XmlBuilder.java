@@ -1,12 +1,10 @@
 package nl.digischool.wrts.api;
 
 import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Map;
 
 import nl.digischool.wrts.classes.Utilities;
 
-import nl.digischool.wrts.dao.WordList;
+import nl.digischool.wrts.database.WordList;
 import org.xmlpull.v1.XmlSerializer;
 
 import android.os.AsyncTask;

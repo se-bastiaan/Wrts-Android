@@ -18,7 +18,7 @@ import java.net.URL;
 public class WrtsDaoGenerator {
 
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, "nl.digischool.wrts.dao");
+        Schema schema = new Schema(1, "nl.digischool.wrts.database");
 
         addWordListWord(schema);
 

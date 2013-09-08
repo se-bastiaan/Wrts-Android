@@ -64,8 +64,6 @@ public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
             connector = new ApiConnector(mApiMethod, mApiAuth);
         }
         String result = connector.execute();
-        Utilities.log(LOG_TAG, LOG_TAG);
-        Utilities.log(LOG_TAG, result);
 		return result;
     }    	
 	
