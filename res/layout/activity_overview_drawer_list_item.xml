@@ -17,7 +17,7 @@
         android:layout_marginRight="15dp"
         android:gravity="left|center_vertical"
         android:ellipsize="end"
-        android:textSize="14dp"
+        android:textSize="@dimen/wrts_listitem_textsize"
         android:textIsSelectable="false"
         android:typeface="sans"
         />

@@ -3,7 +3,6 @@ package nl.digischool.wrts.database;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
-
 import de.greenrobot.dao.AbstractDao;
 import de.greenrobot.dao.Property;
 import de.greenrobot.dao.internal.DaoConfig;
@@ -149,7 +148,7 @@ public class WordListDao extends AbstractDao<WordList, Long> {
  
         Boolean shared = entity.getShared();
         if (shared != null) {
-            stmt.bindLong(16, shared ? 1l : 0l);
+            stmt.bindLong(16, shared ? 1l: 0l);
         }
     }
 

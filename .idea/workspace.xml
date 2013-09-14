@@ -79,6 +79,7 @@
       <profile>
         <option name="device" value="2.7in QVGA" />
         <option name="deviceConfiguration" value="Portrait" />
+        <option name="localeLanguage" value="en" />
         <option name="targetHashString" value="android-17" />
         <option name="theme" value="Theme.Wrts" />
       </profile>
@@ -101,58 +102,78 @@
     </device-configurations>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="query" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="ApiConnector" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\libs\db4o-8.0.249.16098-all-java5.jar" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/Changes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/ChangesDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/undo_row.xml" />
+      <change type="DELETED" beforePath="D:\Android Workspace\WrtsDigischool\.idea\libraries\nineoldandroids_2_4_0.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/crashlytics.jar" afterPath="$PROJECT_DIR$/libs/crashlytics.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiCallback.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiCallback.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Base64.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Base64.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DaoGeneratorWrts/DaoGeneratorWrts.iml" afterPath="$PROJECT_DIR$/DaoGeneratorWrts/DaoGeneratorWrts.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoMaster.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoMaster.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoSession.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoSession.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/IndexXmlHandler.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/IndexXmlHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/ListDetailPagerAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/ListDetailPagerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewDrawerListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewDrawerListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Params.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Params.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordDao.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordList.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordListDao.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordListDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/WordListXmlHandler.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/WordListXmlHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/WordsListAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/WordsListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/WrtsApplication.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/WrtsApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DaoGeneratorWrts/src/nl/digischool/wrts/gen/WrtsDaoGenerator.java" afterPath="$PROJECT_DIR$/DaoGeneratorWrts/src/nl/digischool/wrts/gen/WrtsDaoGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WrtsDigischool.iml" afterPath="$PROJECT_DIR$/WrtsDigischool.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlBuilder.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlReader.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" afterPath="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_list.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_overview_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/com_crashlytics_export_strings.xml" afterPath="$PROJECT_DIR$/res/values/com_crashlytics_export_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\DaoMaster.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoMaster.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\DaoSession.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/DaoSession.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\Word.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/Word.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\WordDao.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordDao.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\WordList.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordList.java" />
-      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\dao\WordListDao.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/database/WordListDao.java" />
     </list>
     <ignored path="WrtsDigischool.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574202355" ignored="false" />
+    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379148297435" ignored="false" />
     <file path="$PROJECT_DIR$/../SlidingMenu/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362192565" ignored="false" />
-    <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378563535510" ignored="false" />
+    <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379159454805" ignored="false" />
     <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378564617461" ignored="false" />
-    <file path="/ApiConnector.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378575304682" ignored="false" />
-    <file path="/ApiConnectorTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372881235408" ignored="false" />
-    <file path="/ApiCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372506282826" ignored="false" />
-    <file path="/ApiHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373062638973" ignored="false" />
-    <file path="/Utilities.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378636303432" ignored="false" />
-    <file path="/Params.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372434163113" ignored="false" />
-    <file path="/SyncListsTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574065495" ignored="false" />
-    <file path="/SyncXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574086672" ignored="false" />
+    <file path="/ApiConnector.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379164243850" ignored="false" />
+    <file path="/ApiConnectorTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379163752983" ignored="false" />
+    <file path="/ApiCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379163595964" ignored="false" />
+    <file path="/ApiHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379160293303" ignored="false" />
+    <file path="/Utilities.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379164534236" ignored="false" />
+    <file path="/Params.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379159790349" ignored="false" />
+    <file path="/SyncListsTask.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379164101669" ignored="false" />
+    <file path="/SyncXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379150221302" ignored="false" />
     <file path="/WordListXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378563151349" ignored="false" />
     <file path="/IndexXmlHandler.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372446525226" ignored="false" />
-    <file path="/XmlBuilder.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378564289461" ignored="false" />
+    <file path="/XmlBuilder.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378644488080" ignored="false" />
     <file path="/BaseActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378575911147" ignored="false" />
     <file path="/DbHelper.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372675037840" ignored="false" />
     <file path="/SlidingMenuListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372442730324" ignored="false" />
@@ -161,7 +182,7 @@
     <file path="$PROJECT_DIR$/../NavigationDrawer/res/layout/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/activity_main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372444338236" ignored="false" />
     <file path="/DrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372686256276" ignored="false" />
-    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378575126722" ignored="false" />
+    <file path="/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378645241234" ignored="false" />
     <file path="/colors.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378412608052" ignored="false" />
     <file path="/OverviewDrawerFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378636327069" ignored="false" />
     <file path="/MainActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372453647978" ignored="false" />
@@ -175,19 +196,19 @@
     <file path="/activity_overview_menu.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372503646464" ignored="false" />
     <file path="/SherlockActionBarDrawerToggle.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372503155385" ignored="false" />
     <file path="/ApiBooleanCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372506314045" ignored="false" />
-    <file path="/activity_overview_drawer_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372630519904" ignored="false" />
+    <file path="/activity_overview_drawer_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378642752188" ignored="false" />
     <file path="/activity_overview_drawer_list_header.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372624018936" ignored="false" />
     <file path="/StickyHeaderExpandableListView.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372621866643" ignored="false" />
     <file path="/DbModel.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378411354653" ignored="false" />
     <file path="/ListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372668426565" ignored="false" />
-    <file path="/OverviewListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378577663617" ignored="false" />
+    <file path="/OverviewListFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379167166923" ignored="false" />
     <file path="/WrtsApplication.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372674455292" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378564778388" ignored="false" />
-    <file path="/OverviewListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1375805383011" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379167507359" ignored="false" />
+    <file path="/OverviewListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379166314789" ignored="false" />
     <file path="/OverviewDrawerListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372687655580" ignored="false" />
-    <file path="/LoginActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1373060307849" ignored="false" />
+    <file path="/LoginActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379163625568" ignored="false" />
     <file path="/wrts_styles.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854463996" ignored="false" />
-    <file path="/activity_overview_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378070357280" ignored="false" />
+    <file path="/activity_overview_list_item.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378642762131" ignored="false" />
     <file path="/wrts_list_selectable_bg.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372854387694" ignored="false" />
     <file path="/activity_firststart.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372875007103" ignored="false" />
     <file path="/FirstStartActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372879324310" ignored="false" />
@@ -197,7 +218,7 @@
     <file path="/FirstDownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372883310279" ignored="false" />
     <file path="/activity_firstlogin.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378061263452" ignored="false" />
     <file path="/activity_firstdownload.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378575806842" ignored="false" />
-    <file path="/DownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378575597777" ignored="false" />
+    <file path="/DownloadActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379157795286" ignored="false" />
     <file path="/proguard-project.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1375813296339" ignored="false" />
     <file path="/ListActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067205857" ignored="false" />
     <file path="/activity_list.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067094085" ignored="false" />
@@ -219,15 +240,7 @@
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/src/com/haarman/listviewanimations/itemmanipulationexamples/contextualundo/ContextualUndoActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407389" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/lint.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407389" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/pom.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407389" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/AnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067587580" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/AndroidManifest.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407389" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/SingleAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/ResourceAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/prepared/SwingLeftInAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/prepared/SwingBottomInAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/prepared/SwingRightInAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/prepared/ScaleInAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697894" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/swinginadapters/prepared/AlphaInAnimationAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697879" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/itemmanipulation/SwipeDismissAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697893" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/itemmanipulation/SwipeDismissListViewTouchListener.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067697893" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/library/src/com/haarman/listviewanimations/itemmanipulation/OnDismissCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067587579" ignored="false" />
@@ -247,27 +260,32 @@
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/res/layout/activity_googlecards_card.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407390" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/example/res/values/strings.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407390" ignored="false" />
     <file path="$PROJECT_DIR$/../ListViewAnimations/res/layout/main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067407390" ignored="false" />
-    <file path="$PROJECT_DIR$/../ListViewAnimations/library/res/layout/main.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378067587579" ignored="false" />
     <file path="/activity_overview_list.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378068163862" ignored="false" />
-    <file path="/ListDetailActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378414436736" ignored="false" />
+    <file path="/ListDetailActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379167403371" ignored="false" />
     <file path="/activity_listdetail.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378416632599" ignored="false" />
-    <file path="/ListDetailWordsFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378415172880" ignored="false" />
-    <file path="/ListDetailPagerAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378414342037" ignored="false" />
+    <file path="/ListDetailWordsFragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378644840041" ignored="false" />
+    <file path="/ListDetailPagerAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378640923639" ignored="false" />
     <file path="/tabstrip_bg.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378412585943" ignored="false" />
     <file path="/WordList.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378559099985" ignored="false" />
     <file path="/Word.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378408933961" ignored="false" />
-    <file path="/WordsListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378414903658" ignored="false" />
-    <file path="/WrtsDaoGenerator.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378559481443" ignored="false" />
+    <file path="/WordsListAdapter.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378641402339" ignored="false" />
+    <file path="/WrtsDaoGenerator.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378644055035" ignored="false" />
     <file path="$PROJECT_DIR$/../GreenDAO/DaoExampleGenerator/src/de/greenrobot/daogenerator/gentest/ExampleDaoGenerator.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378550228044" ignored="false" />
     <file path="/Application.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378561054225" ignored="false" />
     <file path="/ProgressFilterInputStream.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378565463857" ignored="false" />
-    <file path="/XmlReader.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378573042247" ignored="false" />
+    <file path="/XmlReader.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379163815791" ignored="false" />
     <file path="/HandlerProgressCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378562329674" ignored="false" />
     <file path="/ProgressUpdateCallback.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574051110" ignored="false" />
     <file path="$PROJECT_DIR$/../GreenDAO/DaoGenerator/src-generator-testentities/de/greenrobot/daogenerator/gentest/TestDaoGenerator.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574319121" ignored="false" />
     <file path="$PROJECT_DIR$/../GreenDAO/DaoCore/build.gradle" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574319121" ignored="false" />
     <file path="$PROJECT_DIR$/../GreenDAO/DaoCore/src/de/greenrobot/dao/query/QueryBuilder.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574319121" ignored="false" />
     <file path="$PROJECT_DIR$/../GreenDAO/DaoCore/src/de/greenrobot/dao/AbstractDaoMaster.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378574319121" ignored="false" />
+    <file path="/activity_listdetail_list.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378641031837" ignored="false" />
+    <file path="/dimens.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378642747645" ignored="false" />
+    <file path="/Changes.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378643828578" ignored="false" />
+    <file path="/undo_row.xml" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1378645447367" ignored="false" />
+    <file path="$PROJECT_DIR$/../ActionBarSherlock/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379148566922" ignored="false" />
+    <file path="$PROJECT_DIR$/../ActionBarSherlock/src/com/actionbarsherlock/app/SherlockFragmentActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379167339286" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +345,101 @@
     <favorites_list name="WrtsDigischool" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ListDetailActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="149" column="0" selection-start="5342" selection-end="5342" vertical-scroll-proportion="0.59402984">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="29" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewListFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="82" selection-start="4753" selection-end="4785" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2539#2560#0" expanded="true" />
+                <element signature="e#3373#3389#0" expanded="true" />
+                <element signature="e#3715#4335#0" expanded="true" />
+                <element signature="e#4328#4329#0" expanded="true" />
+                <element signature="e#4413#4945#0" expanded="true" />
+                <element signature="e#4938#4939#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="22" selection-start="2132" selection-end="2132" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListDetailWordsFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="13" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyncXmlHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="158" column="39" selection-start="5881" selection-end="5881" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyncListsTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="51" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiConnector.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="94" column="70" selection-start="3725" selection-end="3736" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordsListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/WordsListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="22" selection-start="787" selection-end="801" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -354,22 +466,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ProgressUpdateCallback.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java" />
-        <option value="$PROJECT_DIR$/DaoGeneratorWrts/src/nl/digischool/wrts/gen/WrtsDaoGenerator.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Params.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiHelper.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiCallback.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlReader.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_firstdownload.xml" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_list.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewActionModeCallback.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java" />
+        <option value="$PROJECT_DIR$/res/values-v11/wrts_styles.xml" />
+        <option value="$PROJECT_DIR$/res/values/wrts_styles.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java" />
       </list>
     </option>
   </component>
@@ -408,6 +520,11 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="unused-library(library:project:nineoldandroids-2.4.0)" />
+    </ignored-problems>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -422,7 +539,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -478,6 +594,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,6 +720,10 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -598,6 +740,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WrtsDigischool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout-large-land" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,44 +807,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DaoGeneratorWrts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WrtsDigischool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DaoGeneratorWrts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -974,7 +1113,11 @@
       <created>1378574234549</created>
       <updated>1378574234549</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Main screen lists working OK">
+      <created>1378638792098</created>
+      <updated>1378638792098</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -999,30 +1142,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.3993174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31740615" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31740615" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6006826" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36348122" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25984848" sideWeight="0.6518771" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34812286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25833333" sideWeight="0.6518771" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34812286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6518771" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.64846414" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1069,7 +1212,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced db4o with GreenDAO to fix speed. Syncing is working very well." />
+    <option name="LAST_COMMIT_MESSAGE" value="Main screen lists working OK" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1096,6 +1239,7 @@
     <MESSAGE value="Fixed Proguard errors, fixed case in lists" />
     <MESSAGE value="Fixed parsing words to the object, tabstrip in detaillist and listview" />
     <MESSAGE value="Replaced db4o with GreenDAO to fix speed. Syncing is working very well." />
+    <MESSAGE value="Main screen lists working OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1105,142 +1249,132 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Program Files (x86)/Android/android-sdk/sources/android-17/android/view/View.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="670" column="13" selection-start="29270" selection-end="29270" vertical-scroll-proportion="-2.6957328">
+        <state line="61" column="39" selection-start="2044" selection-end="2044" vertical-scroll-proportion="-14.94">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnectorTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="29" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="53" column="16" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.2266289">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/DownloadActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="63" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.13731343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_firstdownload.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="36" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.67753625">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="56" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="10" selection-start="1506" selection-end="1506" vertical-scroll-proportion="1.514045">
+        <state line="30" column="5" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/XmlReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="34" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-8.502809">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="823" selection-end="823" vertical-scroll-proportion="0.19101124">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files (x86)/Android/android-sdk/sources/android-17/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="11" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.3321033">
+        <state line="46" column="68" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="63" selection-start="353" selection-end="353" vertical-scroll-proportion="0.18820225">
+        <state line="65" column="33" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3174#3308#0" expanded="true" />
+            <element signature="e#3301#3302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/ApiConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="70" selection-start="3725" selection-end="3736" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncXmlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="39" selection-start="5881" selection-end="5881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/api/SyncListsTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="51" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/WordsListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="22" selection-start="787" selection-end="801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/adapters/OverviewListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+        <state line="79" column="22" selection-start="2132" selection-end="2132" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_list.xml">
+    <entry file="file://$PROJECT_DIR$/res/values-v11/wrts_styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="604" selection-end="604" vertical-scroll-proportion="-5.76">
+        <state line="10" column="78" selection-start="628" selection-end="928" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/wrts_styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="496" selection-end="496" vertical-scroll-proportion="-7.48">
+        <state line="9" column="70" selection-start="579" selection-end="855" vertical-scroll-proportion="0.1522388">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="37" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.35568514">
+        <state line="125" column="82" selection-start="4753" selection-end="4785" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2209#2230#0" expanded="true" />
-            <element signature="e#3030#3046#0" expanded="true" />
-            <element signature="e#3373#3812#0" expanded="true" />
-            <element signature="e#3805#3806#0" expanded="true" />
+            <element signature="e#2539#2560#0" expanded="true" />
+            <element signature="e#3373#3389#0" expanded="true" />
+            <element signature="e#3715#4335#0" expanded="true" />
+            <element signature="e#4328#4329#0" expanded="true" />
+            <element signature="e#4413#4945#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/fragments/OverviewDrawerFragment.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="30" selection-start="4407" selection-end="4407" vertical-scroll-proportion="0.71348315">
+        <state line="3" column="29" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="0" selection-start="5342" selection-end="5342" vertical-scroll-proportion="0.59402984">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1872#1880#0" expanded="true" />
-            <element signature="e#1931#1939#0" expanded="true" />
-            <element signature="e#2017#2025#0" expanded="true" />
-            <element signature="e#3626#3634#0" expanded="true" />
-            <element signature="e#3770#3791#0" expanded="true" />
-            <element signature="e#4059#4075#0" expanded="true" />
-            <element signature="e#4926#4927#0" expanded="true" />
-            <element signature="e#5004#5025#0" expanded="true" />
-            <element signature="e#5074#5090#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1297,7 +1431,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>WrtsDigischool</last-edited>
+          <last-edited>ActionBarSherlock</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1321,7 +1455,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>nineoldandroids-2.4.0</last-edited>
+          <last-edited>android-support-v4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

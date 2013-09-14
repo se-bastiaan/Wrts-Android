@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import nl.digischool.wrts.R;
+import nl.digischool.wrts.database.Word;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.List;
 
 /**
  * Sébastiaanmaakt
@@ -20,16 +20,14 @@ import java.util.Map;
 public class WordsListAdapter extends BaseAdapter {
 
     private class ViewHolder { TextView text1; }
-    private ArrayList<Map<String, String>> mWords;
+    private List<Word> mWords;
     private LayoutInflater mInflater;
-    private String mWordName;
+    private Integer mLanguageIndex;
 
-    public WordsListAdapter(Context context, ArrayList<Map<String, String>> words, String wordName) {
-
+    public WordsListAdapter(Context context, List<Word> words, Integer langIndex) {
         mInflater = LayoutInflater.from(context);
         mWords = words;
-        mWordName = wordName;
-
+        mLanguageIndex = langIndex;
     }
 
     @Override
@@ -40,10 +38,8 @@ public class WordsListAdapter extends BaseAdapter {
     }
 
     @Override
-    public Map<String, String> getItem(int position) {
-
+    public Word getItem(int position) {
         return mWords.get(position);
-
     }
 
     @Override
@@ -65,12 +61,48 @@ public class WordsListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Map<String, String> object = getItem(position);
-        String text = (String) object.get(mWordName);
+        Word object = getItem(position);
+        String text = getWord(object);
         holder.text1.setText(text);
 
         return convertView;
 
+    }
+
+    private String getWord(Word word) {
+        switch (mLanguageIndex) {
+            case 0:
+                if(word.getWord_a() != null && !word.getWord_a().isEmpty()) return word.getWord_a();
+                break;
+            case 1:
+                if(word.getWord_b() != null && !word.getWord_b().isEmpty()) return word.getWord_b();
+                break;
+            case 2:
+                if(word.getWord_c() != null && !word.getWord_c().isEmpty()) return word.getWord_c();
+                break;
+            case 3:
+                if(word.getWord_d() != null && !word.getWord_d().isEmpty()) return word.getWord_d();
+                break;
+            case 4:
+                if(word.getWord_e() != null && !word.getWord_e().isEmpty()) return word.getWord_e();
+                break;
+            case 5:
+                if(word.getWord_f() != null && !word.getWord_f().isEmpty()) return word.getWord_f();
+                break;
+            case 6:
+                if(word.getWord_g() != null && !word.getWord_g().isEmpty()) return word.getWord_g();
+                break;
+            case 7:
+                if(word.getWord_h() != null && !word.getWord_h().isEmpty()) return word.getWord_h();
+                break;
+            case 8:
+                if(word.getWord_i() != null && !word.getWord_i().isEmpty()) return word.getWord_i();
+                break;
+            case 9:
+                if(word.getWord_j() != null && !word.getWord_j().isEmpty()) return word.getWord_j();
+                break;
+        }
+        return "";
     }
 
 }

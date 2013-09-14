@@ -19,12 +19,14 @@ public class DaoMaster extends AbstractDaoMaster {
     public static void createAllTables(SQLiteDatabase db, boolean ifNotExists) {
         WordListDao.createTable(db, ifNotExists);
         WordDao.createTable(db, ifNotExists);
+        ChangesDao.createTable(db, ifNotExists);
     }
     
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(SQLiteDatabase db, boolean ifExists) {
         WordListDao.dropTable(db, ifExists);
         WordDao.dropTable(db, ifExists);
+        ChangesDao.dropTable(db, ifExists);
     }
     
     public static abstract class OpenHelper extends SQLiteOpenHelper {
@@ -58,6 +60,7 @@ public class DaoMaster extends AbstractDaoMaster {
         super(db, SCHEMA_VERSION);
         registerDaoClass(WordListDao.class);
         registerDaoClass(WordDao.class);
+        registerDaoClass(ChangesDao.class);
     }
     
     public DaoSession newSession() {

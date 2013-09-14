@@ -1,16 +1,7 @@
 package nl.digischool.wrts.api;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import javax.net.ssl.SSLException;
-
-import nl.digischool.wrts.classes.Params;
-import nl.digischool.wrts.classes.Utilities;
 import android.os.AsyncTask;
+import org.xml.sax.InputSource;
 
 public class ApiConnectorTask extends AsyncTask<Void, Void, String> {
 	

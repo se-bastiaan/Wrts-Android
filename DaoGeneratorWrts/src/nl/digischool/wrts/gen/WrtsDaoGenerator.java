@@ -1,10 +1,6 @@
 package nl.digischool.wrts.gen;
 
-import de.greenrobot.daogenerator.DaoGenerator;
-import de.greenrobot.daogenerator.Entity;
-import de.greenrobot.daogenerator.Property;
-import de.greenrobot.daogenerator.Schema;
-import de.greenrobot.daogenerator.ToMany;
+import de.greenrobot.daogenerator.*;
 
 import java.net.URL;
 
@@ -64,6 +60,12 @@ public class WrtsDaoGenerator {
         word.addToOne(list, listId);
         ToMany listToWords = list.addToMany(word, listId);
         listToWords.setName("words");
+
+        Entity changes = schema.addEntity("Changes");
+        changes.addIdProperty();
+        changes.addIntProperty("type").notNull();
+        Property listIdchange = changes.addLongProperty("list_id").notNull().getProperty();
+        changes.addToOne(list, listIdchange);
     }
 
 }

@@ -1,15 +1,14 @@
 package nl.digischool.wrts.api;
 
-import java.util.ArrayList;
-
+import android.annotation.SuppressLint;
 import nl.digischool.wrts.classes.Utilities;
-
-import nl.digischool.wrts.database.*;
+import nl.digischool.wrts.database.Word;
+import nl.digischool.wrts.database.WordList;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import android.annotation.SuppressLint;
+import java.util.ArrayList;
 
 @SuppressLint("DefaultLocale")
 public class SyncXmlHandler extends DefaultHandler {
@@ -83,6 +82,7 @@ public class SyncXmlHandler extends DefaultHandler {
                 Utilities.log(LOG_TAG, "id: "+Long.parseLong(mElementValue, 10));
     			mList.setId(Long.parseLong(mElementValue, 10));
     		} else if(localName.equals("title")) {
+                Utilities.log(LOG_TAG, "title: "+mElementValue);
     			mList.setTitle(mElementValue);
     		} else if(localName.startsWith("lang-")) {
                 if(localName.endsWith("a")) {

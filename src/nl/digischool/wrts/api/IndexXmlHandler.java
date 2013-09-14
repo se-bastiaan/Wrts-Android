@@ -1,11 +1,11 @@
 package nl.digischool.wrts.api;
 
-import java.util.ArrayList;
-
 import nl.digischool.wrts.classes.Utilities;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import java.util.ArrayList;
 
 public class IndexXmlHandler extends DefaultHandler {
 	

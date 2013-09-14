@@ -1,14 +1,13 @@
 package nl.digischool.wrts.api;
 
-import java.io.StringWriter;
-
+import android.os.AsyncTask;
+import android.util.Xml;
 import nl.digischool.wrts.classes.Utilities;
-
+import nl.digischool.wrts.database.Word;
 import nl.digischool.wrts.database.WordList;
 import org.xmlpull.v1.XmlSerializer;
 
-import android.os.AsyncTask;
-import android.util.Xml;
+import java.io.StringWriter;
 
 public class XmlBuilder {
 	
@@ -179,21 +178,52 @@ public class XmlBuilder {
                                     serializer.endTag("", languageName);
                                 }
 				        	}
-				        	
-				        	/*if(mList.words != null) {
-					        	for(int i = 0; i < mList.words.size(); i++) {
-					        		Map<String, String> word = mList.words.get(i);
-					        		for(int j = 0; j < 10; j++) {
-                                        String wordName = Utilities.getWordName(j);
-                                        if(word.containsKey(wordName) && !word.get(wordName).isEmpty()) {
-                                            serializer.startTag("", wordName);
-                                            serializer.text(word.get(wordName));
-                                            serializer.endTag("", wordName);
-                                        }
-						        	}
-						        	
-					        	}
-				        	}*/
+
+                            serializer.startTag("", "words");
+                            for(Word word : mList.getWords()) {
+                                String wordText = null;
+                                for(int j = 0; j < 10; j++) {
+                                    switch (j) {
+                                        case 0:
+                                            if(word.getWord_a() != null && !word.getWord_a().isEmpty()) wordText = word.getWord_a();
+                                            break;
+                                        case 1:
+                                            if(word.getWord_b() != null && !word.getWord_b().isEmpty()) wordText = word.getWord_b();
+                                            break;
+                                        case 2:
+                                            if(word.getWord_c() != null && !word.getWord_c().isEmpty()) wordText = word.getWord_c();
+                                            break;
+                                        case 3:
+                                            if(word.getWord_d() != null && !word.getWord_d().isEmpty()) wordText = word.getWord_d();
+                                            break;
+                                        case 4:
+                                            if(word.getWord_e() != null && !word.getWord_e().isEmpty()) wordText = word.getWord_e();
+                                            break;
+                                        case 5:
+                                            if(word.getWord_f() != null && !word.getWord_f().isEmpty()) wordText = word.getWord_f();
+                                            break;
+                                        case 6:
+                                            if(word.getWord_g() != null && !word.getWord_g().isEmpty()) wordText = word.getWord_g();
+                                            break;
+                                        case 7:
+                                            if(word.getWord_h() != null && !word.getWord_h().isEmpty()) wordText = word.getWord_h();
+                                            break;
+                                        case 8:
+                                            if(word.getWord_i() != null && !word.getWord_i().isEmpty()) wordText = word.getWord_i();
+                                            break;
+                                        case 9:
+                                            if(word.getWord_j() != null && !word.getWord_j().isEmpty()) wordText = word.getWord_j();
+                                            break;
+                                    }
+                                    String wordName = Utilities.getWordName(j);
+                                    if(wordText != null && !wordText.isEmpty()) {
+                                        serializer.startTag("", wordName);
+                                        serializer.text(wordText);
+                                        serializer.endTag("", wordName);
+                                    }
+                                }
+                            }
+                            serializer.endTag("", "words");
 				        	
 				        serializer.endTag("", "list");
 				        serializer.endDocument();

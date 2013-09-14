@@ -1,12 +1,11 @@
 package nl.digischool.wrts.api;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.zip.GZIPInputStream;
 
+import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLException;
 
 import nl.digischool.wrts.classes.Params;
@@ -51,12 +50,20 @@ public class ApiConnector {
         String result = "";
         try {
             // Create connection to server
-            URL url = new URL(Params.apiUrl + "/" + this.mApiMethod);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            URL url = new URL(Params.API_URL + "/" + this.mApiMethod);
+            HttpsURLConnection urlConnection = null;
+            if(url.getProtocol().toLowerCase().equals("https")) {
+                urlConnection = (HttpsURLConnection) url.openConnection();
+                urlConnection.setHostnameVerifier(Utilities.DO_NOT_VERIFY);
+                Utilities.trustAllHosts();
+            } else {
+                urlConnection = (HttpsURLConnection) url.openConnection();
+            }
             urlConnection.setRequestProperty("Authorization", "Basic " + this.mApiAuth);
-            //urlConnection.setRequestProperty("User-Agent", Params.userAgent);
-
+            urlConnection.setRequestProperty("Accept-Encoding", "gzip");
+            urlConnection.setRequestProperty("User-Agent", Params.USER_AGENT);
             urlConnection.setUseCaches(false);
+
             try {
                 // Set request as POST to post the parameters if they're set
                 if(this.mApiDoOutput) {
@@ -74,14 +81,12 @@ public class ApiConnector {
                 }
 
                 // Read result and return xml string
-                InputStreamReader inputStream = new InputStreamReader(urlConnection.getInputStream(), "UTF-8");
-                StringBuilder builder = new StringBuilder();
-                BufferedReader reader = new BufferedReader(inputStream);
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    builder.append(line);
+                InputStream inputStream = urlConnection.getInputStream();
+                if(urlConnection.getContentEncoding().equals("gzip")) {
+                    inputStream = new GZIPInputStream(inputStream);
                 }
-                result = builder.toString();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
+                result = Utilities.convertToString(inputStreamReader);
                 Utilities.log(LOG_TAG, result);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

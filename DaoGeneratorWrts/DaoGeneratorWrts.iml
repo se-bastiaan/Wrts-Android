@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="DaoGenerator" exported="" />
+    <orderEntry type="module" module-name="DaoGenerator" />
   </component>
 </module>
 

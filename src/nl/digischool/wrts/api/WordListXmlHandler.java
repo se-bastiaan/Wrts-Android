@@ -1,7 +1,6 @@
 package nl.digischool.wrts.api;
 
 import nl.digischool.wrts.classes.Utilities;
-
 import nl.digischool.wrts.database.Word;
 import nl.digischool.wrts.database.WordList;
 import org.xml.sax.Attributes;

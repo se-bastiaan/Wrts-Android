@@ -1,6 +1,5 @@
 package nl.digischool.wrts.fragments;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
 import de.greenrobot.dao.query.LazyList;
-import de.greenrobot.dao.query.Query;
+import nl.digischool.wrts.R;
 import nl.digischool.wrts.activities.BaseActivity;
 import nl.digischool.wrts.activities.OverviewActivity;
-import nl.digischool.wrts.R;
 import nl.digischool.wrts.adapters.OverviewDrawerListAdapter;
 import nl.digischool.wrts.classes.Utilities;
 import nl.digischool.wrts.database.DaoMaster;
@@ -22,7 +20,7 @@ import nl.digischool.wrts.database.WordListDao;
 
 import java.util.*;
 
-import static android.widget.AdapterView.*;
+import static android.widget.AdapterView.OnItemClickListener;
 
 /**
  * Sébastiaanmaakt
@@ -34,10 +32,6 @@ public class OverviewDrawerFragment extends SherlockFragment {
 
     private ListView mListView;
     //private final String LOG_TAG = getClass().getSimpleName();
-
-    public OverviewDrawerFragment() {
-
-    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_overview_list, group, false);

@@ -30,7 +30,7 @@ public class BaseActivity extends SherlockFragmentActivity {
 
 		super.onCreate(savedInstanceState);
 
-        mSettings = getSharedPreferences(Params.preferencesName, Context.MODE_PRIVATE);
+        mSettings = getSharedPreferences(Params.PREFERENCES_NAME, Context.MODE_PRIVATE);
         mApi = new ApiHelper(this);
         mRes = getResources();
 

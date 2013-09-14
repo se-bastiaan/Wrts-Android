@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.api.ApiBooleanCallback;
 import nl.digischool.wrts.api.SyncListsTask;
@@ -34,8 +33,10 @@ public class DownloadActivity extends BaseActivity implements ApiBooleanCallback
     public void retryDownload(View v) {
         v.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
-        mText.setVisibility(View.VISIBLE);
+        mProgressBar.setIndeterminate(true);
+        mText.setText(mRes.getString(R.string.downloading_lists));
         findViewById(R.id.oneMoment).setVisibility(View.VISIBLE);
+        executeDownload();
     }
 
     public void executeDownload() {

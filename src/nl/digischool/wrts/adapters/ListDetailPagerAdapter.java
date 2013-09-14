@@ -17,24 +17,25 @@ import java.util.Map;
  */
 public class ListDetailPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<Map<String, String>> mLanguages;
+    private ArrayList<Map<String, Object>> mLanguages;
 
-    public ListDetailPagerAdapter(FragmentManager fm, ArrayList<Map<String, String>> languages) {
+    public ListDetailPagerAdapter(FragmentManager fm, ArrayList<Map<String, Object>> languages) {
         super(fm);
         mLanguages = languages;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        Map<String, String> map = mLanguages.get(position);
-        return map.get("languageText");
+        Map<String, Object> map = mLanguages.get(position);
+        return map.get("languageText").toString();
     }
 
     @Override
     public Fragment getItem(int position) {
-        Map<String, String> map = mLanguages.get(position);
+        Map<String, Object> map = mLanguages.get(position);
         Bundle b = new Bundle();
-        b.putString("language", map.get("languageName"));
+        Integer langIndex = (Integer) map.get("languageIndex");
+        b.putInt("languageIndex", langIndex);
         ListDetailWordsFragment fragment = new ListDetailWordsFragment();
         fragment.setArguments(b);
         return fragment;  //To change body of implemented methods use File | Settings | File Templates.

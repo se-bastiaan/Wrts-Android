@@ -1,5 +1,7 @@
 package nl.digischool.wrts.api;
 
+import org.xml.sax.InputSource;
+
 /**
  * Sébastiaanmaakt
  * http://sebastiaanmaakt.nl/

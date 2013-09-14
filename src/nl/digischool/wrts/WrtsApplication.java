@@ -17,7 +17,7 @@ public class WrtsApplication extends Application {
     private DaoMaster mDaoMaster;
 
     public void onCreate() {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, Params.databaseName, null);
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, Params.DATABASE_NAME, null);
         mDb = helper.getWritableDatabase();
         mDaoMaster = new DaoMaster(mDb);
     }

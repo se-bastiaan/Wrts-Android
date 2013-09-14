@@ -10,7 +10,9 @@ import nl.digischool.wrts.database.DaoMaster;
 import nl.digischool.wrts.database.DaoSession;
 import nl.digischool.wrts.database.Word;
 import nl.digischool.wrts.database.WordList;
+import org.xml.sax.InputSource;
 
+import java.io.Reader;
 import java.io.StringReader;
 import java.util.ArrayList;
 
@@ -61,6 +63,7 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> implements 
 		try {
 			ApiConnector connector = new ApiConnector("lists/all" + mSinceString, mAuthString);
 			String syncXml = connector.execute();
+
             int lastIndex = 0;
             mMaxProgress = 0;
             String findStr = "<id>";
@@ -71,8 +74,12 @@ public class SyncListsTask extends AsyncTask<Void, Integer, Boolean> implements 
                     lastIndex += findStr.length();
                 }
             }
-            StringReader reader = new StringReader(syncXml);
+
+            Utilities.log(LOG_TAG, "max: "+mMaxProgress);
+            Utilities.log(LOG_TAG, "sync: "+syncXml);
+
             super.publishProgress(0);
+            StringReader reader = new StringReader(syncXml);
 			SyncXmlHandler handler = XmlReader.readSyncXml(reader, this);
             ArrayList<WordList> lists = handler.getLists();
             ArrayList<Word> words = handler.getWords();

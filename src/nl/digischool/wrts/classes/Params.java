@@ -1,9 +1,9 @@
 package nl.digischool.wrts.classes;
 
 public class Params {
-	public static Boolean logEnabled = true;
-	public static String apiUrl = "http://www.wrts.nl/api";
-	public static String userAgent = "Wrts_App/2.0 (Android)";
-	public static String databaseName = "Wrts_ListsDB";
-    public static String preferencesName = "Wrts_Userdata";
+	public final static Boolean LOG_ENABLED = true;
+	public final static String API_URL = "https://www.wrts.nl/api";
+	public final static String USER_AGENT = "Wrts_App/2.0 (Android)";
+	public final static String DATABASE_NAME = "Wrts_ListsDB";
+    public final static String PREFERENCES_NAME = "Wrts_Userdata";
 }
