@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
@@ -16,11 +17,13 @@ import de.greenrobot.dao.query.WhereCondition;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.activities.BaseActivity;
 import nl.digischool.wrts.activities.ListDetailActivity;
+import nl.digischool.wrts.activities.OverviewActivity;
 import nl.digischool.wrts.adapters.OverviewListAdapter;
 import nl.digischool.wrts.database.DaoMaster;
 import nl.digischool.wrts.database.DaoSession;
 import nl.digischool.wrts.database.WordList;
 import nl.digischool.wrts.database.WordListDao;
+import nl.digischool.wrts.views.CheckableRelativeLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,6 +45,7 @@ public class OverviewListFragment extends SherlockFragment {
     private DaoSession mDaoSession;
     private WordListDao mWordListDao;
     private ActionMode actionMode = null;
+    private OverviewActivity mActivity;
     //private final String LOG_TAG = this.getClass().getSimpleName();
 
     public OverviewListFragment() {
@@ -52,11 +56,13 @@ public class OverviewListFragment extends SherlockFragment {
         View v = inflater.inflate(R.layout.activity_overview_list, group, false);
 
         mListView = (ListView) v.findViewById(R.id.drawer_list);
-        mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         mListView.setOnItemClickListener(mOnItemClickListener);
         mListView.setOnItemLongClickListener(mOnItemLongClickListener);
-        mListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+        mListView.setChoiceMode(ListView.CHOICE_MODE_NONE);
         refreshList();
+
+        mActivity = (OverviewActivity) getSherlockActivity();
+
         return v;
     }
 
@@ -105,8 +111,12 @@ public class OverviewListFragment extends SherlockFragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if(actionMode != null) {
                 mAdapter.toggleChecked(position);
+                ((CheckableRelativeLayout) view).toggle();
                 actionMode.invalidate();
+                actionMode.setTitle(getResources().getQuantityString(R.plurals.selected_lists, mAdapter.getCheckedItemCount(), mAdapter.getCheckedItemCount()));
             } else {
+                ((CheckableRelativeLayout) view).setChecked(false);
+                mListView.setItemChecked(position, false);
                 Map<String, Object> map = mAdapter.getItem(position);
                 Long listId = (Long) map.get("id");
                 Intent intent = new Intent(getActivity(), ListDetailActivity.class);
@@ -125,6 +135,10 @@ public class OverviewListFragment extends SherlockFragment {
             mAdapter.setChecked(position, true);
             getSherlockActivity().startActionMode(new OverviewActionModeCallback());
             actionMode.invalidate();
+            ((CheckableRelativeLayout) view).setChecked(true);
+            ((CheckableRelativeLayout) view).toggle();
+            mListView.setItemChecked(position, true);
+            actionMode.setTitle(getResources().getQuantityString(R.plurals.selected_lists, mAdapter.getCheckedItemCount(), mAdapter.getCheckedItemCount()));
             //getSherlockActivity().startActionMode(OverviewListFragment.this);
             return true;
         }
@@ -134,7 +148,10 @@ public class OverviewListFragment extends SherlockFragment {
         @Override
         public boolean onCreateActionMode(ActionMode mode, Menu menu) {
             actionMode = mode;
+            mListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
             mAdapter.startMultiMode();
+            mActivity.toggleDrawerLocked();
+            menu.add(0, 0, 0, R.string.delete).setIcon(R.drawable.ic_action_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
             return true;
         }
 
@@ -145,12 +162,20 @@ public class OverviewListFragment extends SherlockFragment {
 
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            switch(item.getItemId()) {
+                case 0:
+                    Toast.makeText(getSherlockActivity(), "Clicked delete", Toast.LENGTH_SHORT).show();
+                    return true;
+            }
             return false;
         }
 
         @Override
         public void onDestroyActionMode(ActionMode mode) {
             mAdapter.stopMultiMode();
+            mListView.clearChoices();
+            mListView.setChoiceMode(ListView.CHOICE_MODE_NONE);
+            mActivity.toggleDrawerLocked();
             actionMode = null;
         }
     }

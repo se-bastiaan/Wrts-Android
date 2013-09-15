@@ -19,13 +19,12 @@ public class OverviewListAdapter extends BaseAdapter {
     private ArrayList<Map<String, Object>> mData;
     private LayoutInflater mInflater;
     private HashSet<Integer> mCheckedItems;
-    private Boolean mMultiMode;
+    private Boolean mMultiMode = false;
 
     public OverviewListAdapter(Context context, ArrayList<Map<String, Object>> dataObject) {
-
         mInflater = LayoutInflater.from(context);
         mData = dataObject;
-
+        mCheckedItems = new HashSet<Integer>();
     }
 
     @Override

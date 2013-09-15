@@ -5,8 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
-    <string name="itemdeleted">Verwijderd</string>
-    <string name="taptoundo">Ongedaan maken</string>
+    <string name="delete">Verwijderen</string>
+    <string name="undo">Ongedaan maken</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
 
     <string name="drawer_open">Open navigatie lade</string>
     <string name="drawer_close">Close navigatie lade</string>
@@ -31,6 +33,10 @@
 
     <!-- Overview -->
     <string name="all_languages">alle talen</string>
+    <plurals name="selected_lists">
+        <item quantity="one">1 lijst geselecteerd</item>
+        <item quantity="other">%d lijsten geselecteerd</item>
+    </plurals>
 
     <!-- Errors -->
     <string name="no_server_response">Er kon geen contact gemaakt worden met de server van Wrts</string>

@@ -2,6 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
           android:exitFadeDuration="@android:integer/config_mediumAnimTime" >
     <item android:state_pressed="false" android:state_focused="true" android:drawable="@color/wrts_list_pressed" />
-    <item android:state_pressed="true" android:drawable="@color/wrts_list_pressed" />
+    <item android:state_pressed="true" android:state_checked="false" android:drawable="@color/wrts_list_pressed" />
+    <item android:state_pressed="false" android:state_checked="false" android:drawable="@color/bg" />
+    <item android:state_checked="true" android:state_pressed="false" android:drawable="@color/pressed_wrts" />
+    <item android:state_checked="true" android:state_pressed="true" android:drawable="@color/pressed_wrts" />
     <item android:drawable="@color/bg" />
 </selector>

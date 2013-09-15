@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<nl.digischool.wrts.views.CheckableRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="48dp"
@@ -25,4 +25,4 @@
         android:lineSpacingExtra="4dp"
         />
 
-</RelativeLayout>
+</nl.digischool.wrts.views.CheckableRelativeLayout>

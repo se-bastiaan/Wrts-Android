@@ -26,7 +26,7 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
     private DrawerLayout mDrawerLayout;
     private FrameLayout mMenu;
     private SherlockActionBarDrawerToggle mDrawerToggle;
-    private Boolean mIsDrawerLayout = false;
+    private Boolean mIsDrawerLayout = false, mDrawerIsLocked = false;
 
     private OverviewDrawerFragment mMenuFragment;
     private OverviewListFragment mContentFragment;
@@ -177,6 +177,23 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
 
     public boolean isDrawerLayout() {
         return mIsDrawerLayout;
+    }
+
+    public void toggleDrawerLocked() {
+        if(isDrawerLayout()) {
+            if(mDrawerIsLocked) {
+                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+            } else {
+                mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+            }
+        } else {
+            if(mDrawerIsLocked) {
+                mMenu.setEnabled(false);
+            } else {
+                mMenu.setEnabled(true);
+            }
+        }
+        mDrawerIsLocked = !mDrawerIsLocked;
     }
 
     @Override

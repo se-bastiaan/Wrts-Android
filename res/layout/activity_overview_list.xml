@@ -10,7 +10,7 @@
     	android:fadingEdgeLength="0dp"
     	android:background="@color/transparent"
     	android:cacheColorHint="@color/transparent"
-        android:listSelector="@color/transparent"
+        android:listSelector="@drawable/wrts_list_selectable_bg"
     	android:divider="@color/wrts_drawer_divider"
     	android:dividerHeight="0.5dp"
         />
