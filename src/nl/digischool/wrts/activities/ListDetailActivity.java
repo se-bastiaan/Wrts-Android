@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ListView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
@@ -15,6 +18,7 @@ import nl.digischool.wrts.database.WordList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -132,6 +136,10 @@ public class ListDetailActivity extends BaseActivity {
 
     public WordList getWordList() {
         return mList;
+    }
+
+    public ListDetailPagerAdapter getPagerAdapter() {
+        return (ListDetailPagerAdapter) mViewPager.getAdapter();
     }
 
     @Override

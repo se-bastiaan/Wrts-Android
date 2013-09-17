@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Checkable;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragment;
@@ -174,9 +175,12 @@ public class OverviewListFragment extends SherlockFragment {
         public void onDestroyActionMode(ActionMode mode) {
             mAdapter.stopMultiMode();
             mListView.clearChoices();
-            mListView.setChoiceMode(ListView.CHOICE_MODE_NONE);
+            for (int i = 0; i < mListView.getChildCount(); i++) {
+                ((Checkable) mListView.getChildAt(i)).setChecked(false);
+            }
             mActivity.toggleDrawerLocked();
             actionMode = null;
+            mListView.setChoiceMode(ListView.CHOICE_MODE_NONE);
         }
     }
 

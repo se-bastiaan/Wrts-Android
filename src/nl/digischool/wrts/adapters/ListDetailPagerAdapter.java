@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.ListView;
 import nl.digischool.wrts.fragments.ListDetailWordsFragment;
+import nl.digischool.wrts.views.ObservableListView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,10 +21,13 @@ import java.util.Map;
 public class ListDetailPagerAdapter extends FragmentPagerAdapter {
 
     private ArrayList<Map<String, Object>> mLanguages;
+    private List<ObservableListView> mListViews;
+    private Integer mScrollPosition = 0, mScrollY = 0;
 
     public ListDetailPagerAdapter(FragmentManager fm, ArrayList<Map<String, Object>> languages) {
         super(fm);
         mLanguages = languages;
+        mListViews = new ArrayList<ObservableListView>();
     }
 
     @Override
@@ -44,6 +50,30 @@ public class ListDetailPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return mLanguages.size();  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    public List<ObservableListView> getListViews() {
+        return mListViews;
+    }
+
+    public void addToListViews(ObservableListView listView) {
+        mListViews.add(listView);
+    }
+
+    public void setScrollPosition(int scrollPosition) {
+        mScrollPosition = scrollPosition;
+    }
+
+    public void setScrollY(int scrollY) {
+        mScrollY = scrollY;
+    }
+
+    public Integer getScrollPosition() {
+        return mScrollPosition;
+    }
+
+    public Integer getScrollY() {
+        return mScrollY;
     }
 
 }
