@@ -4,7 +4,7 @@
     <item
         android:id="@+id/syncAction"
         android:icon="@drawable/ic_action_refresh"
-        android:title="Synchroniseer"
+        android:title="@string/sync"
         android:showAsAction="always"
         android:visible="true"/>
 </menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editAction"
+        android:icon="@drawable/ic_action_edit"
+        android:title="@string/edit"
+        android:showAsAction="always"
+        android:visible="true"/>
+    <item
+        android:id="@+id/testAction"
+        android:icon="@drawable/ic_action_test"
+        android:title="@string/test"
+        android:showAsAction="always"
+        android:visible="true"/>
+</menu>

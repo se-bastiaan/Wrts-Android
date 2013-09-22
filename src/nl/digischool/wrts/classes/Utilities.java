@@ -1,6 +1,8 @@
 package nl.digischool.wrts.classes;
 
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import org.xml.sax.InputSource;
 
 import javax.net.ssl.*;
@@ -103,5 +105,16 @@ public class Utilities {
             return true;
         }
     };
+
+    public static void enableDisableViewGroupClickable(ViewGroup viewGroup, boolean enabled) {
+        int childCount = viewGroup.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View view = viewGroup.getChildAt(i);
+            view.setClickable(enabled);
+            if (view instanceof ViewGroup) {
+                enableDisableViewGroupClickable((ViewGroup) view, enabled);
+            }
+        }
+    }
 
 }

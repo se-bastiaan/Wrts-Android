@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import com.actionbarsherlock.view.Menu;
@@ -188,9 +189,11 @@ public class OverviewActivity extends BaseActivity implements ApiBooleanCallback
             }
         } else {
             if(mDrawerIsLocked) {
-                mMenu.setEnabled(false);
+                mMenuFragment.getView().findViewById(R.id.drawer_overlay).setVisibility(View.GONE);
+                Utilities.enableDisableViewGroupClickable(((ViewGroup) mMenuFragment.getView()), false);
             } else {
-                mMenu.setEnabled(true);
+                mMenuFragment.getView().findViewById(R.id.drawer_overlay).setVisibility(View.VISIBLE);
+                Utilities.enableDisableViewGroupClickable(((ViewGroup) mMenuFragment.getView()), true);
             }
         }
         mDrawerIsLocked = !mDrawerIsLocked;

@@ -73,7 +73,6 @@ public class OverviewDrawerListAdapter extends BaseAdapter {
             holder = new ViewHolder();
 			if(itemViewType == ViewType.HEADER.ordinal()) {
 				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_header, null);
-
 			} else if(itemViewType == ViewType.ITEM.ordinal()) {
 				convertView = mInflater.inflate(R.layout.activity_overview_drawer_list_item, null);
                 holder.count = (TextView) convertView.findViewById(R.id.count);

@@ -20,6 +20,11 @@
     <string name="register">Registreren</string>
     <string name="login">Inloggen</string>
 
+    <!-- Actions -->
+    <string name="sync">Synchroniseren</string>
+    <string name="test">Overhoren</string>
+    <string name="edit">Bewerken</string>
+
     <!-- Download -->
     <string name="checking_data">Controleren...</string>
     <string name="a_moment_patience">Een moment geduld a.u.b.</string>

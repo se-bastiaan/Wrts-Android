@@ -33,8 +33,10 @@
 
     <!-- Drawer colors -->
     <color name="wrts_drawer_bg">#F2F7FA</color>
-    <color name="wrts_drawer_pressed">#E2EDF3</color>
+    <color name="wrts_drawer_pressed">#E1ECF2</color>
+    <color name="wrts_drawer_checked">#DFEDF5</color>
     <color name="wrts_drawer_textcolor">#2D2F31</color>
     <color name="wrts_drawer_header_color">#213039</color>
     <color name="wrts_drawer_divider">#CCCCD4D9</color>
+    <color name="overlay_black">#99000000</color>
 </resources>

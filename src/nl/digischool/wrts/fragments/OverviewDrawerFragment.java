@@ -34,7 +34,7 @@ public class OverviewDrawerFragment extends SherlockFragment {
     //private final String LOG_TAG = getClass().getSimpleName();
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_overview_list, group, false);
+        View v = inflater.inflate(R.layout.activity_overview_drawer_list, group, false);
 
         mListView = (ListView) v.findViewById(R.id.drawer_list);
         mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -52,6 +52,8 @@ public class OverviewDrawerFragment extends SherlockFragment {
         TreeSet<String> stringSet = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
         TreeSet<String> strings = new TreeSet<String>();
         LazyList<WordList> lazyList = wordListDao.queryBuilder().listLazyUncached();
+
+        int listsSize = lazyList.size();
 
         for(WordList list : lazyList) {
             strings = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
@@ -136,12 +138,14 @@ public class OverviewDrawerFragment extends SherlockFragment {
         dataList.add(map);
         map = new HashMap<String, Object>();
         map.put("string", "Alle talen");
+        map.put("count", listsSize);
         dataList.add(map);
         dataList.addAll(conversionList);
         conversionList.clear();
 
         OverviewDrawerListAdapter mAdapter = new OverviewDrawerListAdapter(getSherlockActivity(), dataList);
         mListView.setAdapter(mAdapter);
+        mListView.setItemChecked(1, true);
     }
 
     private OnItemClickListener mOnItemClickListener = new OnItemClickListener() {

@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 import nl.digischool.wrts.R;
@@ -140,6 +141,13 @@ public class ListDetailActivity extends BaseActivity {
 
     public ListDetailPagerAdapter getPagerAdapter() {
         return (ListDetailPagerAdapter) mViewPager.getAdapter();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.activity_listdetail_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
