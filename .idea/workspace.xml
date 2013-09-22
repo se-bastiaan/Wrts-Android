@@ -106,19 +106,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestFullActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestMultiActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestThinkActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestTypeActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-sw600dp/activity_listdetail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/ListDetailPagerAdapter.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/adapters/ListDetailPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/fragments/ListDetailWordsFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/SettingsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestPrepareActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\ListTestFullActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestTypeActivity.java" />
+      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\ListTestMultiActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestMultiActivity.java" />
+      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\ListTestThinkActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestThinkActivity.java" />
+      <change type="MOVED" beforePath="D:\Android Workspace\WrtsDigischool\src\nl\digischool\wrts\activities\ListTestTypeActivity.java" afterPath="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestFullActivity.java" />
     </list>
     <ignored path="WrtsDigischool.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379877893660" ignored="false" />
+    <file path="/Dummy.txt" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379881019428" ignored="false" />
     <file path="$PROJECT_DIR$/../SlidingMenu/project.properties" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1372362192565" ignored="false" />
     <file path="/fragment.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379406154474" ignored="false" />
     <file path="/OverviewActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379775555566" ignored="false" />
@@ -255,6 +253,8 @@
     <file path="/ListTestMultiActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379880963475" ignored="false" />
     <file path="/ListTestFullActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379880966945" ignored="false" />
     <file path="/ListTestThinkActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379880974084" ignored="false" />
+    <file path="/TestPrepareActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379889181448" ignored="false" />
+    <file path="/SettingsActivity.java" changelist="606c23e7-56d9-42df-9e67-8fbc3ad6b4ac" time="1379889198905" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,37 +315,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ListTestThinkActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestThinkActivity.java">
+      <file leaf-file-name="TestThinkActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestThinkActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListTestFullActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestFullActivity.java">
+      <file leaf-file-name="TestPrepareActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestPrepareActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+            <state line="8" column="53" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListTestMultiActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestMultiActivity.java">
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+            <state line="8" column="50" selection-start="178" selection-end="178" vertical-scroll-proportion="0.3809524">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListTestTypeActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestTypeActivity.java">
+      <file leaf-file-name="TestFullActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestFullActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="191" selection-end="191" vertical-scroll-proportion="0.47619048">
+            <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestMultiActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestMultiActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTypeActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestTypeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -378,10 +396,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/classes/Utilities.java" />
-        <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/OverviewActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer_list.xml" />
         <option value="$PROJECT_DIR$/res/layout-sw600dp/activity_overview.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
@@ -394,6 +408,10 @@
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestFullActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestMultiActivity.java" />
         <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestTypeActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestTypeActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestThinkActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestPrepareActivity.java" />
+        <option value="$PROJECT_DIR$/src/nl/digischool/wrts/activities/SettingsActivity.java" />
       </list>
     </option>
   </component>
@@ -1071,7 +1089,11 @@
       <created>1379873700566</created>
       <updated>1379873700566</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ListDetail tablet layout &amp; ListTestActivities">
+      <created>1379881027765</created>
+      <updated>1379881027765</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1166,7 +1188,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved drawer layout on tablets" />
+    <option name="LAST_COMMIT_MESSAGE" value="ListDetail tablet layout &amp; ListTestActivities" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1198,6 +1220,7 @@
     <MESSAGE value="Working MultiChoice list selection" />
     <MESSAGE value="Added simultaneous scrolling ListViews in DetailActivity" />
     <MESSAGE value="Improved drawer layout on tablets" />
+    <MESSAGE value="ListDetail tablet layout &amp; ListTestActivities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1207,26 +1230,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout-large-land/activity_overview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="475" selection-end="619" vertical-scroll-proportion="-4.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_overview_drawer_list_header.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="186" selection-end="186" vertical-scroll-proportion="0.05483871">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-sw600dp/activity_overview.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1322,30 +1325,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestThinkActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestFullActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestFullActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestMultiActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestMultiActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestTypeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/ListTestTypeActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestThinkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="191" selection-end="191" vertical-scroll-proportion="0.47619048">
+        <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/TestPrepareActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="53" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nl/digischool/wrts/activities/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="50" selection-start="178" selection-end="178" vertical-scroll-proportion="0.3809524">
           <folding />
         </state>
       </provider>

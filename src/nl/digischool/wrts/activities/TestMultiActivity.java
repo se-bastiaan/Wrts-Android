@@ -6,8 +6,8 @@ package nl.digischool.wrts.activities;
  * Date: 22-9-13
  * Time: 22:15
  */
-public class ListTestThinkActivity extends BaseActivity {
+public class TestMultiActivity extends BaseActivity {
 
-    
+
 
 }
