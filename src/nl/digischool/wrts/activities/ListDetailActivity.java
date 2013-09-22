@@ -1,12 +1,17 @@
 package nl.digischool.wrts.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
@@ -16,11 +21,10 @@ import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
 import nl.digischool.wrts.R;
 import nl.digischool.wrts.adapters.ListDetailPagerAdapter;
 import nl.digischool.wrts.database.WordList;
+import nl.digischool.wrts.fragments.ListDetailWordsFragment;
+import nl.digischool.wrts.views.ObservableListView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Sébastiaanmaakt
@@ -36,11 +40,15 @@ public class ListDetailActivity extends BaseActivity {
     private WordList mList;
     private PagerSlidingTabStrip mTabStrip;
     private ViewPager mViewPager;
+    private List<ObservableListView> mListViews;
+    private Integer mScrollPosition = 0, mScrollY = 0;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_listdetail);
+
+        mListViews = new ArrayList<ObservableListView>();
 
         mId = getIntent().getLongExtra("id", 0);
 
@@ -50,9 +58,6 @@ public class ListDetailActivity extends BaseActivity {
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setTitle(mList.getTitle());
-
-        mTabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabStrip);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
         ArrayList<Map<String, Object>> checkedLanguages = new ArrayList<Map<String, Object>>();
 
@@ -126,12 +131,68 @@ public class ListDetailActivity extends BaseActivity {
             checkedLanguages.add(map);
         }
 
-        ListDetailPagerAdapter adapter = new ListDetailPagerAdapter(getSupportFragmentManager(), checkedLanguages);
-        mViewPager.setAdapter(adapter);
-        mTabStrip.setViewPager(mViewPager);
+        if(findViewById(R.id.scrollLayout) != null) {
 
-        mTabStrip.setIndicatorColorResource(R.color.pressed_wrts);
-        mTabStrip.setTextColorResource(android.R.color.white);
+            LinearLayout layout = (LinearLayout) findViewById(R.id.scrollLayout);
+            for(int i = 0; i < checkedLanguages.size(); i++) {
+                Map<String, Object> map = checkedLanguages.get(i);
+
+                if(i != 0) {
+                    LinearLayout divider = new LinearLayout(this);
+                    divider.setBackgroundResource(R.color.tab_bg);
+                    int dv_wt_px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics());
+                    divider.setLayoutParams(new LinearLayout.LayoutParams(dv_wt_px, LinearLayout.LayoutParams.MATCH_PARENT));
+                    layout.addView(divider);
+                }
+
+                LinearLayout itemLayout = new LinearLayout(this);
+                int wt_px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getResources().getDisplayMetrics());
+                itemLayout.setLayoutParams(new LinearLayout.LayoutParams(wt_px, LinearLayout.LayoutParams.MATCH_PARENT));
+                itemLayout.setOrientation(LinearLayout.VERTICAL);
+
+
+                TextView textLayout = new TextView(this);
+                textLayout.setText(map.get("languageText").toString().toUpperCase());
+                int ht_px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+                textLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ht_px));
+                int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics());
+                textLayout.setPadding(padding, padding, padding, padding);
+                textLayout.setBackgroundResource(R.color.tab_bg);
+                textLayout.setTextColor(Color.WHITE);
+
+                itemLayout.addView(textLayout);
+
+                Random rnd = new Random();
+
+                FrameLayout frameLayout = new FrameLayout(this);
+                frameLayout.setId(i+123456789);
+                frameLayout.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+
+                Bundle b = new Bundle();
+                Integer langIndex = (Integer) map.get("languageIndex");
+                b.putInt("languageIndex", langIndex);
+                ListDetailWordsFragment fragment = new ListDetailWordsFragment();
+                fragment.setArguments(b);
+
+                itemLayout.addView(frameLayout);
+                layout.addView(itemLayout);
+
+                getSupportFragmentManager().beginTransaction().add(i+123456789, fragment).commit();
+            }
+
+        } else {
+
+            mTabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabStrip);
+            mViewPager = (ViewPager) findViewById(R.id.viewPager);
+
+            ListDetailPagerAdapter adapter = new ListDetailPagerAdapter(getSupportFragmentManager(), checkedLanguages);
+            mViewPager.setAdapter(adapter);
+            mTabStrip.setViewPager(mViewPager);
+
+            mTabStrip.setIndicatorColorResource(R.color.pressed_wrts);
+            mTabStrip.setTextColorResource(android.R.color.white);
+
+        }
 
     }
 
@@ -162,6 +223,30 @@ public class ListDetailActivity extends BaseActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public List<ObservableListView> getListViews() {
+        return mListViews;
+    }
+
+    public void addToListViews(ObservableListView listView) {
+        mListViews.add(listView);
+    }
+
+    public void setScrollPosition(int scrollPosition) {
+        mScrollPosition = scrollPosition;
+    }
+
+    public void setScrollY(int scrollY) {
+        mScrollY = scrollY;
+    }
+
+    public Integer getScrollPosition() {
+        return mScrollPosition;
+    }
+
+    public Integer getScrollY() {
+        return mScrollY;
     }
 
 }

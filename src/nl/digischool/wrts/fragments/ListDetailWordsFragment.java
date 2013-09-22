@@ -30,12 +30,12 @@ public class ListDetailWordsFragment extends SherlockFragment {
     private ObservableListView mListView;
     private WordList mList;
     private Integer mLanguageIndex;
-    private ListDetailPagerAdapter mPagerAdapter;
+  //  private ListDetailPagerAdapter mPagerAdapter;
+    private ListDetailActivity mActivity;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle savedInstanceState) {
-        ListDetailActivity activity = (ListDetailActivity) getActivity();
-        mList = activity.getWordList();
-        mPagerAdapter = activity.getPagerAdapter();
+        mActivity = (ListDetailActivity) getActivity();
+        mList = mActivity.getWordList();
 
         //if(mList.words != null) Utilities.log("ListDetailWordsFragment", "not null");
 
@@ -52,14 +52,14 @@ public class ListDetailWordsFragment extends SherlockFragment {
         mListView.setScrollListener(new ListViewListener() {
             @Override
             public void onScrollChanged(ObservableListView listView, int x, int y, int oldx, int oldy) {
-                List<ObservableListView> listviews = mPagerAdapter.getListViews();
+                List<ObservableListView> listviews = mActivity.getListViews();
 
                 int savedPosition = listView.getFirstVisiblePosition();
                 View firstVisibleView = listView.getChildAt(0);
                 int savedListTop = (firstVisibleView == null) ? 0 : firstVisibleView.getTop();
 
-                mPagerAdapter.setScrollPosition(savedPosition);
-                mPagerAdapter.setScrollY(savedListTop);
+                mActivity.setScrollPosition(savedPosition);
+                mActivity.setScrollY(savedListTop);
 
                 Utilities.log("OnScrollChanged", "Y: "+savedListTop);
                 for(ObservableListView listview : listviews) {
@@ -71,8 +71,8 @@ public class ListDetailWordsFragment extends SherlockFragment {
                 }
             }
         });
-        mListView.setSelectionFromTop(mPagerAdapter.getScrollPosition(), mPagerAdapter.getScrollY());
-        mPagerAdapter.addToListViews(mListView);
+        mListView.setSelectionFromTop(mActivity.getScrollPosition(), mActivity.getScrollY());
+        mActivity.addToListViews(mListView);
 
         mListView.setAdapter(adapter);
 
