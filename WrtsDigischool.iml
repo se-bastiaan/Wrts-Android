@@ -50,6 +50,7 @@
     <orderEntry type="module" module-name="ActionBarSherlockNavigationDrawer" />
     <orderEntry type="module" module-name="PagerSlidingTabStrip" />
     <orderEntry type="module" module-name="DaoCore" />
+    <orderEntry type="library" name="ReadSpeaker Library" level="project" />
   </component>
 </module>
 

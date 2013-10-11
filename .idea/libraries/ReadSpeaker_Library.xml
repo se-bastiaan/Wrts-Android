@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ReadSpeaker Library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/andoidrsentlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

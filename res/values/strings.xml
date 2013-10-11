@@ -46,6 +46,7 @@
     <!-- Errors -->
     <string name="no_server_response">Er kon geen contact gemaakt worden met de server van Wrts</string>
     <string name="bad_auth">De inloggegevens zijn onjuist</string>
+    <string name="no_internet">Er is geen werkende internetverbinding</string>
 
     <string name="cantfindurl">Deze webpagina kan niet gevonden worden.</string>
 

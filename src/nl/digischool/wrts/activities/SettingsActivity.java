@@ -7,4 +7,7 @@ package nl.digischool.wrts.activities;
  * Time: 0:33
  */
 public class SettingsActivity extends BaseActivity {
+
+
+
 }

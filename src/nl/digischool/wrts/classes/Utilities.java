@@ -1,8 +1,13 @@
 package nl.digischool.wrts.classes;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+import nl.digischool.wrts.R;
 import org.xml.sax.InputSource;
 
 import javax.net.ssl.*;
@@ -52,6 +57,24 @@ public class Utilities {
         Utilities.log("getWordNameByLanguage", language);
         String postfix = language.substring(language.length() - 1);
         return "word-" + postfix;
+    }
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isOnline(Context context, Boolean showMessage) {
+        Boolean online = Utilities.isOnline(context);
+        if(!online && showMessage) {
+
+            Toast.makeText(context, R.string.no_internet, Toast.LENGTH_SHORT).show();
+        }
+        return online;
     }
 
     /**

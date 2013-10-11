@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="gradleHome" value="D:\Program Files (x86)\Android\android-sdk\gradle-1.8" />
+    <option name="linkedProjectPath" value="D:\Android Workspace\Crouton\library\build.gradle" />
+    <option name="preferLocalInstallationToWrapper" value="true" />
+  </component>
+</project>
+

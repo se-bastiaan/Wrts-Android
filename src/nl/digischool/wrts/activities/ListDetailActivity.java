@@ -213,11 +213,16 @@ public class ListDetailActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         // Handle action buttons
         switch(item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(this, OverviewActivity.class);
+                intent = new Intent(this, OverviewActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            case R.id.testAction:
+                intent = new Intent(this, TestPrepareActivity.class);
                 startActivity(intent);
                 return true;
             default:
