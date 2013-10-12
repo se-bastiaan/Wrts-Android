@@ -3,6 +3,9 @@ package nl.digischool.wrts.classes;
 import android.content.Context;
 import com.readspeaker.androidrsenterpriselibrary.AndroidRSEnterpriseLibrary;
 import com.readspeaker.androidrsenterpriselibrary.AndroidRSEnterpriseLibraryCallback;
+import eu.se_bastiaan.rslibrary.ExtendedReadSpeakerCallback;
+import eu.se_bastiaan.rslibrary.ReadSpeaker;
+import eu.se_bastiaan.rslibrary.ReadSpeakerCallback;
 
 import java.util.ArrayList;
 
@@ -12,22 +15,21 @@ import java.util.ArrayList;
  * Date: 11-10-13
  * Time: 21:46
  */
-public class ReadSpeaker implements AndroidRSEnterpriseLibraryCallback {
+public class ReadSpeakerHelper implements ExtendedReadSpeakerCallback {
 
-    private AndroidRSEnterpriseLibrary mAudioMobile;
-    private AndroidRSEnterpriseLibraryCallback mCallback;
-    public static String UNKNOWN = "unknown", ENGLISH = "en_uk", DUTCH = "nl_nl", FRISIAN = "fy_nl", GERMAN = "de_de", GREEK = "el_gr", SPANISH = "es_es", ITALIAN = "it_it", FRENCH = "fr_fr";
-    public static Integer AVAILABLE_LANGUAGE_COUNT = 8;
+    private ReadSpeaker mReadSpeaker;
+    private ReadSpeakerCallback mCallback;
+    public static final String UNKNOWN = "unknown";
     public Boolean PLAYING;
 
-    public ReadSpeaker(Context context, AndroidRSEnterpriseLibraryCallback callback) {
+    public ReadSpeakerHelper(Context context, ReadSpeakerCallback callback) {
         mCallback = callback;
-        mAudioMobile = new AndroidRSEnterpriseLibrary(context, this);
+        mReadSpeaker = new ReadSpeaker(context, false, this);
     }
 
     public void read(String text, String language) {
         if(!language.equals(UNKNOWN))
-        mAudioMobile.readText(text, false, false, Params.READSPEAKER_ID, Params.READSPEAKER_URL, language, null, "AndroidLibrary");
+            mReadSpeaker.read(text, false, false, language);
     }
 
     public String recognizeLang(String string) {
@@ -39,7 +41,7 @@ public class ReadSpeaker implements AndroidRSEnterpriseLibraryCallback {
            string.equalsIgnoreCase("ingles") ||
            string.equalsIgnoreCase("englisch") ||
            string.equalsIgnoreCase("inglese"))
-            return ReadSpeaker.ENGLISH;
+            return ReadSpeaker.ENGLISH_UK;
 
         if(string.equalsIgnoreCase("nederlands") ||
             string.equalsIgnoreCase("dutch") ||
@@ -71,7 +73,7 @@ public class ReadSpeaker implements AndroidRSEnterpriseLibraryCallback {
             string.equalsIgnoreCase("espanol") ||
             string.equalsIgnoreCase("spanisch") ||
             string.equalsIgnoreCase("spagnolo"))
-                return ReadSpeaker.SPANISH;
+                return ReadSpeaker.SPANISH_ES;
 
         if(string.equalsIgnoreCase("italiaans") ||
             string.equalsIgnoreCase("italian") ||
@@ -92,10 +94,10 @@ public class ReadSpeaker implements AndroidRSEnterpriseLibraryCallback {
             string.equalsIgnoreCase("greco"))
                 return ReadSpeaker.GREEK;
 
-        return ReadSpeaker.UNKNOWN;
+        return ReadSpeakerHelper.UNKNOWN;
     }
 
-    public void setCallback(AndroidRSEnterpriseLibraryCallback callback) {
+    public void setCallback(ReadSpeakerCallback callback) {
         mCallback = callback;
     }
 
@@ -106,14 +108,19 @@ public class ReadSpeaker implements AndroidRSEnterpriseLibraryCallback {
     }
 
     @Override
-    public void didFinishPlaying() {
+    public void didFinishReading() {
         PLAYING = false;
-        mCallback.didFinishPlaying();
+        mCallback.didFinishReading();
     }
 
     @Override
-    public void didStartPlaying() {
+    public void didStartReading() {
         PLAYING = true;
-        mCallback.didStartPlaying();
+        mCallback.didStartReading();
+    }
+
+    @Override
+    public void obtainedAudioLocation(String location) {
+
     }
 }

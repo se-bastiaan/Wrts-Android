@@ -14,7 +14,7 @@ import nl.digischool.wrts.database.DaoSession;
 import nl.digischool.wrts.database.WordDao;
 import nl.digischool.wrts.database.WordListDao;
 
-public class BaseActivity extends SherlockFragmentActivity {
+public abstract class BaseActivity extends SherlockFragmentActivity {
 
     protected SharedPreferences mSettings;
     protected ApiHelper mApi;

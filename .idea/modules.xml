@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/../GreenDAO/DaoGenerator/DaoGenerator.iml" filepath="$PROJECT_DIR$/../GreenDAO/DaoGenerator/DaoGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/DaoGeneratorWrts/DaoGeneratorWrts.iml" filepath="$PROJECT_DIR$/DaoGeneratorWrts/DaoGeneratorWrts.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PagerSlidingTabStrip-master/library/PagerSlidingTabStrip.iml" filepath="$PROJECT_DIR$/../PagerSlidingTabStrip-master/library/PagerSlidingTabStrip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ReadSpeakerLibrary/ReadSpeakerLibrary.iml" filepath="$PROJECT_DIR$/../ReadSpeakerLibrary/ReadSpeakerLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/WrtsDigischool.iml" filepath="$PROJECT_DIR$/WrtsDigischool.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Crouton/library/crouton.iml" filepath="$PROJECT_DIR$/../Crouton/library/crouton.iml" />
     </modules>

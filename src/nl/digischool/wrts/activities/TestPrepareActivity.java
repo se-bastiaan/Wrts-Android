@@ -2,10 +2,9 @@ package nl.digischool.wrts.activities;
 
 import android.os.Bundle;
 import android.view.View;
-import com.readspeaker.androidrsenterpriselibrary.AndroidRSEnterpriseLibrary;
-import com.readspeaker.androidrsenterpriselibrary.AndroidRSEnterpriseLibraryCallback;
+import eu.se_bastiaan.rslibrary.ReadSpeaker;
+import eu.se_bastiaan.rslibrary.ReadSpeakerCallback;
 import nl.digischool.wrts.R;
-import nl.digischool.wrts.classes.ReadSpeaker;
 import nl.digischool.wrts.classes.Utilities;
 
 /**
@@ -14,7 +13,7 @@ import nl.digischool.wrts.classes.Utilities;
  * Date: 23-9-13
  * Time: 0:32
  */
-public class TestPrepareActivity extends TestBaseActivity implements AndroidRSEnterpriseLibraryCallback {
+public class TestPrepareActivity extends TestBaseActivity implements ReadSpeakerCallback {
 
     private Integer lang;
 
@@ -26,16 +25,16 @@ public class TestPrepareActivity extends TestBaseActivity implements AndroidRSEn
     }
 
     public void button1(View v) {
-        speaker.read("I am happy", ReadSpeaker.ENGLISH);
+        speaker.read("I am happy", ReadSpeaker.ENGLISH_UK);
     }
 
     @Override
     public void error(String s) {}
 
     @Override
-    public void didFinishPlaying() {
+    public void didFinishReading() {
+        lang++;
         if(lang < 8) {
-            lang++;
             switch(lang) {
                 case 1:
                     speaker.read("Ik ben blij", ReadSpeaker.DUTCH);
@@ -50,7 +49,7 @@ public class TestPrepareActivity extends TestBaseActivity implements AndroidRSEn
                     speaker.read("ik bin bliid", ReadSpeaker.FRISIAN);
                     break;
                 case 5:
-                    speaker.read("Estoy feliz", ReadSpeaker.SPANISH);
+                    speaker.read("Estoy feliz", ReadSpeaker.SPANISH_ES);
                     break;
                 case 6:
                     speaker.read("Sono felice", ReadSpeaker.ITALIAN);
@@ -59,11 +58,13 @@ public class TestPrepareActivity extends TestBaseActivity implements AndroidRSEn
                     speaker.read("Είμαι χαρούμενος", ReadSpeaker.GREEK);
                     break;
             }
+        } else {
+            lang = 0;
         }
     }
 
     @Override
-    public void didStartPlaying() {
+    public void didStartReading() {
 
     }
 }

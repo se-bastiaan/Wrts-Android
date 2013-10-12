@@ -1,9 +1,8 @@
 package nl.digischool.wrts.activities;
 
 import android.os.Bundle;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.readspeaker.androidrsenterpriselibrary.AndroidRSEnterpriseLibraryCallback;
-import nl.digischool.wrts.classes.ReadSpeaker;
+import eu.se_bastiaan.rslibrary.ReadSpeakerCallback;
+import nl.digischool.wrts.classes.ReadSpeakerHelper;
 
 /**
  * Sébastiaanmaakt
@@ -11,13 +10,13 @@ import nl.digischool.wrts.classes.ReadSpeaker;
  * Date: 11-10-13
  * Time: 15:46
  */
-public class TestBaseActivity extends BaseActivity implements AndroidRSEnterpriseLibraryCallback {
+public abstract class TestBaseActivity extends BaseActivity implements ReadSpeakerCallback {
 
-    protected ReadSpeaker speaker;
+    protected ReadSpeakerHelper speaker;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        speaker = new ReadSpeaker(this, this);
+        speaker = new ReadSpeakerHelper(this, this);
     }
 
     @Override
@@ -25,10 +24,10 @@ public class TestBaseActivity extends BaseActivity implements AndroidRSEnterpris
     }
 
     @Override
-    public void didFinishPlaying() {
+    public void didFinishReading() {
     }
 
     @Override
-    public void didStartPlaying() {
+    public void didStartReading() {
     }
 }

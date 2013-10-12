@@ -6,7 +6,7 @@ import java.net.URL;
 
 /**
  * Generates entities and DAOs for the Wrts project.
- *
+ * <p/>
  * Run it as a Java application (not Android).
  *
  * @author Sébastiaan Versteeg
