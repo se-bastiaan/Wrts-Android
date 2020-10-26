@@ -1,0 +1,5 @@
+This repository contains the first ever Android application that I built. I started this project in 2011 and released v1.0 in January 2012 (Google can't even give me the date and shows the unix epoch).
+The Google Play Store was still called Android Market then and I had to use the credit card of my parents to be able to release this in the wild.
+Damn the code is horrible, but what can you expect? The only device I had to test was the Galaxy i5800 that my little sister owned. I did not even have my own Android phone.
+
+There is a whole story on how I started building a new application (see the 2013 branch) and never released. But I still had this code that was once hosted in a Mercurial repo on Bitbucket in an email conversation somewhere and wanted to archive it together with the newer unreleased code where you can definitely see that I definitely learned something since I wrote my first lines of Java.
